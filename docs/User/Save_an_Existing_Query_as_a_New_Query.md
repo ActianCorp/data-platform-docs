@@ -24,7 +24,7 @@ To save a query displayed in a query tab
 
 3. Click the Save As Query icon:
 
-![](images/QueryEditor_SaveAsQuery_icon.png)
+    ![](images/QueryEditor_SaveAsQuery_icon.png)
 
 4. The Save Queries dialog opens.
 5. Enter a name for the query.

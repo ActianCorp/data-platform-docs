@@ -28,15 +28,15 @@ To give your Actian warehouse access to Azure ABFS data, you will follow these b
 
 1. In the Azure portal, click Active Directory, App registrations:
 
-![](images/AppRegistrations.png)
+    ![](images/AppRegistrations.png)
 
 2. Click New registration:
 
-![](images/NewRegistration.png)
+    ![](images/NewRegistration.png)
 
     A registration form is displayed:
 
-![](images/SetUpAccessCredentialsCloudStorage_4.png)
+    ![](images/SetUpAccessCredentialsCloudStorage_4.png)
 
 3. Assign an appropriate name.
 4. Select “Accounts in any organizational directory.”
@@ -58,11 +58,11 @@ Although the application has been created, it does not have access to any resour
 
 1. Navigate to the Storage Account that contains the source data to be accessed and click on Access Control (IAM):
 
-![](images/AccessControlIAM.png)
+    ![](images/AccessControlIAM.png)
 
 2. Click Add, Add role assignment:
 
-![](images/AddRoleAssignment.png)
+    ![](images/AddRoleAssignment.png)
 
 3. In the Add Role assignment window:
 
@@ -72,7 +72,7 @@ Although the application has been created, it does not have access to any resour
 
     c. Enter the name of the app created earlier in Step 1 (for example, Actian Reader):
 
-![](images/AddRoleAssignnmentDialog.png)
+    ![](images/AddRoleAssignnmentDialog.png)
 
 4. Select the app and then click Save.
 
@@ -84,15 +84,15 @@ The Azure AD application is now in place and has read-only access to the Storage
 
 1. Navigate to Azure Active Directory, App registrations, Actian Reader app, and click on Certificates & secrets:
 
-![](images/CertificatesAndSecrets.png)
+    ![](images/CertificatesAndSecrets.png)
 
 2. Click New client secret:
 
-![](images/NewClientSecret.png)
+    ![](images/NewClientSecret.png)
 
 3. Provide a description for the secret and click Add:
 
-![](images/AddClientSecret.png)
+    ![](images/AddClientSecret.png)
 
 4. Important: Copy the value of the secret (this is the only time it will be displayed):
 

@@ -24,7 +24,7 @@ https://api.im.actiandatacloud.com/v2/api/login
 
 2. In the Body section of the request, check raw, select the JSON option, and enter your platform username and password in body of the request:
 
-![](images/api_login.png)
+    ![](images/api_login.png)
 
 3. Click SEND to send the request. If accepted, an access token and other related information will display.
 

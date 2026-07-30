@@ -20,15 +20,15 @@ To enable an AKMS for data encryption, you must:
 
 1. In the Actian Data Platform console, click your user ID in the upper right corner of the browser and select Administration from the dropdown menu:
 
-![](images/SetUpKeyManagement_2.png)
+    ![](images/SetUpKeyManagement_2.png)
 
 2. In the navigation pane on the left, click Key Management:
 
-![](images/SetUpKeyManagement_3.png)
+    ![](images/SetUpKeyManagement_3.png)
 
     The Key Management panel is displayed:
 
-![](images/SetUpKeyManagement_4.png)
+    ![](images/SetUpKeyManagement_4.png)
 
     If you have created no warehouses or any key aliases, “No Encryption Key” will be displayed for the default Actian-managed encryption as well as the AWS Key Management Service.
 

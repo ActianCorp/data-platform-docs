@@ -41,39 +41,39 @@ To create a Google Cloud service account
 1. Log in to [Google Cloud Platform](https://console.cloud.google.com/).
 2. If the navigation menu on the left is not displayed, click the Navigation icon to display it:
 
-![](images/GCP_navigation_menu.png)
+    ![](images/GCP_navigation_menu.png)
 
 3. From the dropdown menu, select the project that you want to create the service account in.
 4. From the navigation menu, click IAM & Admin, Service Accounts:
 
-![](images/GCP_open_service_accounts.png)
+    ![](images/GCP_open_service_accounts.png)
 
     The Service accounts page for your company is displayed.
 
 5. Click + CREATE SERVICE ACCOUNT:
 
-![](images/GCP_service_accounts_page.png)
+    ![](images/GCP_service_accounts_page.png)
 
     The Create service account page is displayed.
 
 6. Enter your service account details:
 
-![](images/SetUpAccessCredentialsCloudStorage.png)
+    ![](images/SetUpAccessCredentialsCloudStorage.png)
 
 7. Click the CREATE button.
 8. Do not add any roles or set any conditions; just click CONTINUE.
 
-![](images/GCP_service_account_details_done.png)
+    ![](images/GCP_service_account_details_done.png)
 
 9. Do not grant users access to the service account; just click DONE.
 
     The new service account is listed:
 
-![](images/GCP_service_account_populated.png)
+    ![](images/GCP_service_account_populated.png)
 
 10. Click on the newly created service account to see the details:
 
-![](images/SetUpAccessCredentialsCloudStorage_2.png)
+    ![](images/SetUpAccessCredentialsCloudStorage_2.png)
 
 11. Copy the email as shown above. You will use this copied value later.
 12. Click the back arrow to return to the service account page.
@@ -88,19 +88,19 @@ To generate a set of keys to give the Actian Data Platform access to your Google
 
 1. Click the link for the service account that you created in [Step 1: Create a Google Cloud Service Account](../User/Set_Up_Access_Credentials_for_Cloud_Storage_Acco.md).
 
-![](images/GCP_service_account_populated.png)
+    ![](images/GCP_service_account_populated.png)
 
     The Service account details page is displayed:
 
 2. Under the Keys heading, click the ADD KEY dropdown menu and select Create new key:
 
-![](images/GCP_create_new_key.png)
+    ![](images/GCP_create_new_key.png)
 
     The Create private key dialog opens.
 
 3. Select the JSON key type and click CREATE:
 
-![](images/GCP_create_private_key_json.png)
+    ![](images/GCP_create_private_key_json.png)
 
     The generated key is downloaded to your local machine:
 
@@ -116,17 +116,17 @@ To authorize your Google Cloud service account for access to the bucket and conf
 
     A list of your storage buckets is displayed:
 
-![](images/GCP_storage_browser_buckets.png)
+    ![](images/GCP_storage_browser_buckets.png)
 
 2. Click on the name of the bucket you want to authorize access to. In the above example, it is **avalanche-data**.
 
     The Bucket details page is displayed:
 
-![](images/GCP_bucket_details.png)
+    ![](images/GCP_bucket_details.png)
 
 3. Click the Permissions tab and then click the ADD button:
 
-![](images/GCP_bucket_permissions_tab.png)
+    ![](images/GCP_bucket_permissions_tab.png)
 
     The Add members panel is displayed.
 

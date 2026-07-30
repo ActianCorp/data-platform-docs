@@ -35,7 +35,7 @@ To create a start/stop schedule event
 
 2. In the Schedule row, click the Create Schedule icon:
 
-![](images/create_schedule_icon.png)
+    ![](images/create_schedule_icon.png)
 
     The Schedule Warehouse/Database Action dialog opens.
 
@@ -85,7 +85,7 @@ To create a warehouse scaling schedule event
 1. In the Actian warehouses console, click the warehouse name to display its [Warehouse Details](../User/Warehouse_Details.md) page.
 2. In the Schedule row, click the Create Schedule icon:
 
-![](images/create_schedule_icon.png)
+    ![](images/create_schedule_icon.png)
 
     The Schedule Warehouse Action dialog opens.
 
@@ -137,7 +137,7 @@ To delete a schedule event
 
 2. In the Schedule row, click the Create Schedule icon:
 
-![](images/create_schedule_icon.png)
+    ![](images/create_schedule_icon.png)
 
     The Schedule Warehouse/Database Action dialog opens.
 
@@ -146,7 +146,7 @@ To delete a schedule event
 
 5. When the schedule event is shown in the list, click the delete icon on its right:
 
-![](images/delete_schedule_event.png)
+    ![](images/delete_schedule_event.png)
 
 6. Confirm the deletion.
 

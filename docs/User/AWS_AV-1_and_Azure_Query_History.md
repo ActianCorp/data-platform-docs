@@ -32,7 +32,7 @@ To display query history
 
     The search criteria control is displayed:
 
-![](images/SearchQueries.png)
+    ![](images/SearchQueries.png)
 
     b. Select a field from the first dropdown, specify a choice in the second dropdown, and enter the text to search on.
 

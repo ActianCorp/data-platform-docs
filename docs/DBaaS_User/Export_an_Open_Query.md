@@ -15,7 +15,7 @@ To export a query
 1. Create, open, or display the query you want to export.
 2. Click the Export Query icon:
 
-![](images/QueryEditor_ExportQueryIcon.png)
+    ![](images/QueryEditor_ExportQueryIcon.png)
 
     The Opening dialog box appears.
 

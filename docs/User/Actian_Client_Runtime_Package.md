@@ -32,7 +32,7 @@ To download and install the Actian Client package from ESD
 3. Scroll down to the Actian Data Platform Client Runtime section and expand it, if necessary.
 4. Click the HTTP button to download the driver. For example:
 
-![](images/ESD_download_Client_Runtime.png)
+    ![](images/ESD_download_Client_Runtime.png)
 
 5. Save the Zip, tgz, or tar.Z file to a location on your local machine.
 6. Read the readme file that is posted with the package.

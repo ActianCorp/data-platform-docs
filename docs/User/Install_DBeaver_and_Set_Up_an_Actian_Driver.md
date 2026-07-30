@@ -29,7 +29,7 @@ To set up an Actian driver in DBeaver
 
 3. Click Database, Driver Manager.
 
-![](images/DBeaver_Driver_Manager.png)
+    ![](images/DBeaver_Driver_Manager.png)
 
     The Driver Manager dialog opens.
 
@@ -58,7 +58,7 @@ To set up an Actian driver in DBeaver
 
     The Driver class and Class Name are populated with com.ingres.jdbc.IngresDriver. If not, type it in the Class Name field.
 
-![](images/create_new_vector_driver.png)
+    ![](images/create_new_vector_driver.png)
 
 9. Click OK.
 

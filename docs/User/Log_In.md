@@ -41,7 +41,7 @@ To log in to Platform
 
 3. The Login to Actian Data Platform page displays.
 
-![](images/login.jpg)
+    ![](images/login.jpg)
 
 4. Choose the appropriate login credentials and click Next.!
 

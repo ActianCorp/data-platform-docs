@@ -26,7 +26,7 @@ To create a start/stop schedule event
 1. In the Actian Database Instances console, click the database name to display its [Database Instance Details](../DBaaS_User/Database_Instance_Details.md) page.
 2. In the Schedule row, click the Create Schedule icon:
 
-![](images/create_schedule_icon.png)
+    ![](images/create_schedule_icon.png)
 
     The Schedule Database Action dialog opens.
 
@@ -74,7 +74,7 @@ To delete a schedule event
 1. In the Database Instances console, click the database name to display its [Database Instance Details](../DBaaS_User/Database_Instance_Details.md) page.
 2. In the Schedule row, click the Create Schedule icon:
 
-![](images/create_schedule_icon.png)
+    ![](images/create_schedule_icon.png)
 
     The Schedule Database Action dialog opens.
 
@@ -83,7 +83,7 @@ To delete a schedule event
 
 5. When the schedule event is shown in the list, click the delete icon on its right:
 
-![](images/delete_schedule_event.png)
+    ![](images/delete_schedule_event.png)
 
 6. Confirm the deletion.
 

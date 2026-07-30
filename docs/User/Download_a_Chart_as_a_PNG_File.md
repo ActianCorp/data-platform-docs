@@ -15,7 +15,7 @@ To download a chart as a PNG file
 1. Display the service data as a chart (see [Graphing Service Information](../User/Graphing_Service_Information.md)).
 2. On the Graph tab, click the Download plot as a png icon:
 
-![](images/DownloadPlotPNGToolIcon.png)
+    ![](images/DownloadPlotPNGToolIcon.png)
 
     The Opening dialog appears.
 

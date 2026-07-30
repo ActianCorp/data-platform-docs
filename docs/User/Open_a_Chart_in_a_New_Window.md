@@ -26,10 +26,10 @@ AWS AV-1 and Azure only: To display a chart in a new browser tab
 
 2. Click the Save icon:
 
-![](images/QuerySaveIcon.png)
+    ![](images/QuerySaveIcon.png)
 
 3. On the displayed chart pane, click the Open chart in new window icon:
 
-![](images/QueryOpenChartNewWindowIcon.png)
+    ![](images/QueryOpenChartNewWindowIcon.png)
 
     The chart is opened in a new browser tab.

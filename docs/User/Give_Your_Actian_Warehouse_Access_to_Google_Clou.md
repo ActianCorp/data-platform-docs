@@ -23,7 +23,7 @@ To add the keys to your Actian warehouse
 
 3. Click the Upload Service Account Key File button.
 
-![](images/GCP_upload_service_account_key_file.png)
+    ![](images/GCP_upload_service_account_key_file.png)
 
 4. Browse your local file system, select the key file that was download from Google Cloud (named <account_name>.json), and click Open.
 

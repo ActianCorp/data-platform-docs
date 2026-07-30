@@ -36,7 +36,7 @@ To create a listener
 7. Click Generate Keys to confirm the creation of the keys.
 8. Click the Copy button to copy the Access Key to the clipboard and paste it in your third-party application.
 
-![](images/CopyToClipboardIcon.png)
+    ![](images/CopyToClipboardIcon.png)
 
 9. In the Actian Data Platform, click the Copy button to copy the Secret Key to the clipboard and paste it in your third-party application.
 10. Click Save to save the listener.

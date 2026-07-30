@@ -30,13 +30,13 @@ To create a template
 
     a. Select whether to link a public or private package:
 
-![](images/RuntimeWorkspace_62.png)
+    ![](images/RuntimeWorkspace_62.png)
 
     The file(s) are listed.
 
     b. Select a package from the list:
 
-![](images/RuntimeWorkspace_63.png)
+    ![](images/RuntimeWorkspace_63.png)
 
     c. Click the Select Package button.
 

@@ -22,15 +22,15 @@ To add an access key in Actian
 
 1. In the Actian console, click your user ID in the upper right corner of the browser and select Administration from the dropdown menu:
 
-![](images/SetUpKeyManagement_2.png)
+    ![](images/SetUpKeyManagement_2.png)
 
 2. In the navigation pane on the left, click Key Management:
 
-![](images/SetUpKeyManagement_3.png)
+    ![](images/SetUpKeyManagement_3.png)
 
     The Key Management panel is displayed:
 
-![](images/SetUpKeyManagement_4.png)
+    ![](images/SetUpKeyManagement_4.png)
 
     If you have created no warehouses or any key aliases, “No Encryption Key” will be displayed for the default Actian-managed encryption as well as the AWS Key Management Service.
 
@@ -38,7 +38,7 @@ To add an access key in Actian
 
     The Add Key Details dialog opens:
 
-![](images/SetUpKeyManagement_5.png)
+    ![](images/SetUpKeyManagement_5.png)
 
 4. Add a Key Name, specify AWS KMS, and copy the Actian Account ID to add the Actian account ID to your AKMS policy.
 5. [Add the Actian AWS Account ID to Your AKMS Policy](../DBaaS_User/Set_Up_the_AWS_Key_Management_Service_(AKMS).md). After you finish this task in AWS, return back to Actian to finish creating and validating key.

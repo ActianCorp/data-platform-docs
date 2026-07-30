@@ -17,16 +17,16 @@ To select the Actian database driver in DBeaver and connect to your Avalanche wa
 
 3. Select the All tab on the left to show all drivers.
 
-![](images/DBeaver_All_tab.png)
+    ![](images/DBeaver_All_tab.png)
 
 4. Select the Actian driver and click Next.
 
-![](images/DBeaver_Avalanche_driver.png)
+    ![](images/DBeaver_Avalanche_driver.png)
 
 5. Paste the JDBC connection string (from step 3 of [Get Connection Properties for DBeaver](../User/Get_Connection_Properties_for_DBeaver.md)) into the DBeaver JDBC URL field.
 6. In the User name and Password fields, enter the username (dbuser) and password you set in the [Set the dbuser Connection Password](../User/Set_the_dbuser_Connection_Password.md) procedure.
 
-![](images/create_new_dbeaver_connection.png)
+    ![](images/create_new_dbeaver_connection.png)
 
 7. Click Test Connection.
 

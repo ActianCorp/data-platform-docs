@@ -18,7 +18,7 @@ To delete an Actian warehouse
 
 1. On the Actian Warehouses page, click the management dropdown for the warehouse you want to delete and select Delete Warehouse:
 
-![](images/Delete_Warehouse.png)
+    ![](images/Delete_Warehouse.png)
 
     The Delete Actian Warehouse dialog appears.
 

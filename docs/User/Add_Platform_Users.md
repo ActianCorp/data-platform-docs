@@ -32,7 +32,7 @@ To open the Administration interface and display User Management
 
 1. In the upper right corner of the Actian Data Platform console window, click the user menu and select Administration:
 
-![](images/AdministrationMenuItem_2.png)
+    ![](images/AdministrationMenuItem_2.png)
 
     The Administration interface opens in a new browser tab.
 

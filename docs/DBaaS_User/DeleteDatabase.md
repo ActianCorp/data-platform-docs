@@ -18,7 +18,7 @@ To delete an Actian database
 
 1. On the Database Instances page, click the management dropdown for the database you want to delete and select Delete Database:
 
-![](images/Delete_Warehouse.png)
+    ![](images/Delete_Warehouse.png)
 
     The Delete Database dialog appears.
 

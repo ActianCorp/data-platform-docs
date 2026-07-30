@@ -18,7 +18,7 @@ To delete an Actian warehouse
 
 1. On the Actian Warehouses page, click the management dropdown for the Tutorial warehouse and select Delete Warehouse:
 
-![](images/DeleteWarehouse.png)
+    ![](images/DeleteWarehouse.png)
 
     The Delete Actian Warehouse dialog appears.
 

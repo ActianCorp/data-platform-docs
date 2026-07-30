@@ -30,26 +30,26 @@ To set up S3 access permissions
 1. Log in to the AWS Console.
 2. Select IAM under the Security, Identity, & Compliance heading.
 
-![](images/s1.jpg)
+    ![](images/s1.jpg)
 
     The IAM dashboard is displayed.
 
 3. Select Users, Add User:
 
-![](images/s3.jpg)
+    ![](images/s3.jpg)
 
 4. Enter a username and give this user Programmatic access only:
 
-![](images/s4.jpg)
+    ![](images/s4.jpg)
 
 5. Click Next: Permissions.
 6. Select Attach existing policies directly:
 
-![](images/s5.jpg)
+    ![](images/s5.jpg)
 
 7. Select Create policy:
 
-![](images/s6.jpg)
+    ![](images/s6.jpg)
 
     The Create policy page is displayed.
 
@@ -65,37 +65,37 @@ To set up S3 access permissions
 
 9. Click Review policy:
 
-![](images/Review_policy_button.jpg)
+    ![](images/Review_policy_button.jpg)
 
     The Review policy pane is displayed.
 
 10. Enter a name for the policy and select Create policy:
 
-![](images/s9.jpg)
+    ![](images/s9.jpg)
 
 11. Click to return to the Create user IAM browser tab:
 
-![](images/s10.jpg)
+    ![](images/s10.jpg)
 
 12. Refresh the policies:
 
-![](images/s11.jpg)
+    ![](images/s11.jpg)
 
 13. Filter on the new policy and select it:
 
-![](images/s12.jpg)
+    ![](images/s12.jpg)
 
 14. Click Next: Tags:
 
-![](images/S3NextTagsButton.png)
+    ![](images/S3NextTagsButton.png)
 
 15. (Optional) Add any desired tags and then click Next: Review:
 
-![](images/S3NextReviewButton.png)
+    ![](images/S3NextReviewButton.png)
 
 16. Review the user, then click Create user:
 
-![](images/S3CreateUserButton.png)
+    ![](images/S3CreateUserButton.png)
 
     The Success status is displayed.
 

@@ -33,7 +33,7 @@ To add native warehouse users in Query Editor
 1. [Launch Query Editor](../User/Launch_Query_Editor.md).
 2. From the Connection dropdown menu, select the User Management (iidbdb) database:
 
-![](images/QueryEditor_database_dropdown.png)
+    ![](images/QueryEditor_database_dropdown.png)
 
 3. Enter query text like the following to create a user:
 

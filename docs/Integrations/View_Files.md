@@ -13,7 +13,7 @@ To view files
 1. Click Integrations, Manage, Files.
 2. To switch between Private Files and Public Files, click the files control:
 
-![](images/PrivatePublicSlider.png)
+    ![](images/PrivatePublicSlider.png)
 
     The Files page displays the available files.
 

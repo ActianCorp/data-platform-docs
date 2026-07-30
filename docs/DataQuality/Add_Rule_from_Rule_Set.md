@@ -28,9 +28,9 @@ To add rules from rule set
 
     The Add rules from rule sets page is displayed. The top half of the page is used to display rule sets and add rules from these rule sets. The bottom half of the page displays the source data.
 
-![](images/Design_33.png)
+    ![](images/Design_33.png)
 
-![](images/Design_34.png)
+    ![](images/Design_34.png)
 
     You can perform the following actions with the source dataset:
 

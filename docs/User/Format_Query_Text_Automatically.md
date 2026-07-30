@@ -15,7 +15,7 @@ To format a displayed query with line breaks and indentations
 1. Display the query in the query pane (see [Open a Saved Query](../User/Open_a_Saved_Query.md)).
 2. Click the Format Query icon on the toolbar:
 
-![](images/QueryFormatIcon.png)
+    ![](images/QueryFormatIcon.png)
 
     The query is formatted. For example:
 
