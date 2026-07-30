@@ -66,16 +66,6 @@ nav = [
       { "Run Sample Queries" = "Tutorials/Run_Sample_Queries.md" },
       { "Delete the Tutorial Warehouse" = "Tutorials/Delete_the_Tutorial_Warehouse.md" },
     ] },
-    { "Database" = [
-      { "Database" = "Tutorials/Database.md" },
-      { "Log In" = "Tutorials/Log_In_2.md" },
-      { "Create the Tutorial Database" = "Tutorials/Create_the_Tutorial_Database.md" },
-      { "Actian Data Platform Database Instances Console" = "Tutorials/Actian_Data_Platform_Database_Instances_Console.md" },
-      { "Database Details" = "Tutorials/Database_Details.md" },
-      { "Launch Query Editor" = "Tutorials/Launch_Query_Editor_2.md" },
-      { "Run Sample Queries" = "Tutorials/Run_Sample_Queries_2.md" },
-      { "Delete the Tutorial Database" = "Tutorials/Delete_the_Tutorial_Database.md" },
-    ] },
   ] },
   { "Warehouse User Guide" = [
     { "Introduction and Concepts" = [
