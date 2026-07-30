@@ -17,7 +17,7 @@ To download and install the JDBC package from ESD
 
 3. Click the HTTP button to download the driver. For example:
 
-![](images/ESD_download_JDBC.png)
+    ![](images/ESD_download_JDBC.png)
 
 4. Save the Zip file to a location on your local machine.
 5. Read the readme file that is posted with the package.

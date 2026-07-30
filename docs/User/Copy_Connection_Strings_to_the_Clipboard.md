@@ -25,6 +25,6 @@ To copy a connection string
 
 4. Click the copy icon at the end of the field you want to copy:
 
-![](images/ConnectionToolsCopyIcon.png)
+    ![](images/ConnectionToolsCopyIcon.png)
 
     The displayed text is copied to the clipboard.

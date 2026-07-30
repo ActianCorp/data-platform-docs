@@ -12,7 +12,7 @@ To log out of Platform
 
 1. Click your username in the upper right corner of the console window:
 
-![](images/AdministrationMenuItem.png)
+    ![](images/AdministrationMenuItem.png)
 
 2. Select Logout.
 

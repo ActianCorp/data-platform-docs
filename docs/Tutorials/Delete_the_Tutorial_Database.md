@@ -18,7 +18,7 @@ To delete an Actian database
 
 1. On the Actian Database Instances page, click the management dropdown for the Tutorial database and select Delete Database:
 
-![](images/DeleteDatabase.png)
+    ![](images/DeleteDatabase.png)
 
     The Delete Actian Database dialog appears.
 

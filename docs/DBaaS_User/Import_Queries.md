@@ -20,7 +20,7 @@ To import a query
 
     The dialog expands:
 
-![](images/QueryEditor_ImportQuery.png)
+    ![](images/QueryEditor_ImportQuery.png)
 
 3. Either drag and drop one or more.sql files onto the box, or click “Choose ‘SQL’ file to browse files to add.
 

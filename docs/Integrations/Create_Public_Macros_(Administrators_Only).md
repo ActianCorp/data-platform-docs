@@ -18,7 +18,7 @@ To create your first public macro
 
 2. Set the macros list to public using the toggle control:
 
-![](images/PublicPrivateSlider.png)
+    ![](images/PublicPrivateSlider.png)
 
 3. To enter macros manually:
 
@@ -44,7 +44,7 @@ To create more public macros
 
 2. Set the macros list to public:
 
-![](images/PublicPrivateSlider.png)
+    ![](images/PublicPrivateSlider.png)
 
 3. Click the Add Macro button.
 

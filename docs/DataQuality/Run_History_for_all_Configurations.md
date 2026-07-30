@@ -36,7 +36,7 @@ To search execution results
 
     The upper portion of the page features a bar chart which presents the aggregated status of all executed jobs.
 
-![](images/runHistorySummBar.png)
+    ![](images/runHistorySummBar.png)
 
     The lower portion of the page presents a sortable list of all executed jobs with the following information:
 

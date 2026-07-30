@@ -18,7 +18,7 @@ To export all saved queries
 
 2. Click the Export All Query icon:
 
-![](images/QueryEditor_ExportQueryIcon.png)
+    ![](images/QueryEditor_ExportQueryIcon.png)
 
     The Opening dialog box appears.
 
@@ -34,7 +34,7 @@ To export all queries in Query History
 
 2. Click the Export All Query icon:
 
-![](images/QueryEditor_ExportQueryIcon.png)
+    ![](images/QueryEditor_ExportQueryIcon.png)
 
     The Opening dialog box appears.
 

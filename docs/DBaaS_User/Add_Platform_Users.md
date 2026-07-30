@@ -32,7 +32,7 @@ To open the Administration interface and display User Management
 
 1. In the upper right corner of the Actian console window, click the user menu and select Administration:
 
-![](images/AdministrationMenuItem.png)
+    ![](images/AdministrationMenuItem.png)
 
     The Administration interface opens in a new browser tab.
 

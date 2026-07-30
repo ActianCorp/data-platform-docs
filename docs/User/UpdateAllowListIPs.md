@@ -22,7 +22,7 @@ To update Allow List IP addresses
 
 2. (Optional) In the IP Allow List IP field, click the Show IP Labels to toggle between text labels and address numbers:
 
-![](images/IPAllowListToggle.png)
+    ![](images/IPAllowListToggle.png)
 
 3. Click the ![](images/DownArrowBlue.png) button to display the complete list of IP addresses.
 4. To add or remove IP addresses:

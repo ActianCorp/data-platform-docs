@@ -60,7 +60,7 @@ To log in to Actian
 
 3. The Login to Actian Data Platform page displays.
 
-![](images/login.jpg)
+    ![](images/login.jpg)
 
 4. Choose the appropriate login credentials and click Next.!
 
@@ -72,7 +72,7 @@ To log out of Actian
 
 1. Click your username in the upper right corner of the console window:
 
-![](images/log_out.png)
+    ![](images/log_out.png)
 
 2. Select Logout.
 
@@ -88,7 +88,7 @@ To check Actian Data Platform health status
 
 1. In the upper right corner of the Actian Data Platform console window, click the user menu and select Administration:
 
-![](images/AdministrationMenuItem.png)
+    ![](images/AdministrationMenuItem.png)
 
     The Administration interface opens in a new browser tab.
 
@@ -96,7 +96,7 @@ To check Actian Data Platform health status
 
     The Service Request panel is displayed, showing any health status notifications:
 
-![](images/View_Health_Status.png)
+    ![](images/View_Health_Status.png)
 
 3. Click View Latest Status.
 
@@ -118,7 +118,7 @@ To monitor AU usage
 
 1. In the upper right corner of the Actian Data Platform console window, click the user menu and select Administration:
 
-![](images/AdministrationMenuItem.png)
+    ![](images/AdministrationMenuItem.png)
 
     The Administration interface opens in a new browser tab.
 

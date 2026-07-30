@@ -1163,7 +1163,7 @@ Notes:
 3. If that does not work, narrow down the offending column or columns in incremental steps by doing SELECT <column1> FROM <external table>, and adding more columns as you go to find the offending column or columns.
 4. Not only can filenames use wildcards but with Azure Blob storage, you can use wildcards for Object Store virtual folders and filenames. For example, the following CSV files from 2011:
 
-![](images/BattingData.png)
+    ![](images/BattingData.png)
 
     could be referenced with:
 

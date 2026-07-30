@@ -42,7 +42,7 @@ Enter new virtual node name.
 
     The Enter new login/password pop-up appears.
 
-![](images/netutil_login1.png)
+    ![](images/netutil_login1.png)
 
 5. Enter the appropriate user name (login) and the password, depending on the type of authentication method used to access the remote instance:
 
@@ -56,7 +56,7 @@ Enter new virtual node name.
 
     The Enter new connection pop-up appears.
 
-![](images/netutil_connect2.png)
+    ![](images/netutil_connect2.png)
 
 7. Enter the connection data (type over the default values, if necessary), and then choose Save from the menu.
 

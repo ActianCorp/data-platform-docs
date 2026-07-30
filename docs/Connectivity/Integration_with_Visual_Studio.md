@@ -161,7 +161,7 @@ The .NET Data Provider uses SQL statements to retrieve and update data in Ingres
 
     Ingres Query Designer opens.
 
-![](images/QueryBuilder.png)
+    ![](images/QueryBuilder.png)
 
     The Query Designer has three horizontal panels:
 

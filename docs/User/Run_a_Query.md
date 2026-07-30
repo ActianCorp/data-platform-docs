@@ -22,7 +22,7 @@ SELECT year,count(*) AS c1 FROM sample.ontime GROUP BY year;
 
 3. Press Ctrl+Enter to run the query or click the Play button:
 
-![](images/DBeaver_run_query.png)
+    ![](images/DBeaver_run_query.png)
 
 4. Examine the results.
 

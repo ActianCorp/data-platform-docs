@@ -13,7 +13,7 @@ To display a horizontal bar chart
 1. Run your query to display the results in the query results pane (see [Run Your Own Queries](../User/Run_Your_Own_Queries.md) or [Run Sample Queries](../User/Run_Sample_Queries.md)).
 2. Do the following:
 
-![](images/QueryConfigureVisualizationIcon.png)
+    ![](images/QueryConfigureVisualizationIcon.png)
 
     The Configure Visualization dialog opens. ]
 

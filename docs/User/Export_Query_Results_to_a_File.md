@@ -15,7 +15,7 @@ AWS AV-1 and Azure:To export query results to a file
 1. Run your query to display the results at the bottom of the query pane (see [Run Your Own Queries](../User/Run_Your_Own_Queries.md)).
 2. In the top row of the results table, click to select the output type you want to export to (.csv, .xlsx, .json):
 
-![](images/QueryExportFileTypes.png)
+    ![](images/QueryExportFileTypes.png)
 
     The Opening dialog appears.
 

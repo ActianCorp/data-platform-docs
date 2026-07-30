@@ -28,7 +28,7 @@ AWS AV-1 and Azure only: To save a chart image
 
 2. On the displayed chart pane, click the Save chart image icon:
 
-![](images/QuerySaveChartImageIcon.png)
+    ![](images/QuerySaveChartImageIcon.png)
 
     The Opening dialog appears.
 

@@ -16,7 +16,7 @@ To check Actian Data Platform health status
 
 1. In the upper right corner of the console window, click the user menu and select Administration:
 
-![](images/AdministrationMenuItem_2.png)
+    ![](images/AdministrationMenuItem_2.png)
 
     The Administration interface opens in a new browser tab.
 
@@ -24,7 +24,7 @@ To check Actian Data Platform health status
 
     The Service Request panel is displayed, showing any health status notifications:
 
-![](images/View_Health_Status.png)
+    ![](images/View_Health_Status.png)
 
 3. Click View Latest Status.
 

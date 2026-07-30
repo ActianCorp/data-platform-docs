@@ -22,7 +22,7 @@ To configure a new data source on Windows
 
     The ODBC Data Source Administrator is displayed:
 
-![](images/ODBCDSAdmin.png)
+    ![](images/ODBCDSAdmin.png)
 
     You can define one or more data sources for each installed driver. The data source name must provide a unique description of the data; for example, Payroll or Accounts Payable.
 

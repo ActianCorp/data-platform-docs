@@ -12,11 +12,11 @@ To create a new expression:
 
 1. When creating or editing an integration, on the Mapping page, select Expression Builder from the Expression drop down menu of the desired Field.
 
-![](images/ExpressionBuilder01.png)
+    ![](images/ExpressionBuilder01.png)
 
     The Expression Builder user interface is displayed.
 
-![](images/DesignWorkspace_47.png)
+    ![](images/DesignWorkspace_47.png)
 
 2. Select a block category.
 

@@ -94,13 +94,13 @@ To link file in the file repository
 
     a. Select whether to link a public or private package:
 
-![](images/RuntimeWorkspace_103.png)
+    ![](images/RuntimeWorkspace_103.png)
 
     The files are listed.
 
     b. Select a package from the list:
 
-![](images/RuntimeWorkspace_104.png)
+    ![](images/RuntimeWorkspace_104.png)
 
     c. Click the Select Package button.
 

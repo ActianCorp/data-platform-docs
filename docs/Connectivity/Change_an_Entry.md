@@ -40,7 +40,7 @@ To edit a remote user authorization
 
     The Edit login and password pop-up window appears and prompts you to enter new login and password data.
 
-![](images/netutil_RemoteUser.png)
+    ![](images/netutil_RemoteUser.png)
 
 2. Enter the login and password for the remote account; then re-enter the password as prompted.
 
@@ -60,7 +60,7 @@ To edit a connection data entry
 
     The Edit connection entry pop-up window appears, which displays the connection type, network address, protocol, and listen address for the selected entry.
 
-![](images/netutil_ConnectEntry.png)
+    ![](images/netutil_ConnectEntry.png)
 
 2. Tab to the fields to be changed and enter the new values. Choose Save from the menu.
 
@@ -78,7 +78,7 @@ To edit attribute data for a particular vnode
 
     The Edit attribute entry pop-up window appears.
 
-![](images/netutil_AttribEntry.png)
+    ![](images/netutil_AttribEntry.png)
 
 3. Edit the attribute by typing over the displayed data with the desired changes. For a list of valid attribute names and values, see [Configure Vnode Attributes](../Connectivity/Establish_and_Test_a_Remote_Connection_Using_Net.md). Choose Save from the menu.
 
