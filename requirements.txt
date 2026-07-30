@@ -1,0 +1,3 @@
+# Zensical — modern static site generator by the Material for MkDocs team.
+# https://zensical.org/docs/setup/basics/
+zensical

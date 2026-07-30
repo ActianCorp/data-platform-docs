@@ -1,0 +1,15 @@
+# Zensical build output (rebuilt in CI on every deploy)
+site/
+
+# Local build/tooling caches
+.cache/
+__pycache__/
+*.py[cod]
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor cruft
+.DS_Store

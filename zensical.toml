@@ -1,0 +1,1526 @@
+# ============================================================================
+# Zensical configuration for the Actian Data Platform documentation portal.
+#
+# Converted from mkdocs.yml (Material for MkDocs) to the Zensical authoring
+# template. Content Markdown, CSS and JavaScript are unchanged.
+#   Docs:  https://zensical.org/docs/setup/basics/
+# ============================================================================
+
+[project]
+
+site_name = "Actian Data Platform"
+site_url = "https://docs.actian.com/actiandataplatform/"
+site_description = """
+Complete documentation for the Actian Data Platform — warehousing, connectivity, SQL, integrations, data quality, security, and more.
+"""
+
+# Preserve the existing (non-directory) URL scheme so bookmarks/links keep working.
+use_directory_urls = false
+
+docs_dir = "docs"
+site_dir = "site"
+
+copyright = """
+Copyright &copy; 2026, Actian
+"""
+
+# Header "Support" pill (was repo_url/repo_name in mkdocs.yml).
+repo_url = "https://www.actian.com/contact/"
+repo_name = "Support"
+
+# Additional CSS / JS (paths are relative to docs_dir).
+extra_css = ["stylesheets/site-theme.css"]
+extra_javascript = ["javascripts/analytics.js", "javascripts/extra.js"]
+
+nav = [
+  { "Welcome Guide" = [
+    { "Guide Overview" = "index.md" },
+    { "What’s New in the Actian Data Platform" = [
+      { "What’s New in the Actian Data Platform" = "Welcome/What's_New_in_the_Actian_Data_Platform.md" },
+      { "Actian Warehouse Release Notes" = "Welcome/Actian_Warehouse_Release_Notes.md" },
+    ] },
+    { "What’s New in Actian Integrations" = [
+      { "What’s New in Actian Integrations" = "Welcome/What's_New_in_Actian_Integrations.md" },
+      { "Actian Integrations Release Notes" = "Welcome/Actian_Integrations_Release_Notes.md" },
+    ] },
+    { "What’s New in Actian Data Quality" = [
+      { "What’s New in Actian Data Quality" = "Welcome/What's_New_in_Actian_Data_Quality.md" },
+      { "Actian Data Profiling Release Notes" = "Welcome/Actian_Data_Profiling_Release_Notes.md" },
+    ] },
+    { "What’s New in Actian Data Platform Databases" = [
+      { "What’s New in Actian Data Platform Databases" = "Welcome/What's_New_in_Actian_Data_Platform_Databases.md" },
+      { "Actian Database as a Service EAP Release Notes" = "Welcome/Actian_Database_as_a_Service_EAP_Release_Notes.md" },
+      { "Copyright Information" = "Welcome/CopyrightTopic.md" },
+    ] },
+    { "Actian Data Platform Guide Overview" = "Welcome/Actian_Data_Platform_Guide_Overview.md" },
+    { "Documentation Home" = "Welcome/Documentation_Home.md" },
+  ] },
+  { "Tutorials Guide" = [
+    { "Warehouse" = [
+      { "Warehouse" = "Tutorials/Warehouse.md" },
+      { "Log In" = "Tutorials/Log_In.md" },
+      { "Create the Tutorial Warehouse" = "Tutorials/Create_the_Tutorial_Warehouse.md" },
+      { "Actian Warehouses Console" = "Tutorials/Actian_Warehouses_Console.md" },
+      { "Warehouse Details" = "Tutorials/Warehouse_Details.md" },
+      { "Launch Query Editor" = "Tutorials/Launch_Query_Editor.md" },
+      { "Run Sample Queries" = "Tutorials/Run_Sample_Queries.md" },
+      { "Delete the Tutorial Warehouse" = "Tutorials/Delete_the_Tutorial_Warehouse.md" },
+    ] },
+    { "Database" = [
+      { "Database" = "Tutorials/Database.md" },
+      { "Log In" = "Tutorials/Log_In_2.md" },
+      { "Create the Tutorial Database" = "Tutorials/Create_the_Tutorial_Database.md" },
+      { "Actian Data Platform Database Instances Console" = "Tutorials/Actian_Data_Platform_Database_Instances_Console.md" },
+      { "Database Details" = "Tutorials/Database_Details.md" },
+      { "Launch Query Editor" = "Tutorials/Launch_Query_Editor_2.md" },
+      { "Run Sample Queries" = "Tutorials/Run_Sample_Queries_2.md" },
+      { "Delete the Tutorial Database" = "Tutorials/Delete_the_Tutorial_Database.md" },
+    ] },
+  ] },
+  { "Warehouse User Guide" = [
+    { "Introduction and Concepts" = [
+      { "Introduction and Concepts" = "User/Part_IntroConcepts.md" },
+      { "Introducing Actian Warehouse" = [
+        { "Introducing Actian Warehouse" = "User/Introducing_Actian_Warehouse.md" },
+        { "Performance and Concurrency" = "User/Performance_and_Concurrency.md" },
+        { "Actian Data Platform Features" = "User/Actian_Data_Platform_Features.md" },
+        { "Video: Actian Data Platform Architecture" = "User/Video_3a_Actian_Data_Platform_Architecture.md" },
+        { "Actian Data Platform Security Overview" = "User/Actian_Data_Platform_Security_Overview.md" },
+        { "Supported Cloud Platforms" = "User/Supported_Cloud_Platforms.md" },
+        { "Concepts to Understand" = "User/Concepts_to_Understand.md" },
+        { "Using the Actian Assistant" = "User/Using_the_Actian_Assistant.md" },
+      ] },
+    ] },
+    { "Getting Started" = [
+      { "Getting Started" = "User/Part_GettingStarted.md" },
+      { "Access the Actian Data Platform" = [
+        { "Access the Actian Data Platform" = "User/Access_the_Actian_Data_Platform.md" },
+        { "Generating Your Platform Login Credentials" = "User/Generating_Your_Platform_Login_Credentials.md" },
+        { "Log In" = "User/Log_In.md" },
+        { "Log Out" = "User/Log_Out.md" },
+        { "Check Actian Data Platform Health Status" = "User/Check_Actian_Data_Platform_Health_Status.md" },
+        { "Monitor AU Usage" = "User/Monitor_AU_Usage.md" },
+      ] },
+      { "Set Up Key Management Service for Data Encryption" = [
+        { "Set Up Key Management Service for Data Encryption" = "User/Set_Up_Key_Management_Service_for_Data_Encryptio.md" },
+        { "Using an Actian-managed Encryption Key" = "User/Using_an_Actian-managed_Encryption_Key.md" },
+        { "Set Up the AWS Key Management Service (AKMS)" = "User/Set_Up_the_AWS_Key_Management_Service_(AKMS).md" },
+        { "Availability of Your KMS When Starting and Stopping Warehouses" = "User/Availability_of_Your_KMS_When_Starting_and_Stopp.md" },
+      ] },
+      { "Create a Warehouse" = [
+        { "Create a Warehouse" = "User/Create_a_Warehouse.md" },
+        { "Create a New Warehouse" = "User/Create_a_New_Warehouse.md" },
+        { "Actian Data Platform Warehouses Console" = "User/Actian_Data_Platform_Warehouses_Console.md" },
+        { "Warehouse Details" = "User/Warehouse_Details.md" },
+        { "Comparing Warehouses and Databases" = "User/Comparing_Warehouses_and_Databases.md" },
+        { "Automated Backup Process" = "User/Automated_Backup_Process.md" },
+      ] },
+      { "Create a Database Instance" = [
+        { "Create a Database Instance" = "User/Create_a_Database_Instance.md" },
+        { "Create a New Database Instance" = "User/Create_a_New_Database_Instance.md" },
+        { "Actian Database Instances Console" = "User/Actian_Database_Instances_Console.md" },
+        { "Database Instance Details" = "User/Database_Instance_Details.md" },
+        { "Manage Public RSA Keys for Database Administrator Access" = "User/Manage_Public_RSA_Keys_for_Database_Administrato.md" },
+      ] },
+      { "Set Up Access Credentials for Cloud Storage Accounts" = [
+        { "Set Up Access Credentials for Cloud Storage Accounts" = "User/Set_Up_Access_Credentials_for_Cloud_Storage_Acco.md" },
+        { "Set Up Amazon S3 Access" = "User/Set_Up_Amazon_S3_Access.md" },
+        { "Set Up Microsoft Azure Access" = "User/Set_Up_Microsoft_Azure_Access.md" },
+      ] },
+      { "Grant Access to Warehouse or Database for External Tables Access" = [
+        { "Grant Access to Warehouse or Database for External Tables Access" = "User/Grant_Access_to_Warehouse_or_Database_for_Extern.md" },
+        { "Give Your Actian Warehouse Access to Google Cloud Storage" = "User/Give_Your_Actian_Warehouse_Access_to_Google_Clou.md" },
+        { "Give Your Actian Warehouse Access to AWS Cloud Storage" = "User/Give_Your_Actian_Warehouse_Access_to_AWS_Cloud_S.md" },
+        { "Give Your Actian Warehouse Access to Azure Cloud Storage" = "User/Give_Your_Actian_Warehouse_Access_to_Azure_Cloud.md" },
+      ] },
+    ] },
+    { "Warehouse and Database Management" = [
+      { "Warehouse and Database Management" = "User/Part_WarehouseManagement.md" },
+      { "Access Warehouse or Database Connection Information" = [
+        { "Access Warehouse or Database Connection Information" = "User/Access_Warehouse_or_Database_Connection_Informat.md" },
+        { "Connection Tools" = [
+          { "Connection Tools" = "User/Connection_Tools.md" },
+          { "Actian Client Runtime Package" = "User/Actian_Client_Runtime_Package.md" },
+          { "Actian JDBC Driver" = "User/Actian_JDBC_Driver.md" },
+        ] },
+        { "Copy Connection Strings to the Clipboard" = "User/Copy_Connection_Strings_to_the_Clipboard.md" },
+      ] },
+      { "Update Allow List IP Addresses" = "User/UpdateAllowListIPs.md" },
+      { "Scale a Warehouse" = "User/ScaleWarehouse.md" },
+      { "Actian Warehouse Clone" = [
+        { "Actian Warehouse Clone" = "User/Actian_Warehouse_Clone.md" },
+        { "Cloning a Warehouse" = "User/Cloning_a_Warehouse.md" },
+      ] },
+      { "Administrate Warehouses or Databases" = [
+        { "Administrate Warehouses or Databases" = "User/Administrate_Warehouses_or_Databases.md" },
+        { "Stop a Warehouse" = "User/Stop_a_Warehouse.md" },
+        { "Restart a Warehouse" = "User/Restart_a_Warehouse.md" },
+        { "Stop a Database" = "User/Stop_a_Database.md" },
+        { "Restart a Database" = "User/Restart_a_Database.md" },
+        { "Automatic Stopping of Idle Warehouses or Databases" = "User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md" },
+        { "Modify Idle Stop Period" = "User/Modify_Idle_Stop_Period.md" },
+        { "Schedule a Warehouse" = [
+          { "Schedule a Warehouse" = "User/Schedule_a_Warehouse.md" },
+          { "Cron Expressions" = "User/Cron_Expressions.md" },
+        ] },
+        { "Modify Maintenance Window Starting Times" = "User/Modify_Maintenance_Window_Starting_Times.md" },
+      ] },
+      { "Delete Warehouses" = "User/DeleteWarehouse.md" },
+      { "Warehouse Administration" = [
+        { "Warehouse Administration" = "User/Warehouse_Administration.md" },
+        { "Manage Users" = "User/Manage_Users.md" },
+        { "View Access Policy Management" = "User/View_Access_Policy_Management.md" },
+        { "Manage Groups" = "User/Manage_Groups.md" },
+        { "Manage Listeners" = "User/Manage_Listeners.md" },
+        { "Open a Service Request" = "User/Open_a_Service_Request.md" },
+        { "Contact Support" = "User/Contact_Support.md" },
+      ] },
+      { "Manage Users" = [
+        { "Manage Users" = "User/Manage_Users_2.md" },
+        { "User Profiles" = "User/User_Profiles.md" },
+        { "User Groups" = "User/User_Groups.md" },
+        { "User Roles" = "User/User_Roles.md" },
+        { "Types of Users" = "User/Types_of_Users.md" },
+        { "Set the dbuser Connection Password" = "User/Set_the_dbuser_Connection_Password.md" },
+        { "Add Native Users" = "User/Add_Native_Users.md" },
+        { "Add SSO Users" = "User/Add_SSO_Users.md" },
+        { "Delete Users and Their Schemas" = "User/Delete_Users_and_Their_Schemas.md" },
+        { "Update Users" = "User/Update_Users.md" },
+        { "Display Users from the Warehouse Details or Database Instances Page" = "User/Display_Users_from_the_Warehouse_Details_or_Data.md" },
+        { "Add Platform Users" = "User/Add_Platform_Users.md" },
+        { "API access with Platform User Accounts" = "User/API_access_with_Platform_User_Accounts.md" },
+      ] },
+      { "Monitor Warehouses" = [
+        { "Monitor Warehouses" = "User/Monitor_Warehouses.md" },
+        { "Display the Warehouse Monitoring Console" = "User/Display_the_Warehouse_Monitoring_Console.md" },
+        { "Warehouse Monitoring Services" = [
+          { "Warehouse Monitoring Services" = "User/Warehouse_Monitoring_Services.md" },
+          { "Service Information" = "User/Service_Information.md" },
+          { "Active Queries" = "User/Active_Queries.md" },
+          { "Cluster CPU Load" = "User/Cluster_CPU_Load.md" },
+          { "Connected Sessions" = "User/Connected_Sessions.md" },
+          { "Error Log" = "User/Error_Log.md" },
+          { "Execution Memory" = "User/Execution_Memory.md" },
+          { "Pending Disk Updates" = "User/Pending_Disk_Updates.md" },
+          { "Query Parallelism" = "User/Query_Parallelism.md" },
+          { "System Data Skew" = "User/System_Data_Skew.md" },
+          { "Table Data Skew" = "User/Table_Data_Skew.md" },
+          { "Warehouse Disk Usage" = "User/Warehouse_Disk_Usage.md" },
+        ] },
+        { "Service Statuses" = "User/Service_Statuses.md" },
+        { "Check a Service" = "User/Check_a_Service.md" },
+        { "Graphing Service Information" = [
+          { "Graphing Service Information" = "User/Graphing_Service_Information.md" },
+          { "Graphing Toolbar Icons" = "User/Graphing_Toolbar_Icons.md" },
+          { "Zoom in on Graphing Data" = "User/Zoom_in_on_Graphing_Data.md" },
+          { "Download a Chart as a PNG File" = "User/Download_a_Chart_as_a_PNG_File.md" },
+        ] },
+      ] },
+    ] },
+    { "Sparkforce Platform" = [
+      { "Sparkforce Platform" = "User/Part_SparkforcePlatform.md" },
+      { "Sparkforce Platform" = [
+        { "Sparkforce Platform" = "User/Sparkforce_Platform.md" },
+        { "System Architecture" = [
+          { "System Architecture" = "User/System_Architecture.md" },
+          { "Components" = "User/Components.md" },
+        ] },
+        { "Core Services" = "User/Core_Services.md" },
+        { "Apache Spark and Spark Connect" = "User/Apache_Spark_and_Spark_Connect.md" },
+        { "Configuring Sparkforce" = [
+          { "Configuring Sparkforce" = "User/Configuring_Sparkforce.md" },
+          { "Enabling ML Services" = "User/Enabling_ML_Services.md" },
+          { "Spark Configuration" = "User/Spark_Configuration.md" },
+          { "Connections" = "User/Connections.md" },
+          { "Spark Logs" = "User/Spark_Logs.md" },
+          { "MLflow" = "User/MLflow.md" },
+          { "Code Server" = "User/Code_Server.md" },
+          { "Spark Connect Server UI" = "User/Spark_Connect_Server_UI.md" },
+          { "Spark Provider UI" = "User/Spark_Provider_UI.md" },
+        ] },
+        { "Usage and Billing" = "User/Usage_and_Billing.md" },
+      ] },
+    ] },
+    { "Query Editor" = [
+      { "Query Editor" = "User/Part_QueryEditor.md" },
+      { "Overview of the Query Editor" = [
+        { "Overview of the Query Editor" = "User/Overview_of_the_Query_Editor.md" },
+        { "Query Editor Diagram" = "User/Query_Editor_Diagram.md" },
+        { "Single Sign-on Users, Native Users, and Platform Users" = "User/Single_Sign-on_Users__Native_Users__and_Platform.md" },
+        { "How Authentication Works" = "User/How_Authentication_Works.md" },
+      ] },
+      { "Using the Query Editor" = [
+        { "Using the Query Editor" = "User/Using_the_Query_Editor.md" },
+        { "Launch Query Editor" = "User/Launch_Query_Editor.md" },
+        { "Examine the Database Schema" = "User/Examine_the_Database_Schema.md" },
+        { "Create and Save a New Query" = "User/Create_and_Save_a_New_Query.md" },
+        { "Save an Existing Query as a New Query" = "User/Save_an_Existing_Query_as_a_New_Query.md" },
+        { "Import Queries" = "User/Import_Queries.md" },
+        { "Edit Queries" = "User/Edit_Queries.md" },
+        { "Open a Saved Query" = "User/Open_a_Saved_Query.md" },
+        { "Run Sample Queries" = "User/Run_Sample_Queries.md" },
+        { "Run Your Own Queries" = "User/Run_Your_Own_Queries.md" },
+        { "Tag a Query" = "User/Tag_a_Query.md" },
+        { "Display Query History" = [
+          { "Display Query History" = "User/Display_Query_History.md" },
+          { "AWS AV-1 and Azure Query History" = "User/AWS_AV-1_and_Azure_Query_History.md" },
+          { "Google Cloud and AWS AV-2 Query History" = "User/Google_Cloud_and_AWS_AV-2_Query_History.md" },
+        ] },
+        { "Make a Query Shared or Private" = "User/Make_a_Query_Shared_or_Private.md" },
+        { "Clone a Query" = "User/Clone_a_Query.md" },
+        { "Format Query Text Automatically" = "User/Format_Query_Text_Automatically.md" },
+        { "List and Sort Queries" = "User/List_and_Sort_Queries.md" },
+        { "Export an Open Query" = "User/Export_an_Open_Query.md" },
+        { "Export All Queries from Saved Queries or Query History" = "User/Export_All_Queries_from_Saved_Queries_or_Query_H.md" },
+        { "Export Query Results to a File" = "User/Export_Query_Results_to_a_File.md" },
+        { "Display Query Results as a Formatted Table" = "User/Display_Query_Results_as_a_Formatted_Table.md" },
+        { "Display Query Results as Chart Visualizations" = [
+          { "Display Query Results as Chart Visualizations" = "User/Display_Query_Results_as_Chart_Visualizations.md" },
+          { "Display a Line Chart" = "User/Display_a_Line_Chart.md" },
+          { "Display a Horizontal Bar Chart" = "User/Display_a_Horizontal_Bar_Chart.md" },
+          { "Display a Vertical Bar Chart" = "User/Display_a_Vertical_Bar_Chart.md" },
+          { "Display a Scatterplot Chart" = "User/Display_a_Scatterplot_Chart.md" },
+          { "Display a Pie Chart" = "User/Display_a_Pie_Chart.md" },
+          { "Display a Vertical Stacked Bar Chart" = "User/Display_a_Vertical_Stacked_Bar_Chart.md" },
+          { "Display a Horizontal Stacked Bar Chart" = "User/Display_a_Horizontal_Stacked_Bar_Chart.md" },
+          { "Open a Chart in a New Window" = "User/Open_a_Chart_in_a_New_Window.md" },
+          { "Save a Chart Image as a PNG File" = "User/Save_a_Chart_Image_as_a_PNG_File.md" },
+        ] },
+        { "Working with Monitoring (imadb) Tables" = "User/Working_with_Monitoring_(imadb)_Tables.md" },
+        { "Troubleshooting the Query Editor" = "User/Troubleshooting_the_Query_Editor.md" },
+        { "Command Palette Reference" = "User/Command_Palette_Reference.md" },
+      ] },
+    ] },
+    { "Troubleshooting" = [
+      { "Troubleshooting" = "User/Part_Troubleshooting.md" },
+      { "SSO Authentication Troubleshooting" = "User/SSO_Authentication_Troubleshooting.md" },
+      { "Network Data Encryption Troubleshooting" = "User/Network_Data_Encryption_Troubleshooting.md" },
+      { "Errors Creating Tables" = "User/Errors_Creating_Tables.md" },
+      { "Common Data Loading Error Messages" = "User/Common_Data_Loading_Error_Messages.md" },
+      { "Network Disconnects Due to Perceived Inactivity" = "User/Network_Disconnects_Due_to_Perceived_Inactivity.md" },
+      { "Loading Fails When Using External Tables (Spark)" = "User/Loading_Fails_When_Using_External_Tables_(Spark).md" },
+      { "Query Editor Troubleshooting" = "User/Query_Editor_Troubleshooting.md" },
+    ] },
+    { "Appendixes" = [
+      { "Appendixes" = "User/Part_Appendixes.md" },
+      { "Mapping Blob URI Syntax to ABFS Syntax" = "User/AzureURItoABFSSyntax.md" },
+      { "Connect to DBeaver with JDBC" = [
+        { "Connect to DBeaver with JDBC" = "User/Connect_to_DBeaver_with_JDBC.md" },
+        { "Install DBeaver and Set Up an Actian Driver" = "User/Install_DBeaver_and_Set_Up_an_Actian_Driver.md" },
+        { "Set a Connection Password" = "User/Set_a_Connection_Password.md" },
+        { "Get Connection Properties for DBeaver" = "User/Get_Connection_Properties_for_DBeaver.md" },
+        { "Select the Actian Database Driver and Connect to a Warehouse" = "User/Select_the_Actian_Database_Driver_and_Connect_to.md" },
+        { "Run a Query" = "User/Run_a_Query.md" },
+      ] },
+      { "Connect to Looker with JDBC" = "User/ConnectLookerJDBC.md" },
+      { "Connect to Power BI with ODBC" = "User/ConnectPowerBIODBC.md" },
+      { "Connect to Tableau with ODBC" = "User/ConnectTableauODBC.md" },
+      { "Run Sample Queries" = "User/RunSampleQueries.md" },
+    ] },
+  ] },
+  { "Data Loading Guide" = [
+    { "Data Loading Overview" = [
+      { "Data Loading Overview" = "DataLoading/DataLoadingOverview.md" },
+      { "Data Loading Roadmap: Choosing a Data Loading Method" = "DataLoading/Data_Loading_Roadmap_3a_Choosing_a_Data_Loading_Me.md" },
+      { "Migrating Your Data to Actian Data Platform" = "DataLoading/Migrating_Your_Data_to_Actian_Data_Platform.md" },
+      { "Overview of SQL-Based Data Loading" = "DataLoading/OverviewSQLDataLoading.md" },
+    ] },
+    { "Loading Delimited Text Data" = [
+      { "Loading Delimited Text Data" = "DataLoading/Part_LoadingDelimitedText.md" },
+      { "Data Load" = [
+        { "Data Load" = "DataLoading/Data_Load.md" },
+        { "Use Data Load to Load Delimited Text Files" = "DataLoading/Use_Data_Load_to_Load_Delimited_Text_Files.md" },
+      ] },
+      { "Loading Delimited Text Data from Cloud Data Storage" = [
+        { "Loading Delimited Text Data from Cloud Data Storage" = "DataLoading/Loading_Delimited_Text_Data_from_Cloud_Data_Stor.md" },
+        { "Delimiter Text File Switches" = "DataLoading/Delimiter_Text_File_Switches.md" },
+      ] },
+      { "Batch Data Loading" = "DataLoading/BatchDataLoad.md" },
+    ] },
+    { "Loading Parquet Data" = [
+      { "Loading Parquet Data" = "DataLoading/Part_LoadingParquetData.md" },
+      { "Loading Parquet Data from Cloud Data Storage" = "DataLoading/LoadingParquet.md" },
+    ] },
+    { "Loading JSON Data" = [
+      { "Loading JSON Data" = "DataLoading/Part_LoadingJSONData.md" },
+      { "Loading JSON Data from Cloud Data Storage" = "DataLoading/LoadingJSONData.md" },
+    ] },
+    { "Appendixes" = [
+      { "Appendixes" = "DataLoading/Part_Appendixes.md" },
+      { "Managing Integration Users, Groups, and Listeners" = [
+        { "Managing Integration Users, Groups, and Listeners" = "DataLoading/Managing_Integration_Users__Groups__and_Listener.md" },
+        { "Manage Integration Users" = "DataLoading/Manage_Integration_Users.md" },
+        { "Manage Integration Groups" = "DataLoading/Manage_Integration_Groups.md" },
+        { "Manage Integration Listeners" = "DataLoading/Manage_Integration_Listeners.md" },
+      ] },
+      { "Updating Data" = "DataLoading/UpdateData.md" },
+      { "Exporting and Importing Data" = "DataLoading/ExportingImportingData.md" },
+      { "Managing Tables and Views" = "DataLoading/TablesViews.md" },
+      { "Using External Tables" = [
+        { "Using External Tables" = "DataLoading/Using_External_Tables.md" },
+        { "Examples of Defining External Tables and Loading Data" = [
+          { "Examples of Defining External Tables and Loading Data" = "DataLoading/Examples_of_Defining_External_Tables_and_Loading.md" },
+          { "CSV Files" = "DataLoading/CSV_Files.md" },
+          { "JSON Files" = "DataLoading/JSON_Files.md" },
+          { "JDBC Data Source" = "DataLoading/JDBC_Data_Source.md" },
+          { "ORC Files" = "DataLoading/ORC_Files.md" },
+          { "PARQUET Files" = "DataLoading/PARQUET_Files.md" },
+          { "AVRO Files" = "DataLoading/AVRO_Files.md" },
+        ] },
+      ] },
+      { "Actian Data Platform to Spark Data Type Mapping" = "DataLoading/AvalancheSparkMapping.md" },
+    ] },
+  ] },
+  { "Connectivity Guide" = [
+    { "Introducing Actian Data Platform Connectivity" = [
+      { "Introducing Actian Data Platform Connectivity" = "Connectivity/Introducing_Actian_Data_Platform_Connectivity.md" },
+      { "Actian Data Platform Warehouse" = "Connectivity/Actian_Data_Platform_Warehouse.md" },
+      { "User Management" = "Connectivity/User_Management.md" },
+      { "What is a Vnode (Virtual Node)?" = "Connectivity/What_is_a_Vnode_(Virtual_Node)_3f.md" },
+      { "Remote User Authorizations" = "Connectivity/Remote_User_Authorizations.md" },
+      { "Global and Private Definitions" = "Connectivity/Global_and_Private_Definitions.md" },
+    ] },
+    { "Using Net" = [
+      { "Using Net" = "Connectivity/Using_Net.md" },
+      { "User Identity on Remote Instance" = "Connectivity/User_Identity_on_Remote_Instance.md" },
+    ] },
+    { "Troubleshooting Connectivity" = [
+      { "Troubleshooting Connectivity" = "Connectivity/Troubleshooting_Connectivity.md" },
+      { "Where Ingres Net Information Is Stored" = "Connectivity/Where_Ingres_Net_Information_Is_Stored.md" },
+      { "Causes of Connectivity Problems" = "Connectivity/Causes_of_Connectivity_Problems.md" },
+      { "How You Diagnose Connectivity Problems" = "Connectivity/How_You_Diagnose_Connectivity_Problems.md" },
+      { "Errors When Using SSO with JDBC" = "Connectivity/Errors_When_Using_SSO_with_JDBC.md" },
+    ] },
+    { "Creating Server Connection Definitions (Vnodes)" = [
+      { "Creating Server Connection Definitions (Vnodes)" = "Connectivity/Creating_Server_Connection_Definitions_(Vnodes).md" },
+      { "Tools for Defining Vnodes" = "Connectivity/Tools_for_Defining_Vnodes.md" },
+      { "Naming Rules for Vnodes" = "Connectivity/Naming_Rules_for_Vnodes.md" },
+      { "Connection Data" = "Connectivity/Connection_Data.md" },
+      { "Simple and Advanced Vnodes" = "Connectivity/Simple_and_Advanced_Vnodes.md" },
+      { "Advanced Vnode Parameters" = "Connectivity/Advanced_Vnode_Parameters.md" },
+    ] },
+    { "Maintaining Connectivity" = [
+      { "Maintaining Connectivity" = "Connectivity/Maintaining_Connectivity.md" },
+      { "Default Remote Nodes" = "Connectivity/Default_Remote_Nodes.md" },
+    ] },
+    { "Understanding ODBC Connectivity" = [
+      { "Understanding ODBC Connectivity" = "Connectivity/Understanding_ODBC_Connectivity.md" },
+      { "ODBC Call-level Interface" = "Connectivity/ODBC_Call-level_Interface.md" },
+      { "Unsupported ODBC Features" = "Connectivity/Unsupported_ODBC_Features.md" },
+      { "Read-only Driver Option" = "Connectivity/Read-only_Driver_Option.md" },
+      { "ODBC Driver Requirements" = [
+        { "ODBC Driver Requirements" = "Connectivity/ODBC_Driver_Requirements.md" },
+        { "ODBC Driver Manager Programs" = "Connectivity/ODBC_Driver_Manager_Programs.md" },
+        { "II_ODBC_WCHAR_SIZE for Unicode Compatibility with unixODBC or DataDirect" = "Connectivity/II_ODBC_WCHAR_SIZE_for_Unicode_Compatibility_wit.md" },
+      ] },
+      { "Access to a Remote Instance" = "Connectivity/Access_to_a_Remote_Instance.md" },
+      { "Configure a Data Source (Windows)" = "Connectivity/Configure_a_Data_Source_(Windows).md" },
+      { "Configure a Data Source (Linux)" = "Connectivity/Configure_a_Data_Source_(Linux).md" },
+      { "Connection String Keywords" = "Connectivity/Connection_String_Keywords.md" },
+      { "ODBC CLI Implementation Considerations" = "Connectivity/ODBC_CLI_Implementation_Considerations.md" },
+      { "Supported Applications" = "Connectivity/Supported_Applications.md" },
+      { "ODBC Programming" = "Connectivity/ODBC_Programming.md" },
+      { "Ingres ODBC and Distributed Transactions (Windows)" = "Connectivity/Ingres_ODBC_and_Distributed_Transactions_(Window.md" },
+      { "ODBC Trace Diagnostics" = "Connectivity/ODBC_Trace_Diagnostics.md" },
+      { "Connecting from Python" = "Connectivity/Connecting_from_Python.md" },
+    ] },
+    { "Understanding JDBC Connectivity" = [
+      { "Understanding JDBC Connectivity" = "Connectivity/Understanding_JDBC_Connectivity.md" },
+      { "Unsupported JDBC Features" = "Connectivity/Unsupported_JDBC_Features.md" },
+      { "JDBC Driver Interface" = "Connectivity/JDBC_Driver_Interface.md" },
+      { "JDBC Implementation Considerations" = "Connectivity/JDBC_Implementation_Considerations.md" },
+      { "Data Type Compatibility" = "Connectivity/Data_Type_Compatibility.md" },
+      { "JDBC Tracing" = "Connectivity/JDBC_Tracing.md" },
+    ] },
+    { "Understanding .NET Data Provider Connectivity" = [
+      { "Understanding .NET Data Provider Connectivity" = "Connectivity/Understanding_.NET_Data_Provider_Connectivity.md" },
+      { ".NET Data Provider Architecture" = "Connectivity/NET_Data_Provider_Architecture.md" },
+      { "Code Access Security" = "Connectivity/Code_Access_Security.md" },
+      { ".NET Data Provider Classes" = "Connectivity/NET_Data_Provider_Classes.md" },
+      { "Data Types Mapping" = "Connectivity/Data_Types_Mapping.md" },
+      { "IngresDataReader Object--Retrieve Data from the Database" = "Connectivity/IngresDataReader_Object--Retrieve_Data_from_the.md" },
+      { "ExecuteNonQuery Method--Modify and Update Database" = "Connectivity/ExecuteNonQuery_Method--Modify_and_Update_Databa.md" },
+      { "How Database Procedures Are Called" = "Connectivity/How_Database_Procedures_Are_Called.md" },
+      { "Integration with Visual Studio" = "Connectivity/Integration_with_Visual_Studio.md" },
+      { "Application Configuration File--Troubleshoot Applications" = "Connectivity/Application_Configuration_File--Troubleshoot_App.md" },
+      { "Obtain File Version of the Data Provider" = "Connectivity/Obtain_File_Version_of_the_Data_Provider.md" },
+    ] },
+    { "Using Utilities" = [
+      { "Using Utilities" = "Connectivity/Using_Utilities.md" },
+      { "Netutil Startup Screen" = "Connectivity/Netutil_Startup_Screen.md" },
+      { "Virtual Node Name Table in Netutil" = "Connectivity/Virtual_Node_Name_Table_in_Netutil.md" },
+      { "Login and Password Data Table in Netutil" = "Connectivity/Login_and_Password_Data_Table_in_Netutil.md" },
+      { "Connection Data Table in Netutil" = "Connectivity/Connection_Data_Table_in_Netutil.md" },
+      { "Other Attribute Data Table in Netutil" = "Connectivity/Other_Attribute_Data_Table_in_Netutil.md" },
+      { "Netutil Operations" = "Connectivity/Netutil_Operations.md" },
+      { "Prerequisites to Establish and Test a Remote Connection" = "Connectivity/Prerequisites_to_Establish_and_Test_a_Remote_Con.md" },
+      { "Establish and Test a Remote Connection Using Netutil" = "Connectivity/Establish_and_Test_a_Remote_Connection_Using_Net.md" },
+      { "Delete an Entry" = "Connectivity/Delete_an_Entry.md" },
+      { "Change an Entry" = "Connectivity/Change_an_Entry.md" },
+      { "Define an Installation Password for the Local Instance" = "Connectivity/Define_an_Installation_Password_for_the_Local_In.md" },
+      { "Netutil Non-Interactive Mode" = [
+        { "Netutil Non-Interactive Mode" = "Connectivity/Netutil_Non-Interactive_Mode.md" },
+        { "Command Line Flags in Netutil Non-interactive Mode" = "Connectivity/Command_Line_Flags_in_Netutil_Non-interactive_Mo.md" },
+        { "Create Function--Create a Remote User Authorization" = "Connectivity/Create_Function--Create_a_Remote_User_Authorizat.md" },
+        { "Destroy Function--Destroy a Remote User Authorization" = "Connectivity/Destroy_Function--Destroy_a_Remote_User_Authoriz.md" },
+        { "Show Function--Display Remote User Authorizations" = "Connectivity/Show_Function--Display_Remote_User_Authorization.md" },
+        { "Create Function--Define an Installation Password for the Local Instance" = "Connectivity/Create_Function--Define_an_Installation_Password.md" },
+        { "Create Function--Create a Connection Data Entry" = "Connectivity/Create_Function--Create_a_Connection_Data_Entry.md" },
+        { "Destroy Function--Destroy a Connection Data Entry" = "Connectivity/Destroy_Function--Destroy_a_Connection_Data_Entr.md" },
+        { "Show Function--Display Connection Data Entries" = "Connectivity/Show_Function--Display_Connection_Data_Entries.md" },
+        { "Stop and Quiesce Commands--Stop or Quiesce One or More Communications Servers" = "Connectivity/Stop_and_Quiesce_Commands--Stop_or_Quiesce_One_o.md" },
+      ] },
+      { "Network Utility (ingnet)" = [
+        { "Network Utility (ingnet)" = "Connectivity/Network_Utility_(ingnet).md" },
+        { "Virtual Nodes Toolbar" = "Connectivity/Virtual_Nodes_Toolbar.md" },
+        { "Simple and Advanced Vnodes" = "Connectivity/Simple_and_Advanced_Vnodes_2.md" },
+        { "Advanced Vnode Parameters" = "Connectivity/Advanced_Vnode_Parameters_2.md" },
+        { "Installation Password Definitions for the Local Instance" = "Connectivity/Installation_Password_Definitions_for_the_Local.md" },
+        { "Changing Installation Passwords" = "Connectivity/Changing_Installation_Passwords.md" },
+        { "Additional Vnode-related Tasks" = "Connectivity/Additional_Vnode-related_Tasks.md" },
+        { "Server-related Tasks" = "Connectivity/Server-related_Tasks.md" },
+      ] },
+    ] },
+  ] },
+  { "Security Guide" = [
+    { "Introduction to Actian Data Platform Security" = [
+      { "Introduction to Actian Data Platform Security" = "Security/Introduction_to_Actian_Data_Platform_Security.md" },
+      { "The Actian Data Platform Virtual Private Cloud (VPC) Architecture" = "Security/The_Actian_Data_Platform_Virtual_Private_Cloud_(.md" },
+      { "Storage and Encryption" = "Security/Storage_and_Encryption.md" },
+      { "Data Access and Authentication" = "Security/Data_Access_and_Authentication.md" },
+      { "Maintenance and Compliance" = "Security/Maintenance_and_Compliance.md" },
+      { "Data Lifecycle" = "Security/Data_Lifecycle.md" },
+      { "SOC2 Security Attestation Available" = "Security/SOC2_Security_Attestation_Available.md" },
+      { "Actian Data Platform Identity and Access Management" = "Security/Actian_Data_Platform_Identity_and_Access_Managem.md" },
+      { "Actian Data Platform Security Features" = "Security/Actian_Data_Platform_Security_Features.md" },
+      { "Warehouse Authorization Identifiers" = "Security/Warehouse_Authorization_Identifiers.md" },
+      { "Subject Privileges" = "Security/Subject_Privileges.md" },
+      { "Object Permissions" = "Security/Object_Permissions.md" },
+      { "Data at Rest Encryption" = "Security/Data_at_Rest_Encryption.md" },
+      { "Data Storage and Retention" = "Security/Data_Storage_and_Retention.md" },
+      { "Backup and Recovery Policy" = "Security/Backup_and_Recovery_Policy.md" },
+      { "Visit the Actian Security Center" = "Security/Visit_the_Actian_Security_Center.md" },
+      { "SQL Statements Referenced in This Guide" = "Security/SQL_Statements_Referenced_in_This_Guide.md" },
+    ] },
+    { "Authorizing User Access for a Warehouse" = [
+      { "Authorizing User Access for a Warehouse" = "Security/Authorizing_User_Access_for_a_Warehouse.md" },
+      { "Groups and Roles" = "Security/Groups_and_Roles.md" },
+    ] },
+    { "Assigning Privileges and Granting Permissions" = [
+      { "Assigning Privileges and Granting Permissions" = "Security/Assigning_Privileges_and_Granting_Permissions.md" },
+      { "Object Permissions (Grants)" = "Security/Object_Permissions_(Grants).md" },
+      { "Grant Overhead" = "Security/Grant_Overhead.md" },
+    ] },
+    { "Controlling Access through Database Procedures" = [
+      { "Controlling Access through Database Procedures" = "Security/Controlling_Access_through_Database_Procedures.md" },
+      { "Working with Procedure Objects" = "Security/Working_with_Procedure_Objects.md" },
+      { "How to Implement a Database Procedure" = "Security/How_to_Implement_a_Database_Procedure.md" },
+      { "Access Control through Database Procedures" = "Security/Access_Control_through_Database_Procedures.md" },
+    ] },
+    { "Using Column Masking" = [
+      { "Using Column Masking" = "Security/Using_Column_Masking.md" },
+      { "Column Masking Example" = "Security/Column_Masking_Example.md" },
+    ] },
+    { "Glossary" = "Security/Security_Glossary.md" },
+  ] },
+  { "SQL Language Guide" = [
+    { "Introducing SQL" = [
+      { "Introducing SQL" = "SQLLanguage/Introducing_SQL.md" },
+      { "Interactive SQL" = "SQLLanguage/Interactive_SQL.md" },
+      { "Object Naming Rules" = "SQLLanguage/Object_Naming_Rules.md" },
+      { "Regular and Delimited Identifiers" = "SQLLanguage/Regular_and_Delimited_Identifiers.md" },
+      { "Statement Terminators" = "SQLLanguage/Statement_Terminators.md" },
+      { "SQL Syntax Conventions" = "SQLLanguage/SQL_Syntax_Conventions.md" },
+      { "Correlation Names" = "SQLLanguage/Correlation_Names.md" },
+    ] },
+    { "SQL Data Types" = [
+      { "SQL Data Types" = "SQLLanguage/SQL_Data_Types.md" },
+      { "Literals" = "SQLLanguage/Literals.md" },
+      { "Constants" = "SQLLanguage/Constants.md" },
+      { "Nulls" = "SQLLanguage/Nulls.md" },
+    ] },
+    { "Elements of SQL Statements" = [
+      { "Elements of SQL Statements" = "SQLLanguage/Elements_of_SQL_Statements.md" },
+      { "SQL Operations" = "SQLLanguage/SQL_Operations.md" },
+      { "SQL Functions" = [
+        { "SQL Functions" = "SQLLanguage/SQL_Functions.md" },
+        { "Encryption Functions" = "SQLLanguage/Encryption_Functions.md" },
+        { "MASK_COLUMN Function" = "SQLLanguage/MASK_COLUMN_Function.md" },
+      ] },
+      { "Scalar User-defined Functions (UDFs)" = [
+        { "Scalar User-defined Functions (UDFs)" = "SQLLanguage/Scalar_User-defined_Functions_(UDFs).md" },
+        { "How to Set up User-defined Functions" = "SQLLanguage/How_to_Set_up_User-defined_Functions.md" },
+      ] },
+      { "Expressions in SQL" = "SQLLanguage/Expressions_in_SQL.md" },
+      { "Predicates in SQL" = "SQLLanguage/Predicates_in_SQL.md" },
+      { "Search Conditions in SQL Statements" = "SQLLanguage/Search_Conditions_in_SQL_Statements.md" },
+      { "Subqueries" = "SQLLanguage/Subqueries.md" },
+      { "Common Table Expressions (CTEs)" = "SQLLanguage/Common_Table_Expressions_(CTEs).md" },
+      { "Pivot Tables" = "SQLLanguage/Pivot_Tables.md" },
+    ] },
+    { "Embedded SQL" = [
+      { "Embedded SQL" = "SQLLanguage/Embedded_SQL.md" },
+      { "How Embedded SQL Statements Are Processed" = "SQLLanguage/How_Embedded_SQL_Statements_Are_Processed.md" },
+      { "General Syntax and Rules of an Embedded SQL Statement" = [
+        { "General Syntax and Rules of an Embedded SQL Statement" = "SQLLanguage/General_Syntax_and_Rules_of_an_Embedded_SQL_Stat.md" },
+        { "Syntax Conventions Used in this Chapter" = "SQLLanguage/Syntax_Conventions_Used_in_this_Chapter.md" },
+      ] },
+      { "Structure of an Embedded SQL Program" = "SQLLanguage/Structure_of_an_Embedded_SQL_Program.md" },
+      { "Host Language Variables in Embedded SQL" = [
+        { "Host Language Variables in Embedded SQL" = "SQLLanguage/Host_Language_Variables_in_Embedded_SQL.md" },
+        { "Variable Declaration" = "SQLLanguage/Variable_Declaration.md" },
+        { "INCLUDE Statement" = "SQLLanguage/INCLUDE_Statement.md" },
+        { "Variable Usage" = "SQLLanguage/Variable_Usage.md" },
+        { "Variable Structures" = "SQLLanguage/Variable_Structures.md" },
+        { "Dclgen Utility--Generate Structure" = "SQLLanguage/Dclgen_Utility--Generate_Structure.md" },
+        { "Indicator Variables" = "SQLLanguage/Indicator_Variables.md" },
+        { "Null Indicator Arrays and Host Structures" = "SQLLanguage/Null_Indicator_Arrays_and_Host_Structures.md" },
+      ] },
+      { "Data Manipulation with Cursors" = [
+        { "Data Manipulation with Cursors" = "SQLLanguage/Data_Manipulation_with_Cursors.md" },
+        { "Example: Cursor Processing" = "SQLLanguage/Example_3a_Cursor_Processing.md" },
+        { "Cursor Declaration" = "SQLLanguage/Cursor_Declaration.md" },
+        { "Open a Cursor" = "SQLLanguage/Open_a_Cursor.md" },
+        { "Readonly Cursors" = "SQLLanguage/Readonly_Cursors.md" },
+        { "Open Cursors and Transaction Processing" = "SQLLanguage/Open_Cursors_and_Transaction_Processing.md" },
+        { "Fetch Data From Cursor" = "SQLLanguage/Fetch_Data_From_Cursor.md" },
+        { "Fetch Rows Inserted by Other Queries" = "SQLLanguage/Fetch_Rows_Inserted_by_Other_Queries.md" },
+        { "Closing Cursors" = "SQLLanguage/Closing_Cursors.md" },
+        { "Summary of Cursor Positioning" = "SQLLanguage/Summary_of_Cursor_Positioning.md" },
+        { "Cursors Versus Select Loops" = "SQLLanguage/Cursors_Versus_Select_Loops.md" },
+      ] },
+      { "Dynamic Programming" = [
+        { "Dynamic Programming" = "SQLLanguage/Dynamic_Programming.md" },
+        { "SQLDA" = "SQLLanguage/SQLDA.md" },
+        { "USING Clause" = "SQLLanguage/USING_Clause.md" },
+        { "Dynamic SQL Statements" = "SQLLanguage/Dynamic_SQL_Statements.md" },
+        { "Execute a Dynamic Non-select Statement" = "SQLLanguage/Execute_a_Dynamic_Non-select_Statement.md" },
+        { "Execute a Dynamic SELECT Statement" = "SQLLanguage/Execute_a_Dynamic_SELECT_Statement.md" },
+        { "SELECT Statement with EXECUTE IMMEDIATE" = "SQLLanguage/SELECT_Statement_with_EXECUTE_IMMEDIATE.md" },
+        { "Retrieve Results Using Cursors" = "SQLLanguage/Retrieve_Results_Using_Cursors.md" },
+      ] },
+    ] },
+    { "Working with Transactions and Handling Errors" = [
+      { "Working with Transactions and Handling Errors" = "SQLLanguage/Working_with_Transactions_and_Handling_Errors.md" },
+      { "How Transactions Work" = "SQLLanguage/How_Transactions_Work.md" },
+      { "How Consistency is Maintained During Transactions" = "SQLLanguage/How_Consistency_is_Maintained_During_Transaction.md" },
+      { "SET AUTOCOMMIT ON--Commit Individual Statement" = "SQLLanguage/SET_AUTOCOMMIT_ON--Commit_Individual_Statement.md" },
+      { "Statements Used to Control Transactions" = "SQLLanguage/Statements_Used_to_Control_Transactions.md" },
+      { "How Effects of a Transaction Are Controlled" = "SQLLanguage/How_Effects_of_a_Transaction_Are_Controlled.md" },
+      { "How the Transaction Processing System Handles Interrupts" = "SQLLanguage/How_the_Transaction_Processing_System_Handles_In.md" },
+      { "Abort Policy for Transactions and Statements" = "SQLLanguage/Abort_Policy_for_Transactions_and_Statements.md" },
+      { "Ways to Obtain Status Information" = [
+        { "Ways to Obtain Status Information" = "SQLLanguage/Ways_to_Obtain_Status_Information.md" },
+        { "SESSION_PRIV Function--Determine If Session Has a Privilege" = "SQLLanguage/SESSION_PRIV_Function--Determine_If_Session_Has.md" },
+        { "DBMSINFO Function--Return Information About the Current Session" = "SQLLanguage/DBMSINFO_Function--Return_Information_About_the.md" },
+        { "INQUIRE_SQL Function" = "SQLLanguage/INQUIRE_SQL_Function.md" },
+        { "SQL Communications Area (SQLCA)" = "SQLLanguage/SQL_Communications_Area_(SQLCA).md" },
+        { "SQLCODE and SQLSTATE" = "SQLLanguage/SQLCODE_and_SQLSTATE.md" },
+      ] },
+      { "Error Handling" = [
+        { "Error Handling" = "SQLLanguage/Error_Handling.md" },
+        { "Types of Error Codes" = "SQLLanguage/Types_of_Error_Codes.md" },
+        { "Error Message Format" = "SQLLanguage/Error_Message_Format.md" },
+        { "Display of Error Messages" = "SQLLanguage/Display_of_Error_Messages.md" },
+        { "Error Handling in Embedded Applications" = "SQLLanguage/Error_Handling_in_Embedded_Applications.md" },
+        { "Set_Sql(Programquit)--Specify Whether to Abort on Error" = "SQLLanguage/Set_Sql(Programquit)--Specify_Whether_to_Abort_o.md" },
+      ] },
+    ] },
+    { "Database Procedures, Sessions, and Events" = [
+      { "Database Procedures, Sessions, and Events" = "SQLLanguage/Database_Procedures__Sessions__and_Events.md" },
+      { "Benefits of Database Procedures" = "SQLLanguage/Benefits_of_Database_Procedures.md" },
+      { "Contents of Database Procedures" = "SQLLanguage/Contents_of_Database_Procedures.md" },
+      { "Permissions on Database Procedures" = "SQLLanguage/Permissions_on_Database_Procedures.md" },
+      { "Methods of Executing Procedures" = "SQLLanguage/Methods_of_Executing_Procedures.md" },
+      { "How Parameters Are Passed in Database Procedures" = "SQLLanguage/How_Parameters_Are_Passed_in_Database_Procedures.md" },
+      { "Row-Producing Procedures" = "SQLLanguage/Row-Producing_Procedures.md" },
+      { "Effects of Errors in Database Procedures" = "SQLLanguage/Effects_of_Errors_in_Database_Procedures.md" },
+      { "Messages from Database Procedures" = "SQLLanguage/Messages_from_Database_Procedures.md" },
+      { "Multiple Session Connections" = [
+        { "Multiple Session Connections" = "SQLLanguage/Multiple_Session_Connections.md" },
+        { "Multiple Sessions" = "SQLLanguage/Multiple_Sessions.md" },
+        { "Session Identification" = "SQLLanguage/Session_Identification.md" },
+        { "Session Switching" = "SQLLanguage/Session_Switching.md" },
+        { "Disconnection of Sessions" = "SQLLanguage/Disconnection_of_Sessions.md" },
+        { "Status Information in Multiple Sessions" = "SQLLanguage/Status_Information_in_Multiple_Sessions.md" },
+        { "What You Should Know When Creating Multiple Sessions" = "SQLLanguage/What_You_Should_Know_When_Creating_Multiple_Sess.md" },
+        { "Example: Two Open Sessions" = "SQLLanguage/Example_3a_Two_Open_Sessions.md" },
+        { "Examples: Session Switching" = "SQLLanguage/Examples_3a_Session_Switching.md" },
+      ] },
+      { "Database Events" = [
+        { "Database Events" = "SQLLanguage/Database_Events.md" },
+        { "Database Event Statements" = "SQLLanguage/Database_Event_Statements.md" },
+      ] },
+    ] },
+    { "Working with JSON Data" = [
+      { "Working with JSON Data" = "SQLLanguage/Working_with_JSON_Data.md" },
+      { "Data Types" = [
+        { "Data Types" = "SQLLanguage/Data_Types.md" },
+        { "JSON Scalars" = "SQLLanguage/JSON_Scalars.md" },
+        { "JSON Arrays" = "SQLLanguage/JSON_Arrays.md" },
+        { "JSON Objects" = "SQLLanguage/JSON_Objects.md" },
+      ] },
+      { "JSON Concepts" = [
+        { "JSON Concepts" = "SQLLanguage/JSON_Concepts.md" },
+        { "Lax and Strict Modes" = "SQLLanguage/Lax_and_Strict_Modes.md" },
+        { "JSON Sequences" = "SQLLanguage/JSON_Sequences.md" },
+        { "JSON Member Accessors" = "SQLLanguage/JSON_Member_Accessors.md" },
+        { "JSON API Common Syntax" = "SQLLanguage/JSON_API_Common_Syntax.md" },
+        { "JSON Predicates" = "SQLLanguage/JSON_Predicates.md" },
+      ] },
+      { "JSON Constructors" = [
+        { "JSON Constructors" = "SQLLanguage/JSON_Constructors.md" },
+        { "JSON_OBJECT" = "SQLLanguage/JSON_OBJECT.md" },
+        { "JSON_OBJECTAGG" = "SQLLanguage/JSON_OBJECTAGG.md" },
+        { "JSON_ARRAY" = "SQLLanguage/JSON_ARRAY.md" },
+        { "JSON_ARRAYAGG" = "SQLLanguage/JSON_ARRAYAGG.md" },
+        { "How JSON Dates Are Handled" = "SQLLanguage/How_JSON_Dates_Are_Handled.md" },
+      ] },
+      { "JSON Query Functions" = "SQLLanguage/JSON_Query_Functions.md" },
+      { "Use of Operators with JSON Data" = [
+        { "Use of Operators with JSON Data" = "SQLLanguage/Use_of_Operators_with_JSON_Data.md" },
+        { "Arithmetic Expressions" = "SQLLanguage/Arithmetic_Expressions.md" },
+        { "Booleans and Boolean Operators" = "SQLLanguage/Booleans_and_Boolean_Operators.md" },
+        { "Comparison Operators" = "SQLLanguage/Comparison_Operators.md" },
+      ] },
+      { "JSON Item Methods" = "SQLLanguage/JSON_Item_Methods.md" },
+    ] },
+    { "SQL Statements" = [
+      { "SQL Statements" = "SQLLanguage/SQL_Statements.md" },
+      { "Statement Contexts (Valid in)" = "SQLLanguage/Statement_Contexts_(Valid_in).md" },
+      { "ALTER GROUP" = "SQLLanguage/ALTER_GROUP.md" },
+      { "ALTER PROFILE" = "SQLLanguage/ALTER_PROFILE.md" },
+      { "ALTER ROLE" = "SQLLanguage/ALTER_ROLE.md" },
+      { "ALTER SEQUENCE" = [
+        { "ALTER SEQUENCE" = "SQLLanguage/ALTER_SEQUENCE.md" },
+        { "ALTER SEQUENCE Examples" = "SQLLanguage/ALTER_SEQUENCE_Examples.md" },
+      ] },
+      { "ALTER TABLE" = [
+        { "ALTER TABLE" = "SQLLanguage/ALTER_TABLE.md" },
+        { "ALTER TABLE...ALTER COLUMN Restrictions" = "SQLLanguage/ALTER_TABLE...ALTER_COLUMN_Restrictions.md" },
+      ] },
+      { "ALTER USER" = "SQLLanguage/ALTER_USER.md" },
+      { "CLOSE" = [
+        { "CLOSE" = "SQLLanguage/CLOSE.md" },
+        { "CLOSE Example" = "SQLLanguage/CLOSE_Example.md" },
+      ] },
+      { "COMMENT ON" = "SQLLanguage/COMMENT_ON.md" },
+      { "COMMIT" = "SQLLanguage/COMMIT.md" },
+      { "CONNECT" = "SQLLanguage/CONNECT.md" },
+      { "CONTINUE" = "SQLLanguage/CONTINUE.md" },
+      { "COPY VWLOAD" = "SQLLanguage/COPY_VWLOAD.md" },
+      { "CREATE DBEVENT" = "SQLLanguage/CREATE_DBEVENT.md" },
+      { "CREATE EXTERNAL TABLE" = [
+        { "CREATE EXTERNAL TABLE" = "SQLLanguage/CREATE_EXTERNAL_TABLE.md" },
+        { "Predicate Pushdown" = "SQLLanguage/Predicate_Pushdown.md" },
+      ] },
+      { "CREATE FUNCTION" = [
+        { "CREATE FUNCTION" = "SQLLanguage/CREATE_FUNCTION.md" },
+        { "CREATE FUNCTION Examples" = "SQLLanguage/CREATE_FUNCTION_Examples.md" },
+      ] },
+      { "CREATE GROUP" = "SQLLanguage/CREATE_GROUP.md" },
+      { "CREATE INDEX" = "SQLLanguage/CREATE_INDEX.md" },
+      { "CREATE PROCEDURE" = [
+        { "CREATE PROCEDURE" = "SQLLanguage/CREATE_PROCEDURE.md" },
+        { "Description" = "SQLLanguage/Description.md" },
+        { "Parameter Modes" = "SQLLanguage/Parameter_Modes.md" },
+        { "Nullability and Default Values for Parameters" = "SQLLanguage/Nullability_and_Default_Values_for_Parameters.md" },
+        { "SET OF Parameters" = "SQLLanguage/SET_OF_Parameters.md" },
+        { "Embedded Usage" = "SQLLanguage/Embedded_Usage.md" },
+        { "Permissions" = "SQLLanguage/Permissions.md" },
+        { "Related Statements" = "SQLLanguage/Related_Statements.md" },
+        { "CREATE PROCEDURE Examples" = "SQLLanguage/CREATE_PROCEDURE_Examples.md" },
+      ] },
+      { "CREATE PROFILE" = "SQLLanguage/CREATE_PROFILE.md" },
+      { "CREATE ROLE" = "SQLLanguage/CREATE_ROLE.md" },
+      { "CREATE SCHEMA" = [
+        { "CREATE SCHEMA" = "SQLLanguage/CREATE_SCHEMA.md" },
+        { "CREATE SCHEMA Example" = "SQLLanguage/CREATE_SCHEMA_Example.md" },
+      ] },
+      { "CREATE SECURITY_ALARM" = "SQLLanguage/CREATE_SECURITY_ALARM.md" },
+      { "CREATE SEQUENCE" = [
+        { "CREATE SEQUENCE" = "SQLLanguage/CREATE_SEQUENCE.md" },
+        { "CREATE SEQUENCE Examples" = "SQLLanguage/CREATE_SEQUENCE_Examples.md" },
+      ] },
+      { "CREATE STATISTICS" = "SQLLanguage/CREATE_STATISTICS.md" },
+      { "CREATE SYNONYM" = "SQLLanguage/CREATE_SYNONYM.md" },
+      { "CREATE TABLE" = "SQLLanguage/CREATE_TABLE.md" },
+      { "CREATE USER" = "SQLLanguage/CREATE_USER.md" },
+      { "CREATE VIEW" = "SQLLanguage/CREATE_VIEW.md" },
+      { "DECLARE" = [
+        { "DECLARE" = "SQLLanguage/DECLARE.md" },
+        { "DECLARE Example" = "SQLLanguage/DECLARE_Example.md" },
+      ] },
+      { "DECLARE CURSOR" = [
+        { "DECLARE CURSOR" = "SQLLanguage/DECLARE_CURSOR.md" },
+        { "DECLARE CURSOR Examples" = "SQLLanguage/DECLARE_CURSOR_Examples.md" },
+      ] },
+      { "DECLARE GLOBAL TEMPORARY TABLE" = "SQLLanguage/DECLARE_GLOBAL_TEMPORARY_TABLE.md" },
+      { "DECLARE TABLE" = "SQLLanguage/DECLARE_TABLE.md" },
+      { "DELETE" = "SQLLanguage/DELETE.md" },
+      { "DESCRIBE" = "SQLLanguage/DESCRIBE.md" },
+      { "DESCRIBE INPUT" = "SQLLanguage/DESCRIBE_INPUT.md" },
+      { "DISCONNECT" = [
+        { "DISCONNECT" = "SQLLanguage/DISCONNECT.md" },
+        { "DISCONNECT Examples" = "SQLLanguage/DISCONNECT_Examples.md" },
+      ] },
+      { "DROP" = "SQLLanguage/DROP.md" },
+      { "DROP DBEVENT" = "SQLLanguage/DROP_DBEVENT.md" },
+      { "DROP FUNCTION" = [
+        { "DROP FUNCTION" = "SQLLanguage/DROP_FUNCTION.md" },
+        { "DROP FUNCTION Example" = "SQLLanguage/DROP_FUNCTION_Example.md" },
+      ] },
+      { "DROP GROUP" = "SQLLanguage/DROP_GROUP.md" },
+      { "DROP PROCEDURE" = "SQLLanguage/DROP_PROCEDURE.md" },
+      { "DROP PROFILE" = "SQLLanguage/DROP_PROFILE.md" },
+      { "DROP ROLE" = "SQLLanguage/DROP_ROLE.md" },
+      { "DROP SCHEMA" = [
+        { "DROP SCHEMA" = "SQLLanguage/DROP_SCHEMA.md" },
+        { "DROP SCHEMA Example" = "SQLLanguage/DROP_SCHEMA_Example.md" },
+      ] },
+      { "DROP SECURITY_ALARM" = "SQLLanguage/DROP_SECURITY_ALARM.md" },
+      { "DROP SEQUENCE" = [
+        { "DROP SEQUENCE" = "SQLLanguage/DROP_SEQUENCE.md" },
+        { "DROP SEQUENCE Example" = "SQLLanguage/DROP_SEQUENCE_Example.md" },
+      ] },
+      { "DROP STATISTICS" = "SQLLanguage/DROP_STATISTICS.md" },
+      { "DROP SYNONYM" = "SQLLanguage/DROP_SYNONYM.md" },
+      { "DROP USER" = "SQLLanguage/DROP_USER.md" },
+      { "ENDLOOP" = "SQLLanguage/ENDLOOP.md" },
+      { "ENDSELECT" = [
+        { "ENDSELECT" = "SQLLanguage/ENDSELECT.md" },
+        { "ENDSELECT Example" = "SQLLanguage/ENDSELECT_Example.md" },
+      ] },
+      { "EXECUTE" = [
+        { "EXECUTE" = "SQLLanguage/EXECUTE.md" },
+        { "EXECUTE Examples" = "SQLLanguage/EXECUTE_Examples.md" },
+      ] },
+      { "EXECUTE IMMEDIATE" = [
+        { "EXECUTE IMMEDIATE" = "SQLLanguage/EXECUTE_IMMEDIATE.md" },
+        { "EXECUTE IMMEDIATE Examples" = "SQLLanguage/EXECUTE_IMMEDIATE_Examples.md" },
+      ] },
+      { "EXECUTE PROCEDURE" = [
+        { "EXECUTE PROCEDURE" = "SQLLanguage/EXECUTE_PROCEDURE.md" },
+        { "Passing Parameters--Non-Dynamic Version" = "SQLLanguage/Passing_Parameters--Non-Dynamic_Version.md" },
+        { "Passing Parameters - Dynamic Version" = "SQLLanguage/Passing_Parameters_-_Dynamic_Version.md" },
+        { "Positional Parameters Sample Syntax" = "SQLLanguage/Positional_Parameters_Sample_Syntax.md" },
+        { "Temporary Table Parameter" = "SQLLanguage/Temporary_Table_Parameter.md" },
+        { "Execute Procedure Loops" = "SQLLanguage/Execute_Procedure_Loops.md" },
+        { "Usage in OpenAPI, ODBC, JDBC, .NET" = "SQLLanguage/Usage_in_OpenAPI__ODBC__JDBC__.NET.md" },
+        { "Permissions" = "SQLLanguage/Permissions_2.md" },
+        { "Locking" = "SQLLanguage/Locking.md" },
+        { "Performance" = "SQLLanguage/Performance.md" },
+        { "Related Statements" = "SQLLanguage/Related_Statements_2.md" },
+        { "EXECUTE PROCEDURE Examples" = "SQLLanguage/EXECUTE_PROCEDURE_Examples.md" },
+      ] },
+      { "FETCH" = [
+        { "FETCH" = "SQLLanguage/FETCH.md" },
+        { "FETCH Examples" = "SQLLanguage/FETCH_Examples.md" },
+      ] },
+      { "FOR - ENDFOR" = [
+        { "FOR - ENDFOR" = "SQLLanguage/FOR_-_ENDFOR.md" },
+        { "FOR - ENDFOR Example" = "SQLLanguage/FOR_-_ENDFOR_Example.md" },
+      ] },
+      { "GET DBEVENT" = "SQLLanguage/GET_DBEVENT.md" },
+      { "GRANT (privilege)" = "SQLLanguage/GRANT_(privilege).md" },
+      { "GRANT (role)" = "SQLLanguage/GRANT_(role).md" },
+      { "HELP" = "SQLLanguage/HELP.md" },
+      { "IF - THEN - ELSE" = [
+        { "IF - THEN - ELSE" = "SQLLanguage/IF_-_THEN_-_ELSE.md" },
+        { "If-Then-Else Example" = "SQLLanguage/If-Then-Else_Example.md" },
+      ] },
+      { "INCLUDE" = [
+        { "INCLUDE" = "SQLLanguage/INCLUDE.md" },
+        { "INCLUDE Examples" = "SQLLanguage/INCLUDE_Examples.md" },
+      ] },
+      { "INQUIRE_SQL" = "SQLLanguage/INQUIRE_SQL.md" },
+      { "INSERT" = "SQLLanguage/INSERT.md" },
+      { "INSERT INTO EXTERNAL CSV" = "SQLLanguage/INSERT_INTO_EXTERNAL_CSV.md" },
+      { "MERGE" = "SQLLanguage/MERGE.md" },
+      { "MESSAGE" = [
+        { "MESSAGE" = "SQLLanguage/MESSAGE.md" },
+        { "MESSAGE Examples" = "SQLLanguage/MESSAGE_Examples.md" },
+      ] },
+      { "MODIFY" = "SQLLanguage/MODIFY.md" },
+      { "OPEN" = "SQLLanguage/OPEN.md" },
+      { "PREPARE" = [
+        { "PREPARE" = "SQLLanguage/PREPARE.md" },
+        { "PREPARE Example" = "SQLLanguage/PREPARE_Example.md" },
+      ] },
+      { "RAISE DBEVENT" = "SQLLanguage/RAISE_DBEVENT.md" },
+      { "RAISE ERROR" = "SQLLanguage/RAISE_ERROR.md" },
+      { "REGISTER DBEVENT" = "SQLLanguage/REGISTER_DBEVENT.md" },
+      { "REMOVE DBEVENT" = "SQLLanguage/REMOVE_DBEVENT.md" },
+      { "RENAME TABLE" = "SQLLanguage/RENAME_TABLE.md" },
+      { "REPEAT - ENDREPEAT" = [
+        { "REPEAT - ENDREPEAT" = "SQLLanguage/REPEAT_-_ENDREPEAT.md" },
+        { "REPEAT - ENDREPEAT Example" = "SQLLanguage/REPEAT_-_ENDREPEAT_Example.md" },
+      ] },
+      { "RETURN" = [
+        { "RETURN" = "SQLLanguage/RETURN.md" },
+        { "RETURN Example" = "SQLLanguage/RETURN_Example.md" },
+      ] },
+      { "RETURN ROW" = [
+        { "RETURN ROW" = "SQLLanguage/RETURN_ROW.md" },
+        { "RETURN ROW Example" = "SQLLanguage/RETURN_ROW_Example.md" },
+      ] },
+      { "REVOKE" = "SQLLanguage/REVOKE.md" },
+      { "ROLLBACK" = "SQLLanguage/ROLLBACK.md" },
+      { "SELECT (Interactive)" = "SQLLanguage/SELECT_(Interactive).md" },
+      { "SELECT (Embedded)" = [
+        { "SELECT (Embedded)" = "SQLLanguage/SELECT_(Embedded).md" },
+        { "Non-cursor Select" = "SQLLanguage/Non-cursor_Select.md" },
+        { "Cursor Select" = "SQLLanguage/Cursor_Select.md" },
+        { "Error Handling for Embedded SELECT" = "SQLLanguage/Error_Handling_for_Embedded_SELECT.md" },
+        { "Embedded Usage" = "SQLLanguage/Embedded_Usage_2.md" },
+        { "Related Statements" = "SQLLanguage/Related_Statements_3.md" },
+        { "SELECT (embedded) Examples" = "SQLLanguage/SELECT_(embedded)_Examples.md" },
+      ] },
+      { "SET" = "SQLLanguage/SET.md" },
+      { "TRUNCATE TABLE" = "SQLLanguage/TRUNCATE_TABLE.md" },
+      { "UPDATE" = [
+        { "UPDATE" = "SQLLanguage/UPDATE.md" },
+        { "FROM Clause" = "SQLLanguage/FROM_Clause.md" },
+        { "WHERE Clause" = "SQLLanguage/WHERE_Clause.md" },
+      ] },
+      { "WHENEVER" = "SQLLanguage/WHENEVER.md" },
+      { "WHILE - ENDWHILE" = "SQLLanguage/WHILE_-_ENDWHILE.md" },
+      { "WITH (common_table_expression)" = "SQLLanguage/WITH_(common_table_expression).md" },
+    ] },
+    { "Actian SQL CLI" = [
+      { "Actian SQL CLI" = "SQLLanguage/Actian_SQL_CLI.md" },
+      { "Start the SQL CLI" = [
+        { "Start the SQL CLI" = "SQLLanguage/Start_the_SQL_CLI.md" },
+        { "sql Command Options and Flags" = "SQLLanguage/sql_Command_Options_and_Flags.md" },
+      ] },
+      { "SQL CLI Query Buffering" = "SQLLanguage/SQL_CLI_Query_Buffering.md" },
+      { "SQL CLI Commands" = "SQLLanguage/SQL_CLI_Commands.md" },
+      { "SQL CLI Character Input and Output" = "SQLLanguage/SQL_CLI_Character_Input_and_Output.md" },
+      { "The HELP Statement" = "SQLLanguage/The_HELP_Statement.md" },
+      { "SQL CLI Macros" = "SQLLanguage/SQL_CLI_Macros.md" },
+      { "SQL Example" = "SQLLanguage/SQL_Example.md" },
+    ] },
+    { "System Catalogs" = [
+      { "System Catalogs" = "SQLLanguage/System_Catalogs.md" },
+      { "Example of HELP VIEW and HELP Statements" = "SQLLanguage/Example_of_HELP_VIEW_and_HELP_Statements.md" },
+      { "Actian Data Platform Standard Catalogs" = "SQLLanguage/Actian_Data_Platform_Standard_Catalogs.md" },
+      { "Standard Catalogs for iidbdb" = "SQLLanguage/Standard_Catalogs_for_iidbdb.md" },
+    ] },
+    { "Keywords" = [
+      { "Keywords" = "SQLLanguage/Keywords.md" },
+      { "Abbreviations Used in Keyword Lists" = "SQLLanguage/Abbreviations_Used_in_Keyword_Lists.md" },
+      { "Reserved Single Word Keywords" = "SQLLanguage/Reserved_Single_Word_Keywords.md" },
+      { "Reserved Multi Word Keywords" = "SQLLanguage/Reserved_Multi_Word_Keywords.md" },
+      { "Partition Keywords" = "SQLLanguage/Partition_Keywords.md" },
+      { "ANSI/ISO SQL Keywords" = "SQLLanguage/ANSI_2fISO_SQL_Keywords.md" },
+    ] },
+    { "Environment Variables" = [
+      { "Environment Variables" = "SQLLanguage/Environment_Variables.md" },
+      { "User-definable Environment Variables" = "SQLLanguage/User-definable_Environment_Variables.md" },
+      { "Syntax Rules for Startup Files and Environment Variables" = "SQLLanguage/Syntax_Rules_for_Startup_Files_and_Environment_V.md" },
+    ] },
+  ] },
+  { "Database as a Service Guide" = [
+    { "Introducing Actian Database as a Service on the Actian Data Platform" = [
+      { "Introducing Actian Database as a Service on the Actian Data Platform" = "DBaaS_User/Introducing_Actian_Database_as_a_Service_on_the.md" },
+      { "Overview" = "DBaaS_User/Overview.md" },
+      { "Concepts to Understand" = "DBaaS_User/Concepts_to_Understand.md" },
+      { "Access Documentation and Help" = "DBaaS_User/Access_Documentation_and_Help.md" },
+      { "Using the Assistant" = "DBaaS_User/Using_the_Assistant.md" },
+    ] },
+    { "What’s New in Actian Database as a Service on the Actian Data Platform" = [
+      { "What’s New in Actian Database as a Service on the Actian Data Platform" = "DBaaS_User/What's_New_in_Actian_Database_as_a_Service_on_th.md" },
+      { "Actian Database as a Service EAP Release Notes" = "DBaaS_User/Actian_Database_as_a_Service_EAP_Release_Notes.md" },
+    ] },
+    { "Getting Started with Actian Database as a Service" = [
+      { "Getting Started with Actian Database as a Service" = "DBaaS_User/Getting_Started_with_Actian_Database_as_a_Servic.md" },
+      { "Actian Ingres Database as a Service Workflow" = "DBaaS_User/Actian_Ingres_Database_as_a_Service_Workflow.md" },
+      { "Common Tasks" = "DBaaS_User/Common_Tasks.md" },
+      { "Set Up Key Management Service for Data Encryption" = [
+        { "Set Up Key Management Service for Data Encryption" = "DBaaS_User/Set_Up_Key_Management_Service_for_Data_Encryptio.md" },
+        { "Using the Actian-managed Encryption Key" = "DBaaS_User/Using_the_Actian-managed_Encryption_Key.md" },
+        { "Set Up the AWS Key Management Service (AKMS)" = "DBaaS_User/Set_Up_the_AWS_Key_Management_Service_(AKMS).md" },
+        { "Availability of Your KMS When Starting and Stopping Warehouses" = "DBaaS_User/Availability_of_Your_KMS_When_Starting_and_Stopp.md" },
+      ] },
+      { "Create a Database Instance" = [
+        { "Create a Database Instance" = "DBaaS_User/Create_a_Database_Instance.md" },
+        { "Create a New Database Instance" = "DBaaS_User/Create_a_New_Database_Instance.md" },
+        { "Actian Data Platform Database Instances Console" = "DBaaS_User/Actian_Data_Platform_Database_Instances_Console.md" },
+        { "Database Instance Details" = "DBaaS_User/Database_Instance_Details.md" },
+        { "Database User Management" = "DBaaS_User/Database_User_Management.md" },
+        { "Load Data" = "DBaaS_User/Load_Data.md" },
+        { "Manage Public RSA Keys for Database Administrator Access" = "DBaaS_User/Manage_Public_RSA_Keys_for_Database_Administrato.md" },
+        { "Automated Database Backup Process" = "DBaaS_User/Automated_Database_Backup_Process.md" },
+        { "Use of the Restricted Bash Shell (rbash)" = [
+          { "Use of the Restricted Bash Shell (rbash)" = "DBaaS_User/Use_of_the_Restricted_Bash_Shell_(rbash).md" },
+          { "Commands and Tools" = "DBaaS_User/Commands_and_Tools.md" },
+        ] },
+      ] },
+    ] },
+    { "Warehouse and Database Management" = [
+      { "Warehouse and Database Management" = "DBaaS_User/Part_WarehouseManagement.md" },
+      { "Access Warehouse or Database Connection Information" = [
+        { "Access Warehouse or Database Connection Information" = "DBaaS_User/Access_Warehouse_or_Database_Connection_Informat.md" },
+        { "Connection Tools" = [
+          { "Connection Tools" = "DBaaS_User/Connection_Tools.md" },
+          { "Actian Client Runtime Package" = "DBaaS_User/Actian_Client_Runtime_Package.md" },
+          { "Actian JDBC Driver" = "DBaaS_User/Actian_JDBC_Driver.md" },
+        ] },
+        { "Copy Connection Strings to the Clipboard" = "DBaaS_User/Copy_Connection_Strings_to_the_Clipboard.md" },
+      ] },
+      { "Scale a Database" = "DBaaS_User/ScaleDatabase.md" },
+      { "Stop and Start Databases" = [
+        { "Stop and Start Databases" = "DBaaS_User/Stop_and_Start_Databases.md" },
+        { "Stop a Database" = "DBaaS_User/Stop_a_Database.md" },
+        { "Restart a Database" = "DBaaS_User/Restart_a_Database.md" },
+        { "Stop a Database" = "DBaaS_User/Stop_a_Database_2.md" },
+        { "Restart a Database" = "DBaaS_User/Restart_a_Database_2.md" },
+        { "Automatic Stopping of Idle Databases" = "DBaaS_User/Automatic_Stopping_of_Idle_Databases.md" },
+        { "Modify Idle Stop Period" = "DBaaS_User/Modify_Idle_Stop_Period.md" },
+        { "Schedule a Database" = [
+          { "Schedule a Database" = "DBaaS_User/Schedule_a_Database.md" },
+          { "Cron Expressions" = "DBaaS_User/Cron_Expressions.md" },
+        ] },
+      ] },
+      { "Delete Databases" = "DBaaS_User/DeleteDatabase.md" },
+      { "Database Administration" = [
+        { "Database Administration" = "DBaaS_User/Database_Administration.md" },
+        { "Manage Users" = "DBaaS_User/Manage_Users.md" },
+        { "View Access Policy Management" = "DBaaS_User/View_Access_Policy_Management.md" },
+        { "Manage Groups" = "DBaaS_User/Manage_Groups.md" },
+        { "Manage Listeners" = "DBaaS_User/Manage_Listeners.md" },
+        { "Open a Service Request" = "DBaaS_User/Open_a_Service_Request.md" },
+        { "Contact Support" = "DBaaS_User/Contact_Support.md" },
+      ] },
+      { "Manage Users" = [
+        { "Manage Users" = "DBaaS_User/Manage_Users_2.md" },
+        { "Overview of User Management" = "DBaaS_User/Overview_of_User_Management.md" },
+        { "User Profiles" = "DBaaS_User/User_Profiles.md" },
+        { "User Groups" = "DBaaS_User/User_Groups.md" },
+        { "User Roles" = "DBaaS_User/User_Roles.md" },
+        { "Types of Users" = "DBaaS_User/Types_of_Users.md" },
+        { "Set the dbuser Connection Password" = "DBaaS_User/Set_the_dbuser_Connection_Password.md" },
+        { "Add Native Users" = "DBaaS_User/Add_Native_Users.md" },
+        { "Add SSO Users" = "DBaaS_User/Add_SSO_Users.md" },
+        { "Delete Users and Their Schemas" = "DBaaS_User/Delete_Users_and_Their_Schemas.md" },
+        { "Update Users" = "DBaaS_User/Update_Users.md" },
+        { "Display Users from the Warehouse Details or Database Instances Page" = "DBaaS_User/Display_Users_from_the_Warehouse_Details_or_Data.md" },
+        { "Add Platform Users" = "DBaaS_User/Add_Platform_Users.md" },
+        { "API access with Platform User Accounts" = "DBaaS_User/API_access_with_Platform_User_Accounts.md" },
+      ] },
+      { "Monitor Databases" = [
+        { "Monitor Databases" = "DBaaS_User/Monitor_Databases.md" },
+        { "Display the Database Monitoring Console" = "DBaaS_User/Display_the_Database_Monitoring_Console.md" },
+        { "Database Monitoring Services" = [
+          { "Database Monitoring Services" = "DBaaS_User/Database_Monitoring_Services.md" },
+          { "Active Queries KEEP?" = "DBaaS_User/Active_Queries_KEEP_3f.md" },
+          { "Connected Sessions KEEP?" = "DBaaS_User/Connected_Sessions_KEEP_3f.md" },
+          { "Error Log" = "DBaaS_User/Error_Log.md" },
+          { "DBMS Processes" = "DBaaS_User/DBMS_Processes.md" },
+          { "Lock Waits" = "DBaaS_User/Lock_Waits.md" },
+          { "Transaction Log" = "DBaaS_User/Transaction_Log.md" },
+          { "OS Disk Usage" = "DBaaS_User/OS_Disk_Usage.md" },
+          { "OS Load Average" = "DBaaS_User/OS_Load_Average.md" },
+          { "OS Memory" = "DBaaS_User/OS_Memory.md" },
+        ] },
+        { "Check a Service" = "DBaaS_User/Check_a_Service.md" },
+      ] },
+    ] },
+    { "Query Editor" = [
+      { "Query Editor" = "DBaaS_User/Part_QueryEditor.md" },
+      { "Overview of the Query Editor" = [
+        { "Overview of the Query Editor" = "DBaaS_User/Overview_of_the_Query_Editor.md" },
+        { "Features and Restrictions" = "DBaaS_User/Features_and_Restrictions.md" },
+        { "Query Editor Diagram" = "DBaaS_User/Query_Editor_Diagram.md" },
+        { "Single Sign-on Users, Native Users, and Platform Users" = "DBaaS_User/Single_Sign-on_Users__Native_Users__and_Platform.md" },
+        { "How Authentication Works" = "DBaaS_User/How_Authentication_Works.md" },
+        { "Run Your Own Queries" = "DBaaS_User/Run_Your_Own_Queries.md" },
+      ] },
+      { "Using the Query Editor" = [
+        { "Using the Query Editor" = "DBaaS_User/Using_the_Query_Editor.md" },
+        { "Launch Query Editor" = "DBaaS_User/Launch_Query_Editor.md" },
+        { "Examine the Database Schema" = "DBaaS_User/Examine_the_Database_Schema.md" },
+        { "Create and Save a New Query" = "DBaaS_User/Create_and_Save_a_New_Query.md" },
+        { "Save an Existing Query as a New Query" = "DBaaS_User/Save_an_Existing_Query_as_a_New_Query.md" },
+        { "Import Queries" = "DBaaS_User/Import_Queries.md" },
+        { "Edit Queries" = "DBaaS_User/Edit_Queries.md" },
+        { "Open a Saved Query" = "DBaaS_User/Open_a_Saved_Query.md" },
+        { "Run Sample Queries" = "DBaaS_User/Run_Sample_Queries.md" },
+        { "Run Your Own Queries" = "DBaaS_User/Run_Your_Own_Queries_2.md" },
+        { "Tag a Query" = "DBaaS_User/Tag_a_Query.md" },
+        { "Display Query History" = [
+          { "Display Query History" = "DBaaS_User/Display_Query_History.md" },
+          { "AWS AV-1 and Azure Query History" = "DBaaS_User/AWS_AV-1_and_Azure_Query_History.md" },
+          { "Google Cloud and AWS AV-2 Query History" = "DBaaS_User/Google_Cloud_and_AWS_AV-2_Query_History.md" },
+        ] },
+        { "Make a Query Shared or Private" = "DBaaS_User/Make_a_Query_Shared_or_Private.md" },
+        { "Clone a Query" = "DBaaS_User/Clone_a_Query.md" },
+        { "Format Query Text Automatically" = "DBaaS_User/Format_Query_Text_Automatically.md" },
+        { "List and Sort Queries" = "DBaaS_User/List_and_Sort_Queries.md" },
+        { "Export an Open Query" = "DBaaS_User/Export_an_Open_Query.md" },
+        { "Export All Queries from Saved Queries or Query History" = "DBaaS_User/Export_All_Queries_from_Saved_Queries_or_Query_H.md" },
+        { "Export Query Results to a File" = "DBaaS_User/Export_Query_Results_to_a_File.md" },
+        { "Display Query Results as a Formatted Table" = "DBaaS_User/Display_Query_Results_as_a_Formatted_Table.md" },
+        { "Display Query Results as Chart Visualizations" = [
+          { "Display Query Results as Chart Visualizations" = "DBaaS_User/Display_Query_Results_as_Chart_Visualizations.md" },
+          { "Display a Line Chart" = "DBaaS_User/Display_a_Line_Chart.md" },
+          { "Display a Horizontal Bar Chart" = "DBaaS_User/Display_a_Horizontal_Bar_Chart.md" },
+          { "Display a Vertical Bar Chart" = "DBaaS_User/Display_a_Vertical_Bar_Chart.md" },
+          { "Display a Scatterplot Chart" = "DBaaS_User/Display_a_Scatterplot_Chart.md" },
+          { "Display a Pie Chart" = "DBaaS_User/Display_a_Pie_Chart.md" },
+          { "Display a Vertical Stacked Bar Chart" = "DBaaS_User/Display_a_Vertical_Stacked_Bar_Chart.md" },
+          { "Display a Horizontal Stacked Bar Chart" = "DBaaS_User/Display_a_Horizontal_Stacked_Bar_Chart.md" },
+          { "Open a Chart in a New Window" = "DBaaS_User/Open_a_Chart_in_a_New_Window.md" },
+          { "Save a Chart Image as a PNG File" = "DBaaS_User/Save_a_Chart_Image_as_a_PNG_File.md" },
+        ] },
+        { "Working with Monitoring (imadb) Tables" = "DBaaS_User/Working_with_Monitoring_(imadb)_Tables.md" },
+        { "Troubleshooting the Query Editor" = "DBaaS_User/Troubleshooting_the_Query_Editor.md" },
+        { "Command Palette Reference" = "DBaaS_User/Command_Palette_Reference.md" },
+      ] },
+    ] },
+    { "Troubleshooting" = [
+      { "Troubleshooting" = "DBaaS_User/Part_Troubleshooting.md" },
+      { "Network Data Encryption Troubleshooting" = "DBaaS_User/Network_Data_Encryption_Troubleshooting.md" },
+      { "Errors Creating Tables" = "DBaaS_User/Errors_Creating_Tables.md" },
+      { "Common Data Loading Error Messages" = "DBaaS_User/Common_Data_Loading_Error_Messages.md" },
+      { "Network Disconnects Due to Perceived Inactivity" = "DBaaS_User/Network_Disconnects_Due_to_Perceived_Inactivity.md" },
+      { "Loading Fails When Using External Tables (Spark)" = "DBaaS_User/Loading_Fails_When_Using_External_Tables_(Spark).md" },
+      { "Query Editor Troubleshooting" = "DBaaS_User/Query_Editor_Troubleshooting.md" },
+    ] },
+    { "ActianAppendixes" = "DBaaS_User/Part_Appendixes.md" },
+  ] },
+  { "Data Quality Guide" = [
+    { "Getting Started" = [
+      { "Getting Started" = "DataQuality/Getting_Started.md" },
+      { "Overview of Data Quality" = "DataQuality/Overview_of_Data_Quality.md" },
+      { "Overview of Data Profiler" = "DataQuality/Overview_of_Data_Profiler.md" },
+      { "Common Terms" = "DataQuality/Common_Terms.md" },
+    ] },
+    { "Design" = [
+      { "Design" = "DataQuality/Design.md" },
+      { "Overview of Design Environment" = [
+        { "Overview of Design Environment" = "DataQuality/Overview_of_Design_Environment.md" },
+        { "Data Profiles Page" = "DataQuality/Data_Profiles_Page.md" },
+      ] },
+      { "Creating a Data Profile" = [
+        { "Creating a Data Profile" = "DataQuality/Creating_a_Data_Profile.md" },
+        { "Describe Data Profile" = "DataQuality/Describe_Data_Profile.md" },
+        { "Define Source" = "DataQuality/Define_Source.md" },
+        { "Define Rules and Analyze Results" = "DataQuality/Define_Rules_and_Analyze_Results.md" },
+        { "Inspect & Recommend Rules" = "DataQuality/Inspect___Recommend_Rules.md" },
+        { "Add a New Rule" = "DataQuality/Add_a_New_Rule.md" },
+        { "Add Rule from Rule Set" = "DataQuality/Add_Rule_from_Rule_Set.md" },
+        { "Define Targets" = "DataQuality/Define_Targets.md" },
+        { "Results" = "DataQuality/Results.md" },
+      ] },
+      { "Creating a Connection" = "DataQuality/Creating_a_Connection.md" },
+      { "Source and Target Connections" = [
+        { "Source and Target Connections" = "DataQuality/Source_and_Target_Connections.md" },
+        { "Actian Warehouse" = "DataQuality/Actian_Warehouse.md" },
+        { "Actian Ingres" = "DataQuality/Actian_Ingres.md" },
+        { "Actian Vector" = "DataQuality/Actian_Vector.md" },
+        { "Actian X" = "DataQuality/Actian_X.md" },
+        { "Amazon S3 (Delimited Files)" = "DataQuality/Amazon_S3_(Delimited_Files).md" },
+        { "Azure Blob Storage (Delimited Files)" = "DataQuality/Azure_Blob_Storage_(Delimited_Files).md" },
+        { "Google Cloud Storage (Delimited Files)" = "DataQuality/Google_Cloud_Storage_(Delimited_Files).md" },
+        { "NetSuite" = "DataQuality/NetSuite.md" },
+        { "Oracle CRM on Demand" = "DataQuality/Oracle_CRM_on_Demand.md" },
+        { "Salesforce" = "DataQuality/Salesforce.md" },
+        { "ServiceNow" = "DataQuality/ServiceNow.md" },
+      ] },
+      { "Managing a Data Profile" = [
+        { "Managing a Data Profile" = "DataQuality/Managing_a_Data_Profile.md" },
+        { "Search Data Profiles" = "DataQuality/Search_Data_Profiles.md" },
+        { "View Profile Details" = "DataQuality/View_Profile_Details.md" },
+        { "Edit Profile Schedule" = "DataQuality/Edit_Profile_Schedule.md" },
+        { "Run a Profile Manually" = "DataQuality/Run_a_Profile_Manually.md" },
+        { "Duplicate a Profile" = "DataQuality/Duplicate_a_Profile.md" },
+        { "Edit a Profile" = "DataQuality/Edit_a_Profile.md" },
+        { "Save Profile Rules as Rule Set" = "DataQuality/Save_Profile_Rules_as_Rule_Set.md" },
+        { "Delete a Profile" = "DataQuality/Delete_a_Profile.md" },
+      ] },
+      { "Rule Sets" = [
+        { "Rule Sets" = "DataQuality/Rule_Sets.md" },
+        { "Create a Rule Set" = "DataQuality/Create_a_Rule_Set.md" },
+        { "Search a Rule Set" = "DataQuality/Search_a_Rule_Set.md" },
+        { "View Rule Set Details" = "DataQuality/View_Rule_Set_Details.md" },
+        { "Edit a Rule Set" = "DataQuality/Edit_a_Rule_Set.md" },
+        { "Delete a Rule Set" = "DataQuality/Delete_a_Rule_Set.md" },
+      ] },
+      { "Rule and Parameter Reference" = [
+        { "Rule and Parameter Reference" = "DataQuality/Rule_and_Parameter_Reference.md" },
+        { "Compare to Constant" = "DataQuality/Compare_to_Constant.md" },
+        { "Compare to Field" = "DataQuality/Compare_to_Field.md" },
+        { "Is Not Blank" = "DataQuality/Is_Not_Blank.md" },
+        { "Is Not Duplicate" = "DataQuality/Is_Not_Duplicate.md" },
+        { "Is Not Null" = "DataQuality/Is_Not_Null.md" },
+        { "Is Numeric" = "DataQuality/Is_Numeric.md" },
+        { "Is Valid Date" = "DataQuality/Is_Valid_Date.md" },
+        { "Is Valid Email" = "DataQuality/Is_Valid_Email.md" },
+        { "Is Valid Ip4" = "DataQuality/Is_Valid_Ip4.md" },
+        { "Is Valid Phone Number" = "DataQuality/Is_Valid_Phone_Number.md" },
+        { "Is Valid Social ID" = "DataQuality/Is_Valid_Social_ID.md" },
+        { "Is Valid Time" = "DataQuality/Is_Valid_Time.md" },
+        { "Is Valid TimeStamp" = "DataQuality/Is_Valid_TimeStamp.md" },
+        { "Is Valid Zip Code" = "DataQuality/Is_Valid_Zip_Code.md" },
+        { "Is Within Range" = "DataQuality/Is_Within_Range.md" },
+        { "Matches Pattern" = "DataQuality/Matches_Pattern.md" },
+      ] },
+      { "Run History" = "DataQuality/Run_History.md" },
+    ] },
+    { "Manage" = [
+      { "Manage" = "DataQuality/Manage.md" },
+      { "Overview of Manage Environment" = [
+        { "Overview of Manage Environment" = "DataQuality/Overview_of_Manage_Environment.md" },
+        { "Manage, Overview Page" = "DataQuality/Manage__Overview_Page.md" },
+      ] },
+      { "Managing Configurations" = [
+        { "Managing Configurations" = "DataQuality/Managing_Configurations.md" },
+        { "Search Configurations" = "DataQuality/Search_Configurations.md" },
+        { "View Configuration Details" = "DataQuality/View_Configuration_Details.md" },
+        { "Schedule a Configuration" = "DataQuality/Schedule_a_Configuration.md" },
+        { "Run a Configuration" = "DataQuality/Run_a_Configuration.md" },
+        { "Edit a Configuration" = "DataQuality/Edit_a_Configuration.md" },
+        { "Delete a Configuration" = "DataQuality/Delete_a_Configuration.md" },
+      ] },
+      { "Run History" = [
+        { "Run History" = "DataQuality/Run_History_2.md" },
+        { "Run History for all Profiles" = "DataQuality/Run_History_for_all_Profiles.md" },
+        { "Run History for all Configurations" = "DataQuality/Run_History_for_all_Configurations.md" },
+      ] },
+    ] },
+  ] },
+  { "Integrations Guide" = [
+    { "Getting Started" = [
+      { "Getting Started" = "Integrations/Getting_Started.md" },
+      { "Workflow Terms" = "Integrations/Workflow_Terms.md" },
+      { "Common Tasks" = "Integrations/Common_Tasks.md" },
+    ] },
+    { "Design" = [
+      { "Design" = "Integrations/Design.md" },
+      { "Overview of the Design Environment" = [
+        { "Overview of the Design Environment" = "Integrations/Overview_of_the_Design_Environment.md" },
+        { "Integration Designs Page" = "Integrations/Integration_Designs_Page.md" },
+      ] },
+      { "Creating Integrations" = [
+        { "Creating Integrations" = "Integrations/Creating_Integrations.md" },
+        { "Define Source" = "Integrations/Define_Source.md" },
+        { "Define Target" = "Integrations/Define_Target.md" },
+        { "Target Output Modes" = "Integrations/Target_Output_Modes.md" },
+        { "Mapping" = "Integrations/Mapping.md" },
+        { "Mapping Hierarchical Sources" = "Integrations/Mapping_Hierarchical_Sources.md" },
+      ] },
+      { "Managing Integrations" = [
+        { "Managing Integrations" = "Integrations/Managing_Integrations.md" },
+        { "Search Integrations" = "Integrations/Search_Integrations.md" },
+        { "View Integration Details" = "Integrations/View_Integration_Details.md" },
+        { "Edit Integration" = "Integrations/Edit_Integration.md" },
+        { "Duplicate Integration" = "Integrations/Duplicate_Integration.md" },
+        { "Delete Integration" = "Integrations/Delete_Integration.md" },
+        { "Edit Integration Schedule" = "Integrations/Edit_Integration_Schedule.md" },
+        { "Run an Integration Manually" = "Integrations/Run_an_Integration_Manually.md" },
+        { "View Integration Run History" = "Integrations/View_Integration_Run_History.md" },
+        { "Download Log File" = "Integrations/Download_Log_File.md" },
+      ] },
+      { "Expression Builder" = [
+        { "Expression Builder" = "Integrations/Expression_Builder.md" },
+        { "Create an Expression" = "Integrations/Create_an_Expression.md" },
+        { "Edit an Expression" = "Integrations/Edit_an_Expression.md" },
+        { "Context Menu Options" = "Integrations/Context_Menu_Options.md" },
+        { "Block Categories" = "Integrations/Block_Categories.md" },
+        { "List of Text Blocks" = "Integrations/List_of_Text_Blocks.md" },
+        { "List of Math Blocks" = "Integrations/List_of_Math_Blocks.md" },
+        { "List of Convert Blocks" = "Integrations/List_of_Convert_Blocks.md" },
+        { "List of Date/Time Blocks" = "Integrations/List_of_Date_2fTime_Blocks.md" },
+        { "List of Logic Blocks" = "Integrations/List_of_Logic_Blocks.md" },
+        { "Text Blocks" = "Integrations/Text_Blocks.md" },
+        { "Math Blocks" = "Integrations/Math_Blocks.md" },
+        { "Convert Blocks" = "Integrations/Convert_Blocks.md" },
+        { "Date and Time Blocks" = "Integrations/Date_and_Time_Blocks.md" },
+        { "Logic Blocks" = "Integrations/Logic_Blocks.md" },
+      ] },
+      { "Connections" = [
+        { "Connections" = "Integrations/Connections.md" },
+        { "Create Connections" = "Integrations/Create_Connections.md" },
+        { "View Connection" = "Integrations/View_Connection.md" },
+        { "Test Connection" = "Integrations/Test_Connection.md" },
+        { "Edit Connection" = "Integrations/Edit_Connection.md" },
+        { "Delete Connection" = "Integrations/Delete_Connection.md" },
+      ] },
+      { "Source and Target Connections" = [
+        { "Source and Target Connections" = "Integrations/Source_and_Target_Connections.md" },
+        { "Actian Warehouse" = "Integrations/Actian_Warehouse.md" },
+        { "Actian Database" = "Integrations/Actian_Database.md" },
+        { "Actian Ingres" = "Integrations/Actian_Ingres.md" },
+        { "Actian Ingres - Via Agent" = "Integrations/Actian_Ingres_-_Via_Agent.md" },
+        { "Actian Vector" = "Integrations/Actian_Vector.md" },
+        { "Actian Vector - Via Agent" = "Integrations/Actian_Vector_-_Via_Agent.md" },
+        { "Actian X" = "Integrations/Actian_X.md" },
+        { "Actian Zen - Via Agent" = "Integrations/Actian_Zen_-_Via_Agent.md" },
+        { "ActiveCampaign CRM" = "Integrations/ActiveCampaign_CRM.md" },
+        { "Agile CRM" = "Integrations/Agile_CRM.md" },
+        { "Aha!" = "Integrations/Aha!.md" },
+        { "Amazon S3" = "Integrations/Amazon_S3.md" },
+        { "Azure Blob Storage" = "Integrations/Azure_Blob_Storage.md" },
+        { "Azure SQL" = "Integrations/Azure_SQL.md" },
+        { "Capsule CRM" = "Integrations/Capsule_CRM.md" },
+        { "Close CRM" = "Integrations/Close_CRM.md" },
+        { "Copper CRM" = "Integrations/Copper_CRM.md" },
+        { "eBay Sell" = "Integrations/eBay_Sell.md" },
+        { "Facebook Ads" = "Integrations/Facebook_Ads.md" },
+        { "Freshsales CRM" = "Integrations/Freshsales_CRM.md" },
+        { "Gmail" = "Integrations/Gmail.md" },
+        { "Google Ads" = "Integrations/Google_Ads.md" },
+        { "Google Cloud Storage" = "Integrations/Google_Cloud_Storage.md" },
+        { "Google Shopping Content" = "Integrations/Google_Shopping_Content.md" },
+        { "HCL Informix - Via Agent" = "Integrations/HCL_Informix_-_Via_Agent.md" },
+        { "HCL OneDB - Via Agent" = "Integrations/HCL_OneDB_-_Via_Agent.md" },
+        { "Hive" = "Integrations/Hive.md" },
+        { "HubSpot CRM" = "Integrations/HubSpot_CRM.md" },
+        { "Insightly CRM" = "Integrations/Insightly_CRM.md" },
+        { "JDBC - Via Agent" = "Integrations/JDBC_-_Via_Agent.md" },
+        { "Jira" = "Integrations/Jira.md" },
+        { "Keap CRM" = "Integrations/Keap_CRM.md" },
+        { "LinkedIn Ads" = "Integrations/LinkedIn_Ads.md" },
+        { "Mailchimp" = "Integrations/Mailchimp.md" },
+        { "Microsoft Teams" = "Integrations/Microsoft_Teams.md" },
+        { "MongoDB" = "Integrations/MongoDB.md" },
+        { "NetSuite" = "Integrations/NetSuite.md" },
+        { "Nimble CRM" = "Integrations/Nimble_CRM.md" },
+        { "Oracle CRM on Demand" = "Integrations/Oracle_CRM_on_Demand.md" },
+        { "OData" = "Integrations/OData.md" },
+        { "PipeDrive CRM" = "Integrations/PipeDrive_CRM.md" },
+        { "QuickBooks Online Accounting" = "Integrations/QuickBooks_Online_Accounting.md" },
+        { "REST API" = "Integrations/REST_API.md" },
+        { "SAP S/4 HANA" = "Integrations/SAP_S_2f4_HANA.md" },
+        { "SFTP" = "Integrations/SFTP.md" },
+        { "Salesforce" = "Integrations/Salesforce.md" },
+        { "SendGrid" = "Integrations/SendGrid.md" },
+        { "ServiceNow" = "Integrations/ServiceNow.md" },
+        { "Stripe" = "Integrations/Stripe.md" },
+        { "Suite CRM" = "Integrations/Suite_CRM.md" },
+        { "Twilio" = "Integrations/Twilio.md" },
+        { "Typeform" = "Integrations/Typeform.md" },
+        { "Zendesk CRM" = "Integrations/Zendesk_CRM.md" },
+        { "Zoho CRM" = "Integrations/Zoho_CRM.md" },
+        { "Zoom Meeting" = "Integrations/Zoom_Meeting.md" },
+      ] },
+      { "Services (REST/SOAP)" = [
+        { "Services (REST/SOAP)" = "Integrations/Services_(REST_2fSOAP).md" },
+        { "Create a Service" = "Integrations/Create_a_Service.md" },
+        { "Import a Service" = "Integrations/Import_a_Service.md" },
+        { "Edit a Service" = "Integrations/Edit_a_Service.md" },
+        { "Delete a Service" = "Integrations/Delete_a_Service.md" },
+      ] },
+      { "Endpoints" = [
+        { "Endpoints" = "Integrations/Endpoints.md" },
+        { "Create an Endpoint" = "Integrations/Create_an_Endpoint.md" },
+        { "Edit an Endpoint" = "Integrations/Edit_an_Endpoint.md" },
+        { "Include/Exclude an Endpoint" = "Integrations/Include_2fExclude_an_Endpoint.md" },
+        { "Delete an Endpoint" = "Integrations/Delete_an_Endpoint.md" },
+        { "Composite Endpoint" = "Integrations/Composite_Endpoint.md" },
+      ] },
+    ] },
+    { "Manage" = [
+      { "Manage" = "Integrations/Manage.md" },
+      { "Overview of the Management Environment" = [
+        { "Overview of the Management Environment" = "Integrations/Overview_of_the_Management_Environment.md" },
+        { "Overview Page" = "Integrations/Overview_Page.md" },
+      ] },
+      { "Managing Configurations" = [
+        { "Managing Configurations" = "Integrations/Managing_Configurations.md" },
+        { "View Configurations" = "Integrations/View_Configurations.md" },
+        { "Edit Configuration Details" = "Integrations/Edit_Configuration_Details.md" },
+        { "Run a Configuration Manually" = "Integrations/Run_a_Configuration_Manually.md" },
+        { "Run Configuration with a Message" = "Integrations/Run_Configuration_with_a_Message.md" },
+        { "Run Configuration with a File" = "Integrations/Run_Configuration_with_a_File.md" },
+        { "Duplicate a Configuration" = "Integrations/Duplicate_a_Configuration.md" },
+        { "Set a Configuration to Active or Inactive" = "Integrations/Set_a_Configuration_to_Active_or_Inactive.md" },
+        { "Set a Configuration as a Favorite" = "Integrations/Set_a_Configuration_as_a_Favorite.md" },
+        { "Delete a Configuration" = "Integrations/Delete_a_Configuration.md" },
+        { "Import Integration" = "Integrations/Import_Integration.md" },
+        { "Edit Configuration Schedule" = "Integrations/Edit_Configuration_Schedule.md" },
+        { "View Configuration Jobs" = "Integrations/View_Configuration_Jobs.md" },
+        { "Manage Configuration Macros" = "Integrations/Manage_Configuration_Macros.md" },
+        { "Manage Configuration Files" = "Integrations/Manage_Configuration_Files.md" },
+      ] },
+      { "Manage Configuration Run History" = [
+        { "Manage Configuration Run History" = "Integrations/Manage_Configuration_Run_History.md" },
+        { "Download Log File" = "Integrations/Download_Log_File_2.md" },
+      ] },
+      { "Creating Templates" = "Integrations/Creating_Templates.md" },
+      { "Managing Templates" = [
+        { "Managing Templates" = "Integrations/Managing_Templates.md" },
+        { "View Templates" = "Integrations/View_Templates.md" },
+        { "Edit Template Details" = "Integrations/Edit_Template_Details.md" },
+        { "Delete a Template" = "Integrations/Delete_a_Template.md" },
+        { "Set a Template to Active or Inactive" = "Integrations/Set_a_Template_to_Active_or_Inactive.md" },
+        { "Manage Template Macros" = "Integrations/Manage_Template_Macros.md" },
+        { "Manage Template Files" = "Integrations/Manage_Template_Files.md" },
+        { "Manage Template Configurations" = "Integrations/Manage_Template_Configurations.md" },
+      ] },
+      { "Creating Macros" = [
+        { "Creating Macros" = "Integrations/Creating_Macros.md" },
+        { "Create Public Macros (Administrators Only)" = "Integrations/Create_Public_Macros_(Administrators_Only).md" },
+        { "Manage Public Macros (Administrators Only)" = "Integrations/Manage_Public_Macros_(Administrators_Only).md" },
+      ] },
+      { "Managing Macros" = [
+        { "Managing Macros" = "Integrations/Managing_Macros.md" },
+        { "View Macros" = "Integrations/View_Macros.md" },
+        { "Search Macros" = "Integrations/Search_Macros.md" },
+        { "Sort Macros" = "Integrations/Sort_Macros.md" },
+        { "Edit Macros" = "Integrations/Edit_Macros.md" },
+        { "Add Your First Macro" = "Integrations/Add_Your_First_Macro.md" },
+        { "Add More Macros" = "Integrations/Add_More_Macros.md" },
+        { "Import Macros" = "Integrations/Import_Macros.md" },
+      ] },
+      { "Managing Files" = [
+        { "Managing Files" = "Integrations/Managing_Files.md" },
+        { "View Files" = "Integrations/View_Files.md" },
+        { "Search and Filter the Files List" = "Integrations/Search_and_Filter_the_Files_List.md" },
+        { "Upload Files" = "Integrations/Upload_Files.md" },
+        { "Delete Files" = "Integrations/Delete_Files.md" },
+      ] },
+      { "Managing Agents and Devices" = [
+        { "Managing Agents and Devices" = "Integrations/Managing_Agents_and_Devices.md" },
+        { "Download an Agent" = "Integrations/Download_an_Agent.md" },
+        { "Install an Agent" = "Integrations/Install_an_Agent.md" },
+        { "Register an Agent" = "Integrations/Register_an_Agent.md" },
+        { "View Registered Agents" = "Integrations/View_Registered_Agents.md" },
+        { "Ping an Agent" = "Integrations/Ping_an_Agent.md" },
+        { "Request Log" = "Integrations/Request_Log.md" },
+        { "View Log" = "Integrations/View_Log.md" },
+        { "Update an Agent" = "Integrations/Update_an_Agent.md" },
+        { "Activate/Deactivate an Agent" = "Integrations/Activate_2fDeactivate_an_Agent.md" },
+        { "Deregister an Agent" = "Integrations/Deregister_an_Agent.md" },
+        { "Execute a Configuration with an Agent" = "Integrations/Execute_a_Configuration_with_an_Agent.md" },
+        { "Execute a Template with an Agent" = "Integrations/Execute_a_Template_with_an_Agent.md" },
+        { "Other Authorized Devices" = "Integrations/Other_Authorized_Devices.md" },
+      ] },
+    ] },
+  ] },
+]
+
+# ----------------------------------------------------------------------------
+# Theme
+# ----------------------------------------------------------------------------
+[project.theme]
+
+# "modern" is Zensical's new default look-and-feel.
+variant = "modern"
+
+# Template override directory (relative to this config). Used only for the
+# announcement bar: theme_overrides/main.html fills Zensical's `announce` block.
+custom_dir = "theme_overrides"
+
+language = "en"
+logo = "assets/images/actian-logo.svg"
+favicon = "assets/favicon.png"
+
+# NOTE: theme_overrides/main.html is a minimal custom_dir override used ONLY to
+# fill Zensical's `announce` block (the "moved from FrameMaker to Markdown"
+# banner). Analytics (GA4) and the "View as Markdown" link remain handled by
+# docs/javascripts/analytics.js and docs/javascripts/extra.js respectively,
+# since Zensical's modern theme has no native hook for either in this setup.
+
+# Full Zensical modern feature set. (content.action.edit/view are intentionally
+# omitted: repo_url points at a Support contact page, not an editable repo.)
+features = [
+    "announce.dismiss",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.code.select",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.instant.progress",
+    "navigation.path",
+    "navigation.sections",
+    "navigation.tabs",
+    "navigation.tabs.sticky",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+    "toc.follow",
+]
+
+[project.theme.icon]
+repo = "material/lifebuoy"
+
+# ----------------------------------------------------------------------------
+# Color palette (light default + dark slate, indigo primary/accent)
+# ----------------------------------------------------------------------------
+[[project.theme.palette]]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to light mode"
+
+# ----------------------------------------------------------------------------
+# Markdown extensions — full Zensical recommended set (superset of the original
+# MkDocs config; adds abbreviations, footnotes, math, keys, task lists, etc.)
+# ----------------------------------------------------------------------------
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.meta]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.toc]
+title = "On this page"
+permalink = true
+
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.tilde]
+
+[project.markdown_extensions.pymdownx.magiclink]
+repo_url_shorthand = true
+
+[project.markdown_extensions.pymdownx.highlight]
+use_pygments = true
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+auto_title = false
+linenums = false
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]

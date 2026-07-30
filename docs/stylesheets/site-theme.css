@@ -1,0 +1,54 @@
+/* ============================================================
+   Minimal override on top of the stock Zensical "modern" theme.
+
+   The modern theme is already a light theme (light header with a
+   backdrop blur, light footer, dark text). These rules only force
+   the header, navigation tabs, and footer to a solid white in the
+   light (default) color scheme. Dark mode (slate) is left untouched
+   so it stays readable.
+
+   The Actian logo is configured in zensical.toml (theme.logo).
+   Everything else uses the default Zensical theme.
+   ============================================================ */
+
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs,
+[data-md-color-scheme="default"] .md-footer,
+[data-md-color-scheme="default"] .md-footer-meta {
+  background-color: #ffffff;
+}
+
+/* ============================================================
+   Header "Support" button — solid blue pill, no icon.
+   (repo_url/repo_name in zensical.toml render the header source
+   link; these rules restyle it into a branded pill.)
+   ============================================================ */
+.md-header__source {
+  width: auto;
+  max-width: none;
+}
+.md-header .md-source__icon {
+  display: none;
+}
+.md-header .md-source {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  background-color: #1267dc;
+  border-radius: 2rem;
+  padding: 0.35rem 1rem;
+  font-size: 0.7rem;
+  transition: opacity 0.15s ease;
+}
+.md-header .md-source:hover {
+  opacity: 0.88;
+}
+.md-header .md-source__repository {
+  margin-left: 0;
+  padding-left: 0;
+  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}

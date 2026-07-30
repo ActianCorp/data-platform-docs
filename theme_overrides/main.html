@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{#
+  Announcement bar.
+
+  Zensical's modern theme inherits Material's `announce` block from base.html.
+  The dismiss button + persistence are provided automatically because the
+  "announce.dismiss" feature is enabled in zensical.toml.
+#}
+{% block announce %}
+  <span class="md-banner__text">
+    📄 <strong>New documentation experience:</strong>
+    the Actian Data Platform docs have moved from Adobe FrameMaker to Markdown.
+    If anything looks off,
+    <a href="{{ config.repo_url }}">let us know</a>.
+  </span>
+{% endblock %}
+
+{#
+  Content block override.
+
+  This mirrors Zensical's stock partials/content.html exactly, with ONE change:
+  the first `{% include "partials/actions.html" %}` is replaced by a native
+  content-action button (same `md-content__button md-icon` markup and the same
+  `file-code-2` icon the default theme uses) that opens the raw Markdown source.
+
+  Why override instead of using the built-in `content.action.view` feature:
+  the stock button only renders when `page.edit_url` resolves to a git host
+  (GitHub/GitLab/Bitbucket). These docs have no backing repo (repo_url is a
+  Support page), so the raw source is instead the `.md` mirrored next to each
+  page by scripts/copy_md_sources.py — same path, `.html` -> `.md`.
+#}
+{% block content %}
+  {% if page.url %}
+    <a
+      href="{{ (page.url | replace('.html', '.md')) | url }}"
+      title="{{ lang.t('action.view') }}"
+      class="md-content__button md-icon"
+    >
+      {% include ".icons/" ~ (config.theme.icon.view or "lucide/file-code-2") ~ ".svg" %}
+    </a>
+  {% endif %}
+  {% if "<h1" not in page.content %}
+    <h1 id="__skip">{{ page.title | d(config.site_name, true) }}</h1>
+  {% endif %}
+  {{ page.content }}
+  {% include "partials/tags.html" %}
+  {% include "partials/source-file.html" %}
+  {% include "partials/feedback.html" %}
+  {% include "partials/comments.html" %}
+{% endblock %}
