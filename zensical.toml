@@ -69,7 +69,6 @@ nav = [
   ] },
   { "Warehouse User Guide" = [
     { "Introduction and Concepts" = [
-      { "Introduction and Concepts" = "User/Part_IntroConcepts.md" },
       { "Introducing Actian Warehouse" = [
         { "Introducing Actian Warehouse" = "User/Introducing_Actian_Warehouse.md" },
         { "Performance and Concurrency" = "User/Performance_and_Concurrency.md" },
@@ -99,7 +98,6 @@ nav = [
       ] },
       { "Create a Warehouse" = [
         { "Create a Warehouse" = "User/Create_a_Warehouse.md" },
-        { "Create a New Warehouse" = "User/Create_a_New_Warehouse.md" },
         { "Actian Data Platform Warehouses Console" = "User/Actian_Data_Platform_Warehouses_Console.md" },
         { "Warehouse Details" = "User/Warehouse_Details.md" },
         { "Comparing Warehouses and Databases" = "User/Comparing_Warehouses_and_Databases.md" },
@@ -125,7 +123,6 @@ nav = [
       ] },
     ] },
     { "Warehouse and Database Management" = [
-      { "Warehouse and Database Management" = "User/Part_WarehouseManagement.md" },
       { "Access Warehouse or Database Connection Information" = [
         { "Access Warehouse or Database Connection Information" = "User/Access_Warehouse_or_Database_Connection_Informat.md" },
         { "Connection Tools" = [
@@ -208,7 +205,6 @@ nav = [
       ] },
     ] },
     { "Sparkforce Platform" = [
-      { "Sparkforce Platform" = "User/Part_SparkforcePlatform.md" },
       { "Sparkforce Platform" = [
         { "Sparkforce Platform" = "User/Sparkforce_Platform.md" },
         { "System Architecture" = [
@@ -232,7 +228,6 @@ nav = [
       ] },
     ] },
     { "Query Editor" = [
-      { "Query Editor" = "User/Part_QueryEditor.md" },
       { "Overview of the Query Editor" = [
         { "Overview of the Query Editor" = "User/Overview_of_the_Query_Editor.md" },
         { "Query Editor Diagram" = "User/Query_Editor_Diagram.md" },
@@ -292,7 +287,6 @@ nav = [
       { "Query Editor Troubleshooting" = "User/Query_Editor_Troubleshooting.md" },
     ] },
     { "Appendixes" = [
-      { "Appendixes" = "User/Part_Appendixes.md" },
       { "Mapping Blob URI Syntax to ABFS Syntax" = "User/AzureURItoABFSSyntax.md" },
       { "Connect to DBeaver with JDBC" = [
         { "Connect to DBeaver with JDBC" = "User/Connect_to_DBeaver_with_JDBC.md" },
@@ -307,10 +301,11 @@ nav = [
       { "Connect to Tableau with ODBC" = "User/ConnectTableauODBC.md" },
       { "Run Sample Queries" = "User/RunSampleQueries.md" },
     ] },
+    { "Warehouse Data API (BaaS)" = "User/Warehouse_Data_API.md" },
+    { "MCP Server for Platform Management" = "User/MCP_Server.md" },
   ] },
   { "Data Loading Guide" = [
     { "Data Loading Overview" = [
-      { "Data Loading Overview" = "DataLoading/DataLoadingOverview.md" },
       { "Data Loading Roadmap: Choosing a Data Loading Method" = "DataLoading/Data_Loading_Roadmap_3a_Choosing_a_Data_Loading_Me.md" },
       { "Migrating Your Data to Actian Data Platform" = "DataLoading/Migrating_Your_Data_to_Actian_Data_Platform.md" },
       { "Overview of SQL-Based Data Loading" = "DataLoading/OverviewSQLDataLoading.md" },
@@ -336,7 +331,6 @@ nav = [
       { "Loading JSON Data from Cloud Data Storage" = "DataLoading/LoadingJSONData.md" },
     ] },
     { "Appendixes" = [
-      { "Appendixes" = "DataLoading/Part_Appendixes.md" },
       { "Managing Integration Users, Groups, and Listeners" = [
         { "Managing Integration Users, Groups, and Listeners" = "DataLoading/Managing_Integration_Users__Groups__and_Listener.md" },
         { "Manage Integration Users" = "DataLoading/Manage_Integration_Users.md" },
@@ -912,7 +906,6 @@ nav = [
   ] },
   { "Database as a Service Guide" = [
     { "Introducing Actian Database as a Service on the Actian Data Platform" = [
-      { "Introducing Actian Database as a Service on the Actian Data Platform" = "DBaaS_User/Introducing_Actian_Database_as_a_Service_on_the.md" },
       { "Overview" = "DBaaS_User/Overview.md" },
       { "Concepts to Understand" = "DBaaS_User/Concepts_to_Understand.md" },
       { "Access Documentation and Help" = "DBaaS_User/Access_Documentation_and_Help.md" },
@@ -948,7 +941,6 @@ nav = [
       ] },
     ] },
     { "Warehouse and Database Management" = [
-      { "Warehouse and Database Management" = "DBaaS_User/Part_WarehouseManagement.md" },
       { "Access Warehouse or Database Connection Information" = [
         { "Access Warehouse or Database Connection Information" = "DBaaS_User/Access_Warehouse_or_Database_Connection_Informat.md" },
         { "Connection Tools" = [
@@ -983,7 +975,6 @@ nav = [
         { "Contact Support" = "DBaaS_User/Contact_Support.md" },
       ] },
       { "Manage Users" = [
-        { "Manage Users" = "DBaaS_User/Manage_Users_2.md" },
         { "Overview of User Management" = "DBaaS_User/Overview_of_User_Management.md" },
         { "User Profiles" = "DBaaS_User/User_Profiles.md" },
         { "User Groups" = "DBaaS_User/User_Groups.md" },
@@ -1017,9 +1008,7 @@ nav = [
       ] },
     ] },
     { "Query Editor" = [
-      { "Query Editor" = "DBaaS_User/Part_QueryEditor.md" },
       { "Overview of the Query Editor" = [
-        { "Overview of the Query Editor" = "DBaaS_User/Overview_of_the_Query_Editor.md" },
         { "Features and Restrictions" = "DBaaS_User/Features_and_Restrictions.md" },
         { "Query Editor Diagram" = "DBaaS_User/Query_Editor_Diagram.md" },
         { "Single Sign-on Users, Native Users, and Platform Users" = "DBaaS_User/Single_Sign-on_Users__Native_Users__and_Platform.md" },
@@ -1087,7 +1076,6 @@ nav = [
       { "Common Terms" = "DataQuality/Common_Terms.md" },
     ] },
     { "Design" = [
-      { "Design" = "DataQuality/Design.md" },
       { "Overview of Design Environment" = [
         { "Overview of Design Environment" = "DataQuality/Overview_of_Design_Environment.md" },
         { "Data Profiles Page" = "DataQuality/Data_Profiles_Page.md" },
@@ -1159,7 +1147,6 @@ nav = [
       { "Run History" = "DataQuality/Run_History.md" },
     ] },
     { "Manage" = [
-      { "Manage" = "DataQuality/Manage.md" },
       { "Overview of Manage Environment" = [
         { "Overview of Manage Environment" = "DataQuality/Overview_of_Manage_Environment.md" },
         { "Manage, Overview Page" = "DataQuality/Manage__Overview_Page.md" },
@@ -1187,7 +1174,6 @@ nav = [
       { "Common Tasks" = "Integrations/Common_Tasks.md" },
     ] },
     { "Design" = [
-      { "Design" = "Integrations/Design.md" },
       { "Overview of the Design Environment" = [
         { "Overview of the Design Environment" = "Integrations/Overview_of_the_Design_Environment.md" },
         { "Integration Designs Page" = "Integrations/Integration_Designs_Page.md" },
@@ -1312,7 +1298,6 @@ nav = [
       ] },
     ] },
     { "Manage" = [
-      { "Manage" = "Integrations/Manage.md" },
       { "Overview of the Management Environment" = [
         { "Overview of the Management Environment" = "Integrations/Overview_of_the_Management_Environment.md" },
         { "Overview Page" = "Integrations/Overview_Page.md" },
@@ -1433,8 +1418,11 @@ features = [
     "navigation.tabs",
     "navigation.tabs.sticky",
     "navigation.top",
+    "navigation.prune",
     "navigation.tracking",
     "search.highlight",
+    "search.suggest",
+    "search.share",
     "toc.follow",
 ]
 
@@ -1444,19 +1432,29 @@ repo = "material/lifebuoy"
 # ----------------------------------------------------------------------------
 # Color palette (light default + dark slate, indigo primary/accent)
 # ----------------------------------------------------------------------------
+# Entry 1: follow the operating-system preference on first visit.
 [[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "material/brightness-auto"
+toggle.name = "Switch to light mode"
+
+# Entry 2: explicit light mode.
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
 scheme = "default"
 primary = "indigo"
 accent = "indigo"
-toggle.icon = "material/brightness-4"
+toggle.icon = "material/brightness-7"
 toggle.name = "Switch to dark mode"
 
+# Entry 3: explicit dark mode.
 [[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 primary = "indigo"
 accent = "indigo"
-toggle.icon = "material/brightness-7"
-toggle.name = "Switch to light mode"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to system preference"
 
 # ----------------------------------------------------------------------------
 # Markdown extensions — full Zensical recommended set (superset of the original

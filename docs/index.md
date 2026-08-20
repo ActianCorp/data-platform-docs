@@ -16,7 +16,7 @@ Welcome to the Actian Data Platform documentation. Choose a guide below to get s
 
     Quickly understand basic tasks — create a warehouse or database, load data, and run your first queries.
 
--   :material-database:{ .lg .middle } __[Warehouse User Guide](User/Part_IntroConcepts.md)__
+-   :material-database:{ .lg .middle } __[Warehouse User Guide](User/Introducing_Actian_Warehouse.md)__
 
     ---
 
@@ -46,7 +46,7 @@ Welcome to the Actian Data Platform documentation. Choose a guide below to get s
 
     Complete reference for SQL syntax, data types, statements, embedded SQL, JSON, and the SQL CLI.
 
--   :material-cloud-outline:{ .lg .middle } __[Database as a Service](DBaaS_User/Introducing_Actian_Database_as_a_Service_on_the.md)__
+-   :material-cloud-outline:{ .lg .middle } __[Database as a Service](DBaaS_User/Overview.md)__
 
     ---
 

@@ -159,7 +159,7 @@ The login page now supports logging in to Avalanche using your Actian ID or your
 
 You can now modify the idle stop period for Google Cloud warehouses. For more information, see Modify Idle Stop Period (Google Cloud Only).
 
-Idle stop now supports periods of 15 and 30 minutes. For more information, see [Create a New Warehouse](../User/Create_a_New_Warehouse.md).
+Idle stop now supports periods of 15 and 30 minutes. For more information, see [Create a Warehouse](../User/Create_a_Warehouse.md).
 
 You can open a service request with Actian Support on the Administration page. For more information, see [Open a Service Request](../User/Open_a_Service_Request.md). If you are an administrator, you may contact Actian Support directly; see [Contact Support](../User/Contact_Support.md).
 

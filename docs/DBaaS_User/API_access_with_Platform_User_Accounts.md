@@ -18,14 +18,22 @@ To access Actian APIs as a Platform User:
 
 1. Using an API client, enter the Actian production API endpoint to make a POST request:
 
-```
-https://api.im.actiandatacloud.com/v2/api/login
-```
+    ```
+    https://api.im.actiandatacloud.com/v2/api/login
+    ```
 
-2. In the Body section of the request, check raw, select the JSON option, and enter your platform username and password in body of the request:
+2. In the Headers section of the request, add the required `Content-Type` header:
+
+    | Key | Value |
+    | --- | --- |
+    | Content-Type | application/json |
+
+    The login request fails if the `Content-Type: application/json` header is not set.
+
+3. In the Body section of the request, check raw, select the JSON option, and enter your platform username and password in body of the request:
 
     ![](images/api_login.png)
 
-3. Click SEND to send the request. If accepted, an access token and other related information will display.
+4. Click SEND to send the request. If accepted, an access token and other related information will display.
 
 ![](images/postman_example.png)
