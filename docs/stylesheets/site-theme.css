@@ -360,3 +360,23 @@ body,
   font-weight: 600;
   letter-spacing: -0.02em;
 }
+
+/* Announcement banner: compact.
+   The theme sizes the banner from `.md-banner__inner` (font-size .7rem,
+   margin .6rem) and inherits `.md-typeset` line-height on the same element,
+   which together make the bar taller than a one-line notice needs. Shrink the
+   text and collapse the vertical margin so the banner reads as a thin strip
+   above the header. Selectors carry two classes to beat the theme's
+   single-class rules regardless of load order. */
+.md-banner .md-banner__inner {
+  font-size: 0.5rem;
+  line-height: 1.35;
+  margin: 0.2rem auto;
+}
+
+/* Scale the dismiss button down with the text (theme default is 1rem) so it
+   does not set the bar's height on its own. */
+.md-banner .md-banner__button svg {
+  width: 0.65rem;
+  height: 0.65rem;
+}
