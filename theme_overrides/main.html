@@ -40,12 +40,67 @@
       {% include ".icons/" ~ (config.theme.icon.view or "lucide/file-code-2") ~ ".svg" %}
     </a>
   {% endif %}
-  {% if "<h1" not in page.content %}
+  {#
+    Ensure a single page title with no duplicate heading.
+
+    Most pages converted from FrameMaker lead with an H2 that already serves
+    as the page title. Previously the template ALSO injected an H1 title, so
+    two identical headings rendered. We now render content as-is whenever it
+    contains any heading, and only fall back to an injected title for pages
+    that have no heading at all. The leading H2 on converted pages is styled
+    to look like an H1 in stylesheets/site-theme.css (no content edits).
+  #}
+  {% if "<h1" in page.content or "<h2" in page.content %}
+    {{ page.content }}
+  {% else %}
     <h1 id="__skip">{{ page.title | d(config.site_name, true) }}</h1>
+    {{ page.content }}
   {% endif %}
-  {{ page.content }}
+
   {% include "partials/tags.html" %}
   {% include "partials/source-file.html" %}
   {% include "partials/feedback.html" %}
   {% include "partials/comments.html" %}
+
+  {#
+    Prev/next navigation rendered INSIDE the content column so it spans the
+    content width — previous pinned left, next pinned right — instead of the
+    default centered footer bar. Mirrors the Zeenea platform docs. The stock
+    full-width footer nav (.md-footer__inner) is hidden in
+    stylesheets/site-theme.css so this is the only prev/next control.
+  #}
+  {% if "navigation.footer" in features %}
+    {% if page.previous_page or page.next_page %}
+      {% set hidden = "" %}
+      {% if page.meta and page.meta.hide and "footer" in page.meta.hide %}
+        {% set hidden = "hidden" %}
+      {% endif %}
+      <nav class="md-content-footer" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+        {% if page.previous_page %}
+          {% set direction = lang.t("footer.previous") %}
+          <a href="{{ page.previous_page.url | url }}" class="md-content-footer__link md-content-footer__link--prev" aria-label="{{ direction }}: {{ page.previous_page.title }}">
+            <div class="md-content-footer__button md-icon">
+              {% include ".icons/material/arrow-left.svg" %}
+            </div>
+            <div class="md-content-footer__title">
+              <span class="md-content-footer__direction">{{ direction }}</span>
+              <div class="md-ellipsis">{{ page.previous_page.title }}</div>
+            </div>
+          </a>
+        {% endif %}
+        {% if page.next_page %}
+          {% set direction = lang.t("footer.next") %}
+          <a href="{{ page.next_page.url | url }}" class="md-content-footer__link md-content-footer__link--next" aria-label="{{ direction }}: {{ page.next_page.title }}">
+            <div class="md-content-footer__title">
+              <span class="md-content-footer__direction">{{ direction }}</span>
+              <div class="md-ellipsis">{{ page.next_page.title }}</div>
+            </div>
+            <div class="md-content-footer__button md-icon">
+              {% include ".icons/material/arrow-right.svg" %}
+            </div>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  {% endif %}
 {% endblock %}

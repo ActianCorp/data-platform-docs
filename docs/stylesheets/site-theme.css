@@ -52,3 +52,311 @@
   overflow: visible;
   text-overflow: clip;
 }
+
+/* ============================================================
+   Layout polish (additive; no content changes)
+   Uses documented Material/Zensical CSS custom properties and
+   theme markup classes only.
+   ============================================================ */
+
+/* Brand accent for links, focus rings, and selection in both schemes. */
+:root {
+  --md-accent-fg-color: #1267dc;
+}
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #4c8dff;
+}
+
+/* Slightly wider, more readable content column on large screens
+   (default is 61rem; helps the many wide reference tables). */
+.md-grid {
+  max-width: 66rem;
+}
+
+/* Home-page guide cards — minimal, professional (Stripe / Vercel style).
+   Small inline accent icon (no badge box), quiet semibold title, muted
+   2-line description for even card heights, hairline border, flat hover
+   (border tint only — no shadow or lift). Styling only; the card text and
+   icons in index.md are unchanged. */
+.md-typeset .grid.cards {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.7rem;
+  margin: 1em 0;
+}
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  background: var(--md-default-bg-color);
+  box-shadow: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+  border-color: var(--md-accent-fg-color);
+  background: rgba(18, 103, 220, 0.04); /* fallback */
+  background: color-mix(in srgb, var(--md-accent-fg-color) 4%, var(--md-default-bg-color));
+  box-shadow: none;
+  transform: none;
+}
+
+/* Title row: small inline icon + link (no badge, no oversized glyph). */
+.md-typeset .grid.cards > ul > li > p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.35rem;
+}
+.md-typeset .grid.cards > ul > li .twemoji {
+  flex: none;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--md-accent-fg-color);
+}
+.md-typeset .grid.cards > ul > li .twemoji svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Title text: quiet semibold, accent only on hover. */
+.md-typeset .grid.cards > ul > li > p:first-child a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .grid.cards > ul > li:hover > p:first-child a {
+  color: var(--md-accent-fg-color);
+}
+
+/* Drop the heavy divider; spacing separates title and description. */
+.md-typeset .grid.cards > ul > li > hr {
+  display: none;
+}
+
+/* Description: muted, small, clamped to 2 lines so all cards align. */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tables: full width with a subtly shaded header and rounded frame. */
+.md-typeset table:not([class]) {
+  width: 100%;
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Typography — calmer "developer-docs" feel (Stripe / Google style).
+   Native system font stack (no external font requests). Smaller,
+   tighter semibold headings instead of oversized thin ones; quiet,
+   muted navigation and tabs with the accent reserved for the active
+   item. Layout/type only — no content changes.
+   ============================================================ */
+
+/* Fast, native system font stack everywhere (no webfont fetch). */
+body,
+.md-typeset,
+.md-nav,
+.md-tabs,
+.md-header__title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body copy: relaxed line-height for comfortable reading. */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+/* Headings: moderate weight + tighter tracking, quieter than the
+   default oversized thin headings. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8em;
+}
+.md-typeset h2 {
+  font-size: 1.3rem;
+  margin-top: 1.9em;
+}
+.md-typeset h3 {
+  font-size: 1.05rem;
+}
+.md-typeset h4 {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Sidebar navigation: smaller, lighter, muted; accent on hover/active. */
+.md-nav {
+  font-size: 0.68rem;
+}
+.md-nav__link {
+  color: var(--md-default-fg-color--light);
+  font-weight: 400;
+}
+.md-nav__link:hover,
+.md-nav__link:focus {
+  color: var(--md-accent-fg-color);
+}
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Section labels: small, uppercase, tracked-out — developer-docs style. */
+.md-nav__title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--lighter);
+}
+
+/* Header tabs: quiet by default, emphasized only when active. */
+.md-tabs__link {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.72;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+.md-tabs__link:hover {
+  opacity: 1;
+}
+.md-tabs__link--active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Softer header divider so the top bar reads quieter. */
+.md-header {
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+/* Thin divider between the header/tabs row and the page content. */
+.md-tabs {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Tighten the large gap between the header and the content (was 1.5rem),
+   moving the content and sidebars up. */
+.md-main__inner {
+  margin-top: 0.5rem;
+}
+.md-content__inner > h1:first-child,
+.md-typeset > h1:first-child {
+  margin-top: 0.2rem;
+}
+
+/* Prev/next pagination inside the content column (see main.html): spans the
+   content width with previous pinned left and next pinned right, above a thin
+   rule. The default centered footer nav is hidden below. */
+.md-content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-content-footer__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 48%;
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.md-content-footer__link--next {
+  margin-left: auto;
+  text-align: right;
+}
+.md-content-footer__link,
+.md-content-footer__link:hover {
+  text-decoration: none;
+}
+/* Tiny, bold, accent-colored direction label — small but eye-catching. */
+.md-content-footer__direction {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--md-accent-fg-color);
+}
+/* Compact title in normal text color; turns accent on hover. */
+.md-content-footer__title .md-ellipsis {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+.md-content-footer__link:hover .md-ellipsis {
+  color: var(--md-accent-fg-color);
+}
+.md-content-footer__button svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: var(--md-default-fg-color--light);
+}
+.md-content-footer__link:hover .md-content-footer__button svg {
+  fill: var(--md-accent-fg-color);
+}
+
+/* Hide the stock full-width footer prev/next (copyright meta is kept).
+   Matches the theme's own `.md-footer__inner:not([hidden])` specificity so
+   this override wins the cascade (it loads later); a plain `.md-footer__inner`
+   rule would lose to the theme's `:not([hidden])` selector. */
+.md-footer__inner:not([hidden]) {
+  display: none;
+}
+
+/* Header actions: keep the theme toggle, search, and Support cluster on the
+   right (default), but nudge it slightly in from the right edge so it isn't
+   jammed against the corner. Increase the value to move it further left. */
+.md-header__source {
+  margin-right: 2.5rem;
+}
+
+/* Page title consistency.
+   Pages converted from FrameMaker lead with an H2 that is the page title
+   (there is no H1). Render that single leading H2 at H1 scale so those
+   pages match the ones that use a real H1. Section H2s on H1 pages are
+   untouched because the selector only applies when the content has no H1. */
+.md-typeset:not(:has(> h1)) > h2:first-of-type {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
