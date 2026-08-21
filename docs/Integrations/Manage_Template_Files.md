@@ -45,7 +45,7 @@ The Template Details page options and actions:
 | ![](images/RuntimeWorkspace_97.png) | Click this icon and specify the value that you want to search. The values in each column will be evaluated during the search. Contents will be filtered based on the search string.Click ![](images/RuntimeWorkspace_98.png) to close the search box. |
 | ![](images/RuntimeWorkspace_99.png) | Click the down arrow and select how many records to display on the page. The default page size is set to 25. |
 | ![](images/RuntimeWorkspace_100.png) | Use these options to Navigate from one page to another. |
-| ![](images/RuntimeWorkspace_101.png) | •Upload Files – See [Upload Files to a Template](../Integrations/Manage_Template_Files.md).•Link file in File Repository – See [Link a File to the File Repository](../Integrations/Manage_Template_Files.md). |
+| ![](images/RuntimeWorkspace_101.png) | • Upload Files – See [Upload Files to a Template](../Integrations/Manage_Template_Files.md).<br>• Link file in File Repository – See [Link a File to the File Repository](../Integrations/Manage_Template_Files.md). |
 | Delete File Link | This button is displayed when you select a file by clicking the check-box that is displayed against the file name. Select a file and click Delete File Link to disassociate it from the current template. |
 
 ### Upload Files to a Template

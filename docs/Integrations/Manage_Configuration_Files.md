@@ -47,7 +47,7 @@ The Configuration Files page options and actions:
 | ![](images/RuntimeWorkspace_49.png) | Click this icon and specify the value that you want to search. The values in each column will be evaluated during the search. Contents will be filtered based on the search string.Click ![](images/RuntimeWorkspace_50.png) to close the search box. |
 | ![](images/RuntimeWorkspace_51.png) | Click the down arrow and select how many records to display on the page. The default page size is set to 25. |
 | ![](images/RuntimeWorkspace_52.png) | Use these options to Navigate from one page to another. |
-| ![](images/RuntimeWorkspace_53.png) | •Upload Files – See [Upload Files to a Configuration](../Integrations/Manage_Configuration_Files.md).•Link file in File Repository – See [Link a File to the File Repository](../Integrations/Manage_Template_Files.md). |
+| ![](images/RuntimeWorkspace_53.png) | • Upload Files – See [Upload Files to a Configuration](../Integrations/Manage_Configuration_Files.md).<br>• Link file in File Repository – See [Link a File to the File Repository](../Integrations/Manage_Template_Files.md). |
 | Delete File Link | This button is displayed when you select a file by clicking the check-box that is displayed against the file name. Select a file and click Delete File Link to disassociate it from the current template. |
 
 ### Upload Files to a Configuration

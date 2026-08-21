@@ -36,7 +36,7 @@ Specify the following details to define a connection:
 | HCL OneDB Database Name | Specifies the name of the HCL OneDB database to connect to.This property is mandatory. |
 | User Name | Specifies the user name for the specified database.This property is mandatory. |
 | Password | Specifies the password for the specified database.This property is mandatory. |
-| HCL OneDB Server Locale | Specifies the locale of the server on which the HCL OneDB database is hosted. The default setting is EN_US.819. Select one of the following:• EN_US.819• EN_US.UTF8This property is mandatory. |
+| HCL OneDB Server Locale | Specifies the locale of the server on which the HCL OneDB database is hosted. The default setting is EN_US.819. Select one of the following:<br>• EN_US.819<br>• EN_US.UTF8This property is mandatory. |
 | Test | Click to verify your connection, then click Save.The new connection is listed on the Connections page and selected as the source connection (if you’re in the process of creating an integration). |
 
 The connection appears in the list of connections on the Connections page.

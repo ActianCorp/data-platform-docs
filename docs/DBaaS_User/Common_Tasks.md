@@ -31,9 +31,9 @@ There are three ways to log in to Actian Data Platform:
 
 | This login option… | Provides access to… |
 | --- | --- |
-| Actian Community | •Google Cloud, AWS, and Azure data warehouses•Integrations |
-| Actian Platform User | •Google Cloud data sources•Integrations |
-| Google Cloud | •Google Cloud data sources•Integrations |
+| Actian Community | • Google Cloud, AWS, and Azure data warehouses<br>• Integrations |
+| Actian Platform User | • Google Cloud data sources<br>• Integrations |
+| Google Cloud | • Google Cloud data sources<br>• Integrations |
 
 All three options require that a user has been provisioned. There are three ways to provision a user:
 

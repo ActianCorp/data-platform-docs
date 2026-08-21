@@ -42,7 +42,7 @@ The Template Macros page options and actions:
 | ![](images/RuntimeWorkspace_81.png) | Click this iconand specify the value that you want to search. The values in each column will be evaluated during the search. Contents will be filtered based on the search string.Click ![](images/RuntimeWorkspace_82.png) to close the search box. |
 | ![](images/RuntimeWorkspace_83.png) | Click the down arrow and select how many records to display on the page. The default page size is set to 25. |
 | ![](images/RuntimeWorkspace_84.png) | Use these options to Navigate from one page to another. |
-| ![](images/RuntimeWorkspace_85.png) | •Add Macro – See [Add Macros to Template](../Integrations/Manage_Template_Macros.md).•Import Macro – See [Import Macros to a Template](../Integrations/Manage_Template_Macros.md). |
+| ![](images/RuntimeWorkspace_85.png) | • Add Macro – See [Add Macros to Template](../Integrations/Manage_Template_Macros.md).<br>• Import Macro – See [Import Macros to a Template](../Integrations/Manage_Template_Macros.md). |
 | Delete Macro | This button is displayed when you select a macro by clicking the check-box that is displayed against the macro name. Select a macro and click Delete Macro to delete it.**Caution!**The delete action cannot be undone. |
 | ![](images/RuntimeWorkspace_86.png) | If any entry spans multiple lines, it is in a collapsed state by default.Click this icon to expand the collapsed lines. The icon changes to ![](images/RuntimeWorkspace_87.png) (click this to collapse the lines). |
 | ![](images/RuntimeWorkspace_88.png)![](images/RuntimeWorkspace_89.png) | These are another set of icons that can be used to expand and collapse the lines which span multiple lines. |

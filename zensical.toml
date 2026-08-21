@@ -301,8 +301,11 @@ nav = [
       { "Connect to Tableau with ODBC" = "User/ConnectTableauODBC.md" },
       { "Run Sample Queries" = "User/RunSampleQueries.md" },
     ] },
-    { "Warehouse Data API (BaaS)" = "User/Warehouse_Data_API.md" },
-    { "MCP Server for Platform Management" = "User/MCP_Server.md" },
+    { "APIs and Programmatic Access" = [
+      { "Actian Data Platform REST APIs" = "User/Actian_Data_Platform_REST_APIs.md" },
+      { "Warehouse Data API (BaaS)" = "User/Warehouse_Data_API.md" },
+      { "MCP Server for Platform Management" = "User/MCP_Server.md" },
+    ] },
   ] },
   { "Data Loading Guide" = [
     { "Data Loading Overview" = [
@@ -1375,6 +1378,35 @@ nav = [
     ] },
   ] },
 ]
+
+# ----------------------------------------------------------------------------
+# Page feedback widget
+#
+# Renders the "Was this page helpful?" form via the stock
+# partials/feedback.html, which is included from theme_overrides/main.html.
+# The partial only renders when extra.analytics.feedback is set, so this block
+# is what switches the widget on.
+#
+# The rating buttons and the follow-up comment box are wired to Google
+# Analytics 4 in docs/javascripts/extra.js (events "feedback" and
+# "feedback_text"); styles for the comment box live in
+# docs/stylesheets/site-theme.css. Add "feedback" to a page's `hide:` front
+# matter to suppress the widget on that page.
+# ----------------------------------------------------------------------------
+[project.extra.analytics.feedback]
+title = "Was this page helpful?"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-up-outline"
+name = "This page was helpful"
+data = 1
+note = "Thanks for your feedback!"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-down-outline"
+name = "This page could be improved"
+data = 0
+note = "Thanks for your feedback!"
 
 # ----------------------------------------------------------------------------
 # Theme

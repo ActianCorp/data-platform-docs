@@ -103,7 +103,7 @@ Select a relevant option from below fields:
 
 | Options | Description |
 | --- | --- |
-| Access Token Expiry Action | Action to be taken if the access token is expired. The available options are:•Do not refresh•Refresh with client credentials•Refresh with password credentials |
+| Access Token Expiry Action | Action to be taken if the access token is expired. The available options are:<br>• Do not refresh<br>• Refresh with client credentials<br>• Refresh with password credentials |
 | Access Token | Specifies security token which grants access to the given REST endpoint in OAuth 2.0 |
 | Access Token URL | The endpoint which is called to generate an access token in exchange of the authentication code. |
 | Client ID | This is sometimes referred to as the consumer key. |
@@ -117,7 +117,7 @@ Select a relevant option from below fields:
 
 | Options | Description |
 | --- | --- |
-| Grant Type | Refers to the way an application gets an access token. The available options are:•Authentication Code•Authentication Code with PKCE•Client Credentials•Password Credentials |
+| Grant Type | Refers to the way an application gets an access token. The available options are:<br>• Authentication Code<br>• Authentication Code with PKCE<br>• Client Credentials<br>• Password Credentials |
 | Access Token URL | The endpoint which is called to generate an access token in exchange of the authentication code. |
 | Client ID | This is sometimes referred to as the consumer key. |
 | Client Secret | This is sometimes referred to as the consumer secret. |
@@ -139,7 +139,7 @@ Select a relevant option from below fields:
 
 | Options | Description |
 | --- | --- |
-| Grant Type | Refers to the way an application gets an access token. The available options are:•Client Credentials•Password Credentials |
+| Grant Type | Refers to the way an application gets an access token. The available options are:<br>• Client Credentials<br>• Password Credentials |
 | Access Token URL | The endpoint which is called to generate an access token in exchange of the authentication code. |
 | Client ID | This is sometimes referred to as the consumer key. |
 | Client Secret | This is sometimes referred to as the consumer secret. |

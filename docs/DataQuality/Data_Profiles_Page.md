@@ -35,4 +35,4 @@ Data Profiles page options and actions:
 | ![](images/Design_12.png) | Click this icon to view the Data Profiles in a grid view (the default view). |
 | ![](images/Design_13.png) | Click this icon to view the Data Profiles in a list view. |
 | ![](images/Design_14.png) | Create a profile. See [Creating a Data Profile](../DataQuality/Creating_a_Data_Profile.md). |
-| ![](images/Design_15.png) | •Data Profiles - Displays the Data Profiles page.•Run History - Displays the Run History page. See [Run History](../DataQuality/Run_History.md). |
+| ![](images/Design_15.png) | • Data Profiles - Displays the Data Profiles page.<br>• Run History - Displays the Run History page. See [Run History](../DataQuality/Run_History.md). |

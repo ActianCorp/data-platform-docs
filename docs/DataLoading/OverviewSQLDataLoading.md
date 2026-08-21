@@ -21,8 +21,8 @@ The loading methods that Actian Data Platform supports are:
 
 | Loading Method | Supported Clients | Performance | Supported Formats | Supported Object Stores |
 | --- | --- | --- | --- | --- |
-| COPY VWLOAD | •Actian SQL CLI•JDBC•ODBC | Fastest | Delimited text | •AWS S3•Azure Blob (General-purpose v2 accounts only)•Google Cloud•Gzipped delimited text |
-| External Tables | •Actian SQL CLI•JDBC•ODBC | Fast | •Delimited text•Delimited text (gzipped)•JSON•Parquet | •AWS S3•Azure Blob (General-purpose v2 accounts only)•Google Cloud |
+| COPY VWLOAD | • Actian SQL CLI<br>• JDBC<br>• ODBC | Fastest | Delimited text | • AWS S3<br>• Azure Blob (General-purpose v2 accounts only)<br>• Google Cloud<br>• Gzipped delimited text |
+| External Tables | • Actian SQL CLI<br>• JDBC<br>• ODBC | Fast | • Delimited text<br>• Delimited text (gzipped)<br>• JSON<br>• Parquet | • AWS S3<br>• Azure Blob (General-purpose v2 accounts only)<br>• Google Cloud |
 
 Here is an overview of each data loading method:
 

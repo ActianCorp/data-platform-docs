@@ -28,7 +28,7 @@ This section describes the Date and Time blocks. The Date and Time blocks allow 
 | Block Name | Date/Time Format |
 | Description | Returns a string of formatting characters that specifies a datetime format. |
 | Script | “format” |
-| Inputs | You can select from:•yyyy-mm-dd hh:nn:ss•yyyy-dd-mm hh:nn:ss•yyyy-mm-ddThh:nn:ss |
+| Inputs | You can select from:<br>• yyyy-mm-dd hh:nn:ss<br>• yyyy-dd-mm hh:nn:ss<br>• yyyy-mm-ddThh:nn:ss |
 | Returned Value | String representing datetime format. |
 | Examples | The following example returns “yyyy-mm-dd hh:nn:ss” datetime format:![](images/DesignWorkspace_90.png)Script:`“yyyy-mm-dd hh:nn:ss”` |
 
@@ -39,7 +39,7 @@ This section describes the Date and Time blocks. The Date and Time blocks allow 
 | Block Name | Time Format |
 | Description | Returns a string of formatting characters that specifies a time format. |
 | Script | “format” |
-| Inputs | You can select from:•hh:nn:ss•hh:nn:ss AM/PM•hh:nn•hh:nn AM/PM•hhnnss•hhnn |
+| Inputs | You can select from:<br>• hh:nn:ss<br>• hh:nn:ss AM/PM<br>• hh:nn<br>• hh:nn AM/PM<br>• hhnnss<br>• hhnn |
 | Returned Value | String representing a time format. |
 | Example | The following example returns “hh:nn:ss” time format.![](images/DesignWorkspace_91.png)Script:`“hh:nn:ss”` |
 
@@ -50,7 +50,7 @@ This section describes the Date and Time blocks. The Date and Time blocks allow 
 | Block Name | String to Date/Time |
 | Description | Converts a String representation of a datetime, date or time into a datetime value. |
 | Script | ToDatetime(“datetime”,“format”) |
-| Inputs | datetime – A string that represents a datetime value.format – A string that represents the format of the datetime value:•mm/dd/yy•mm/dd/yyyy•mmddyy•mmddyyyy•dd/mm/yy•dd/mm/yyyy•ddmmyy•ddmmyyyy•yyyymmdd•yyyyddmm•yyyy-mm-dd•yy-mm-dd•yyyy-dd-mm•yy-dd-mm |
+| Inputs | datetime – A string that represents a datetime value.format – A string that represents the format of the datetime value:<br>• mm/dd/yy<br>• mm/dd/yyyy<br>• mmddyy<br>• mmddyyyy<br>• dd/mm/yy<br>• dd/mm/yyyy<br>• ddmmyy<br>• ddmmyyyy<br>• yyyymmdd<br>• yyyyddmm<br>• yyyy-mm-dd<br>• yy-mm-dd<br>• yyyy-dd-mm<br>• yy-dd-mm |
 | Returned Value | A datetime value. |
 | Examples | The following example converts a string datetime (“05/12/23”) into a real datetime value in the specified date format (“mm/dd/yy”).![](images/DesignWorkspace_92.png)Script:`ToDatetime("05/12/23","mm/dd/yy")` |
 
@@ -61,7 +61,7 @@ This section describes the Date and Time blocks. The Date and Time blocks allow 
 | Block Name | Date/Time to String |
 | Description | Converts a datetime, date or time into a string value. |
 | Script | FromDatetime(datetime,“format”) |
-| Inputs | datetime – A datetime value.format – A string that represents the format of the datetime value:•mm/dd/yy•mm/dd/yyyy•mmddyy•mmddyyyy•dd/mm/yy•dd/mm/yyyy•ddmmyy•ddmmyyyy•yyyymmdd•yyyyddmm•yyyy-mm-dd•yy-mm-dd•yyyy-dd-mm•yy-dd-mm |
+| Inputs | datetime – A datetime value.format – A string that represents the format of the datetime value:<br>• mm/dd/yy<br>• mm/dd/yyyy<br>• mmddyy<br>• mmddyyyy<br>• dd/mm/yy<br>• dd/mm/yyyy<br>• ddmmyy<br>• ddmmyyyy<br>• yyyymmdd<br>• yyyyddmm<br>• yyyy-mm-dd<br>• yy-mm-dd<br>• yyyy-dd-mm<br>• yy-dd-mm |
 | Returned Value | A string that represents a datetime value. |
 | Example | The following example formats the datetime from source field @due_date into a string datetime of the specified format (“mm/dd/yy”).![](images/DesignWorkspace_93.png)Script:`FromDatetime(@due_date,"mm/dd/yy")` |
 

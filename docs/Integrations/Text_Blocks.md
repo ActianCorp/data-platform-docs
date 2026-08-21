@@ -80,7 +80,7 @@ This section describes the Text blocks. The Text blocks allow you to perform str
 | Block Category | Text |
 | --- | --- |
 | Block Name | Change Case |
-| Description | Converts the input string to UPPER, lower, or Title case based on the option that you select from the drop-down:•UPPER – Converts the input string to UPPER case.•lower – Converts the input string to lower case.•Title – Converts the input string to Title case. |
+| Description | Converts the input string to UPPER, lower, or Title case based on the option that you select from the drop-down:<br>• UPPER – Converts the input string to UPPER case.<br>• lower – Converts the input string to lower case.<br>• Title – Converts the input string to Title case. |
 | Script | Upper(parameter)Lower(parameter)Proper(parameter) |
 | Inputs | A string. |
 | Returned Value | An UPPER, lower, or Title case string. |
@@ -91,7 +91,7 @@ This section describes the Text blocks. The Text blocks allow you to perform str
 | Block Category | Text |
 | --- | --- |
 | Block Name | Trim |
-| Description | Removes spaces from the beginning, end or both sides of a string, based on the option that you select from the drop-down:•Both – Removes spaces from both sides of the string.•Left – Removes spaces from the beginning of the string.•Right – Removes spaces from the end of the string. |
+| Description | Removes spaces from the beginning, end or both sides of a string, based on the option that you select from the drop-down:<br>• Both – Removes spaces from both sides of the string.<br>• Left – Removes spaces from the beginning of the string.<br>• Right – Removes spaces from the end of the string. |
 | Script | Trim(parameter)TrimLeft(parameter)TrimRight(parameter) |
 | Inputs | A string. |
 | Returned Value | The specified string with spaces removed from the beginning, end or both sides of a string, based on the selected trim option (Left, Right, Both). |

@@ -42,7 +42,7 @@ The Configuration Macros page options and actions:
 | ![](images/RuntimeWorkspace_33.png) | Click this icon and specify the value that you want to search. The values in each column will be evaluated during the search. Contents will be filtered based on the search string.Click ![](images/RuntimeWorkspace_34.png) to close the search box. |
 | ![](images/RuntimeWorkspace_35.png) | Click the down arrow and select how many records to display on the page. The default page size is set to 25. |
 | ![](images/RuntimeWorkspace_36.png) | Use these options to Navigate from one page to another. |
-| ![](images/RuntimeWorkspace_37.png) | •Add Macro - See [Add Macros to a Configuration](../Integrations/Manage_Configuration_Macros.md).•Import Macro - See [Import Macros to a Configuration](../Integrations/Manage_Configuration_Macros.md). |
+| ![](images/RuntimeWorkspace_37.png) | • Add Macro - See [Add Macros to a Configuration](../Integrations/Manage_Configuration_Macros.md).<br>• Import Macro - See [Import Macros to a Configuration](../Integrations/Manage_Configuration_Macros.md). |
 | Delete Macro | This button is displayed when you select a macro by clicking the check-box that is displayed against the macro name. Select a macro and click Delete Macro to delete it.**Caution!**The delete action cannot be undone. |
 | ![](images/RuntimeWorkspace_38.png) | If any entry spans multiple lines, it is in a collapsed state by default.Click this icon to expand the collapsed lines. The icon changes to ![](images/RuntimeWorkspace_39.png) (click this to collapse the lines). |
 | ![](images/RuntimeWorkspace_40.png)![](images/RuntimeWorkspace_41.png) | These are another set of icons that can be used to expand and collapse the lines which span multiple lines. |

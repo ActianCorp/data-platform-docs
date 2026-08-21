@@ -21,4 +21,4 @@ A cloud database is used to handle day-to-day transactional data that changes of
 | Usually 100 GB to 2 TB in size | Usually 10 MB to 100 GB in size |
 | Data is used for analyzing your business | Data used for running your business |
 | Data is processed using queries | Data is processed using transactions |
-| •Unnormalized data may be present•Redundant data may be present | •Data is normalized•Data is unique |
+| • Unnormalized data may be present<br>• Redundant data may be present | • Data is normalized<br>• Data is unique |

@@ -163,8 +163,8 @@ For the properties, refer to the following table:
 | Records per Call | The number of records to fetch per call. |
 | Limit | The total number of records to return across all calls. |
 | First Offset | The offset value to provide in the first call. |
-| End of Data Indicator | This property specifies how the REST service reports that the page is the final page. This property has the following possible values:•Number of Records - A field in the response, or in a header value, provides the total number of records being returned.•Is Last - A boolean field in the response, or in a header value, specifies that the current page is the last page.•Has More - A boolean field in the response, or in a header value, specifies that the current page is not the last page.•No Indicator - Nothing in the data indicates that a page is the last page. Instead, an empty or missing array implies there is no more data. |
-| End of Data Location | Location in response as where to find the total number of records. Select end of data location from below:•Header•Body |
+| End of Data Indicator | This property specifies how the REST service reports that the page is the final page. This property has the following possible values:<br>• Number of Records - A field in the response, or in a header value, provides the total number of records being returned.<br>• Is Last - A boolean field in the response, or in a header value, specifies that the current page is the last page.<br>• Has More - A boolean field in the response, or in a header value, specifies that the current page is not the last page.<br>• No Indicator - Nothing in the data indicates that a page is the last page. Instead, an empty or missing array implies there is no more data. |
+| End of Data Location | Location in response as where to find the total number of records. Select end of data location from below:<br>• Header<br>• Body |
 | Number of Records Path | Header name or the path for which the total number of records are found. This property is applicable only when the Pagination Type is set to Offset and End of Data Indicator is set to Number of Records.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
 | Is Last Path | Header name or the path where the is last indicator is found. This is a boolean field or header that has the value of true to indicate that the last page has been reachedSee [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
 | Has More Path | Header name or the path where the has more indicator is found. This is a boolean field or header that has the value of true to indicate that there are more pages to be fetched.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
@@ -177,8 +177,8 @@ For the properties, refer to the below table:
 | --- | --- |
 | Records per Call | The number of records to fetch per call. |
 | First Page | The page value to provide in the first call. |
-| Number of Pages Location | Location where to find total number of pages. Select number of pages location from below:•Header•Body |
-| End of Data Indicator | This property specifies how the REST service reports that the page is the final page. This property has the following possible values:•Number of Pages - A field in the response, or in a header value, provides the total number of pages being returned.•Is Last - A boolean field in the response, or in a header value, specifies that the current page is the last page.•Has More - A boolean field in the response, or in a header value, specifies that the current page is not the last page.•No Indicator - Nothing in the data indicates that a page is the last page. Instead, an empty or missing array implies there is no more data. |
+| Number of Pages Location | Location where to find total number of pages. Select number of pages location from below:<br>• Header<br>• Body |
+| End of Data Indicator | This property specifies how the REST service reports that the page is the final page. This property has the following possible values:<br>• Number of Pages - A field in the response, or in a header value, provides the total number of pages being returned.<br>• Is Last - A boolean field in the response, or in a header value, specifies that the current page is the last page.<br>• Has More - A boolean field in the response, or in a header value, specifies that the current page is not the last page.<br>• No Indicator - Nothing in the data indicates that a page is the last page. Instead, an empty or missing array implies there is no more data. |
 | Number of Pages Path | Header name or the path for which the URL for the next page is found. This property is applicable only when the Pagination Type is set to Page and End of Data Indicator is set to Number of Pages.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
 | Is Last Path | Header name or the path where the is last indicator is found. This is a boolean field or header that has the value of true to indicate that the last page has been reached.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
 | Has More Path | Header name or the path where the has more indicator is found. This is a boolean field or header that has the value of true to indicate that there are more pages to be fetched.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
@@ -189,7 +189,7 @@ For the properties, refer to the below table:
 
 | Property | Description |
 | --- | --- |
-| Next Page Link Location | The name of the header or the path in the body for the field containing the URL for the next page. Select the next page link location from below:•Header•Body |
+| Next Page Link Location | The name of the header or the path in the body for the field containing the URL for the next page. Select the next page link location from below:<br>• Header<br>• Body |
 | Next Page Link Path | Header name or the path for which the URL for the next page is found.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
 
     - –Next Page Token
@@ -197,9 +197,9 @@ For the properties, refer to the below table:
 
 | Property | Description |
 | --- | --- |
-| Next Token Location | The name of the header or the path in the body for the field containing the token for the next page. Select the next token location from below:•Header•Body |
+| Next Token Location | The name of the header or the path in the body for the field containing the token for the next page. Select the next token location from below:<br>• Header<br>• Body |
 | Next Token Path | Header name or the path for which the token for the next page is found.See [JSON Paths](../Integrations/Create_an_Endpoint.md) to specify path. |
-| Pagination Token Location | Location where the pagination token for subsequent calls would be configured. Select the pagination token location from below:•Parameter•Header |
+| Pagination Token Location | Location where the pagination token for subsequent calls would be configured. Select the pagination token location from below:<br>• Parameter<br>• Header |
 | Pagination Token name | Name of the pagination token to be passed in the next subsequent calls. |
 
 JSON Paths

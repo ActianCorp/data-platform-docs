@@ -24,7 +24,7 @@ The detail section displays individual table data skew details:
 | --- | --- |
 | Partitions | Partition count for the specific table |
 | Total Blocks | Sum of data blocks for all partitions |
-| Partition Blocks | •Min – Block count for smallest partition•Median – Partition median block count•Max – Block count for largest partition |
+| Partition Blocks | • Min – Block count for smallest partition<br>• Median – Partition median block count<br>• Max – Block count for largest partition |
 | Data Skew | Data skew percentage |
 | Table | Table name using <owner>.<table> notation |
 

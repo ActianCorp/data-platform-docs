@@ -16,7 +16,7 @@ The following are the fields and controls on the Warehouse Details page:
 
 | Field | Description |
 | --- | --- |
-| Status | Status of the warehouse:•Creating, Create Failed, Create Error Analysis•Starting, Start Failed•Running•Scaling, Scaling Failed•Stopping, Stopped, Stop Failed•Deleting, Deleted, Delete Failed•Unknown |
+| Status | Status of the warehouse:<br>• Creating, Create Failed, Create Error Analysis<br>• Starting, Start Failed<br>• Running<br>• Scaling, Scaling Failed<br>• Stopping, Stopped, Stop Failed<br>• Deleting, Deleted, Delete Failed<br>• Unknown |
 | Storage | AWS: The amount of AWS S3 storage available in the warehouse.]Azure: The Authentication mechanism that Actian supports to ingest data from a general-purpose v2 storage account is through Azure Active Directory using a service principal.The instructions in this section are intended to be performed in the Azure subscription, where the source data for Actian is located and the credentials that are generated must be supplied to Actian so that it can access and load the data.For more information, see Set Up Microsoft Azure Access.]Google Cloud: Google Cloud Storage.] |
 | Compute | Number of Actian units (AUs) in the warehouse.Azure: You can scale the size of Azure warehouses; for more information, see [Scale a Warehouse](../User/ScaleWarehouse.md).] |
 | Region | Geographical location of the warehouse |

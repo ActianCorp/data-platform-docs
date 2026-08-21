@@ -14,10 +14,10 @@ There are a number of ways you can load data from external sources into the Acti
 | --- | --- | --- | --- | --- | --- |
 | Delimited text | Desktop | Data Load (Azure and Google Cloud only) | ![](images/GreenCheckmark.png) | Not recommended over 100MB | [Data Load](../DataLoading/Data_Load.md) |
 | Cloud storage | SQL |  | ![](images/GreenCheckmark.png) | [Loading Delimited Text Data from Cloud Data Storage](../DataLoading/Loading_Delimited_Text_Data_from_Cloud_Data_Stor.md) |
-| Cloud storage:•AWS S3•Azure Blob Storage•Google Cloud | Batch data loading | ![](images/GreenCheckmark.png) |  | [Batch Data Loading](../DataLoading/BatchDataLoad.md) |
-| •JSON•NoSQL | Cloud storage | SQL |  | ![](images/GreenCheckmark.png) | [Loading JSON Data from Cloud Data Storage](../DataLoading/LoadingJSONData.md) |
-| •Parquet•Avro•CSV•HIVE•ORC•JDBC | Cloud storage | SQL |  | ![](images/GreenCheckmark.png) | •[Loading Parquet Data from Cloud Data Storage](../DataLoading/LoadingParquet.md)•[Examples of Defining External Tables and Loading Data](../DataLoading/Examples_of_Defining_External_Tables_and_Loading.md) |
-| Web applications | •NetSuite•Salesforce•ServiceNow | Batch data loading | ![](images/GreenCheckmark.png) |  | [Batch Data Loading](../DataLoading/BatchDataLoad.md) |
+| Cloud storage:<br>• AWS S3<br>• Azure Blob Storage<br>• Google Cloud | Batch data loading | ![](images/GreenCheckmark.png) |  | [Batch Data Loading](../DataLoading/BatchDataLoad.md) |
+| • JSON<br>• NoSQL | Cloud storage | SQL |  | ![](images/GreenCheckmark.png) | [Loading JSON Data from Cloud Data Storage](../DataLoading/LoadingJSONData.md) |
+| • Parquet<br>• Avro<br>• CSV<br>• HIVE<br>• ORC<br>• JDBC | Cloud storage | SQL |  | ![](images/GreenCheckmark.png) | • [Loading Parquet Data from Cloud Data Storage](../DataLoading/LoadingParquet.md)<br>• [Examples of Defining External Tables and Loading Data](../DataLoading/Examples_of_Defining_External_Tables_and_Loading.md) |
+| Web applications | • NetSuite<br>• Salesforce<br>• ServiceNow | Batch data loading | ![](images/GreenCheckmark.png) |  | [Batch Data Loading](../DataLoading/BatchDataLoad.md) |
 | Databases | Actian Zen | Batch data loading | ![](images/GreenCheckmark.png) |  | [Batch Data Loading](../DataLoading/BatchDataLoad.md) |
 
 You may also choose between the following data loading methods.

@@ -41,11 +41,11 @@ Specify the following details to define a connection:
 | --- | --- |
 | Root URL | Specifies the service root URL of the OData service. This is a mandatory property. |
 | Base Headers | (Optional) Specifies the list of HTTP request headers in the format: key=value key=value...key=value. |
-| Authentication Type | Specifies the type of authentication to use for accessing the OData service. This is a mandatory property. There are two types of authentications:•API Key(default): API Key is used.•Basic: Basic HTTP authentication with username and password is performed. |
+| Authentication Type | Specifies the type of authentication to use for accessing the OData service. This is a mandatory property. There are two types of authentications:<br>• API Key(default): API Key is used.<br>• Basic: Basic HTTP authentication with username and password is performed. |
 | API Key | Specifies the API key value to use for authentication. This is a mandatory property. This property is enabled when Authentication Type is set to API key. |
 | Username | Specifies the username value to use for basic authentication. This is a mandatory property. This property is enabled when Authentication Type is set to Basic. |
 | Password | Specifies the password value to use for basic authentication. This is a mandatory property. This property is enabled when Authentication Type is set to Basic. |
-| OData Version | (Optional) Specifies the version of OData to use for accessing the OData Service. There are two supported versions:•V4 (default)•V2 |
+| OData Version | (Optional) Specifies the version of OData to use for accessing the OData Service. There are two supported versions:<br>• V4 (default)<br>• V2 |
 
 Source Details
 

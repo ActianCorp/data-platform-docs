@@ -29,7 +29,7 @@ Specify the following details to define a new connection:
 | Option | Description |
 | --- | --- |
 | Name | Enter a unique name for the connection and click Continue. |
-| Authentication Method | Choose one of the following:•Credentials File: To upload a file containing credentials.•Credentials Content: To paste credentials.This property is mandatory. |
+| Authentication Method | Choose one of the following:<br>• Credentials File: To upload a file containing credentials.<br>• Credentials Content: To paste credentials.This property is mandatory. |
 | Credentials | The JSON credentials of the service account used to access the Cloud Storage service. The credentials file can be downloaded from the Cloud Storage console.**Note:**To define a connection, the concerned GCP account must have the permission for storage.buckets.list. Your credentials are authenticated successfully only if you have the permissions. |
 | Test | Click to verify your connection, then click Save. |
 

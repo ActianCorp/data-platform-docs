@@ -702,7 +702,7 @@ The public methods for the IngresConnection class are:
 | Dispose | Closes the connection and releases allocated resources. |
 | EnlistDistributedTransaction | Enlists in an existing distributed transaction (ITransaction). Mutually exclusive with the BeginTransaction method. |
 | EnlistTransaction | Enlists in an existing distributed transaction (System.Transactions.Transaction). Mutually exclusive with the BeginTransaction method. |
-| GetSchema | Returns schema metadata from the Ingres catalog for the specified collection name. Valid collection names include:•MetaDataCollections•DataSourceInformation•DataTypes•Restrictions•ReservedWords•Tables•Views•Columns•Indexes•Procedures•ProcedureParameters |
+| GetSchema | Returns schema metadata from the Ingres catalog for the specified collection name. Valid collection names include:<br>• MetaDataCollections<br>• DataSourceInformation<br>• DataTypes<br>• Restrictions<br>• ReservedWords<br>• Tables<br>• Views<br>• Columns<br>• Indexes<br>• Procedures<br>• ProcedureParameters |
 | Open | Opens a database connection or uses one from the connection pool. |
 
 ### IngresConnection Class Events

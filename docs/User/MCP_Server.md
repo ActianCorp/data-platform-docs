@@ -8,18 +8,18 @@ canonical_id: "actian-data-platform-mcp-server-platform-management"
 
 # MCP Server for Platform Management
 
-This MCP server lets you manage and observe your platform resources — warehouses,
-tenant entitlements, usage, events, and telemetry — from an AI client using natural
+This MCP server lets you manage and observe your platform resources (warehouses,
+tenant entitlements, usage, events, and telemetry) from an AI client using natural
 language. It implements the
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), an open standard
 for connecting AI clients to external tools and data.
 
-Once the server is connected to an MCP-aware client — for example Claude Desktop,
-Claude Code, or the MCP Inspector — you can ask questions such as
+After the server is connected to an MCP-aware client, such as Claude Desktop,
+Claude Code, or the MCP Inspector, you can ask questions such as
 *"list my warehouses"* or *"show usage for warehouse `wh-123` last week"*, and the
 client calls the matching tool on the server.
 
-!!! note "This is not the warehouse SQL endpoint"
+!!! note "This Is Not the Warehouse SQL Endpoint"
 
     Actian offers two different MCP servers, and both are reached at a path
     named `/mcp`. This page covers the **platform management** server, whose tools
@@ -29,17 +29,17 @@ client calls the matching tool on the server.
     To explore schemas and run SQL queries against a warehouse, use the MCP Server
     for Analytics Engine instead. That server is enabled per warehouse and is
     documented separately in the
-    [Actian MCP Server documentation](https://docs.actian.com/mcp-server/) — see
+    [Actian MCP Server documentation](https://docs.actian.com/mcp-server/). See
     the *Actian Data Platform* page in the *Analytics Engine* section.
 
-!!! warning "Keep your tokens secret"
+!!! warning "Keep Your Tokens Secret"
 
     The examples below use placeholders such as `<mcp-host>` and `<ACCESS_TOKEN>`.
-    An access token is a credential — treat it like a password. Never commit it to
+    An access token is a credential. Treat it like a password. Never commit it to
     source control, paste it into shared documents, or include it in a support
     request. Rotate a token immediately if it is exposed.
 
-## What the server exposes
+## Server Capabilities
 
 The server speaks MCP over HTTP streamable transport at the path `/mcp`, and
 exposes 12 tools across six domains.
@@ -53,20 +53,20 @@ exposes 12 tools across six domains.
 | Telemetry | `get_telemetry_metrics` | Retrieve telemetry metrics (for example, CPU) for a resource |
 | Utility | `server_status` | Confirm the server is reachable and authentication is working |
 
-The server does not publish MCP resources or prompts — its surface is tools only.
+The server does not publish MCP resources or prompts. Its surface is tools only.
 If your client has a resources or prompts panel, it is empty for this server. That
 is expected; use the tool catalog instead.
 
-### Service endpoints
+### Service Endpoints
 
 | Path | Method | Purpose |
 | --- | --- | --- |
-| `/mcp` | POST | MCP protocol endpoint — all tool calls go here |
+| `/mcp` | POST | MCP protocol endpoint. All tool calls go here |
 | `/health` | GET | Liveness probe; returns `{"status": "ok"}` |
 | `/mcp/apiinfo` | GET | Deployment information: `service`, `version`, `gitCommit`, `deploymentName` |
 | `/.well-known/oauth-protected-resource/mcp` | GET | OAuth Protected Resource Metadata (resource URL, issuer, supported scopes, client ID) |
 
-## Connect an MCP client
+## Connecting MCP Client
 
 You need three things:
 
@@ -75,7 +75,7 @@ You need three things:
    scopes you intend to use.
 3. The **`x-aap-mcp-scope`** header, listing the scopes used for the request.
 
-### Add the server to your client
+### Adding Server Client
 
 In a client that supports remote MCP servers, add a server definition:
 
@@ -92,7 +92,7 @@ Clients that implement OAuth discovery can read the Protected Resource Metadata 
 `/.well-known/oauth-protected-resource/mcp` to find the authorization server,
 supported scopes, and client ID.
 
-### Verify the connection
+### Verifying Connection
 
 List the available tools to confirm the server is reachable and your token is
 accepted:
@@ -106,7 +106,7 @@ curl -sS -X POST 'https://<mcp-host>/mcp' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
 ```
 
-## Authentication and scopes
+## Authentication and Scopes
 
 The server is an OAuth 2.0 protected resource. Every request to `/mcp` must carry a
 valid bearer token from the configured issuer.
@@ -119,11 +119,11 @@ valid bearer token from the configured issuer.
 !!! note
 
     `x-aap-mcp-scope` is a single header value holding the scopes, normally
-    space-separated — for example `read:warehouses write:warehouses`.
+    space-separated, for example, `read:warehouses write:warehouses`.
     Comma-separated values are also accepted. The header is required on every tool
     call, including tools that declare no scope of their own.
 
-### Supported scopes
+### Supported Scopes
 
 | Scope | Used by |
 | --- | --- |
@@ -136,7 +136,7 @@ valid bearer token from the configured issuer.
 A request that does not carry the required scope is rejected with an authorization
 error. See [Troubleshooting](#troubleshooting).
 
-### How a request is authorized
+### Request Authorization
 
 Every inbound request is checked in three stages before it reaches a tool:
 
@@ -150,7 +150,7 @@ When a tool makes a downstream call, it exchanges your token for a short-lived
 internal service token. Your `Authorization` header is never forwarded to backend
 services.
 
-## Tool conventions
+## Tool Conventions
 
 These conventions apply to every tool:
 
@@ -161,7 +161,7 @@ These conventions apply to every tool:
   earlier than `to_date`.
 - Invalid input is returned as a structured error that names the offending field.
 
-## Warehouse tools
+## Warehouse Tools
 
 ### list_warehouses
 
@@ -184,7 +184,7 @@ Response shape:
 ```
 
 Only `id` is guaranteed on each resource. Additional fields returned by the
-platform — such as name, status, or region — are passed through unchanged.
+platform, such as name, status, or region, are passed through unchanged.
 
 ### get_warehouse
 
@@ -229,7 +229,7 @@ Example response:
 ```
 
 `operation_status` is one of `in_progress`, `succeeded`, `rejected`, or `failed`.
-Starting is asynchronous — poll `get_warehouse` to confirm the warehouse has
+Starting is asynchronous. Poll `get_warehouse` to confirm the warehouse has
 reached the state you want.
 
 ### stop_warehouse
@@ -266,7 +266,7 @@ Example tool call:
 
 ### update_warehouse_allow_list
 
-Updates a warehouse's IP allow list — adding entries, removing entries, or
+Updates a warehouse's IP allow list by adding entries, removing entries, or
 relabeling existing entries. Scope: `write:warehouses`.
 
 At least one of `additions`, `removals`, or `changeLabel` must be non-empty.
@@ -306,7 +306,7 @@ Example tool call:
 }
 ```
 
-## Tenant tools
+## Tenant Tools
 
 ### get_tenant_details
 
@@ -330,13 +330,13 @@ Example prompt:
 
 > "Show me my tenant's current entitlements and trial status."
 
-## Usage tools
+## Usage Tools
 
 ### get_usage_details
 
 Retrieves metered consumption for one warehouse over a date range, broken down by
-granularity. Results are keyed by category — for example `DWH`, `DWH_API`, and
-`DWH_backup` — with consumption records per period. Read-only. Scope:
+granularity. Results are keyed by category, for example, `DWH`, `DWH_API`, and
+`DWH_backup`, with consumption records per period. Read-only. Scope:
 `read:warehouses`.
 
 | Name | Type | Required | Default | Description |
@@ -382,11 +382,11 @@ Response shape:
 }
 ```
 
-## Domain events tools
+## Domain Events Tools
 
 ### get_warehouse_domain_events
 
-Retrieves Actian-formatted CloudEvents for a subject — normally a warehouse —
+Retrieves Actian-formatted CloudEvents for a subject, normally a warehouse,
 within a date range. Read-only. Scope: `retrieve:events`.
 
 | Name | Type | Required | Default | Description |
@@ -436,11 +436,11 @@ Returned event shape (CloudEvents 1.0):
 }
 ```
 
-## Telemetry tools
+## Telemetry Tools
 
 ### get_telemetry_metrics
 
-Retrieves telemetry metrics for a resource — a warehouse, database, or job — over a
+Retrieves telemetry metrics for a resource (a warehouse, database, or job) over a
 time window. Read-only. Scope: `retrieve:telemetry`.
 
 | Name | Type | Required | Default | Description |
@@ -479,7 +479,7 @@ Returned metric shape:
 }
 ```
 
-## Utility tools
+## Utility Tools
 
 ### server_status
 
@@ -519,12 +519,12 @@ The `error_code` value is one of `authentication_error`, `authorization_error`,
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
 | `error_code` is `authorization_error` | Your token or `x-aap-mcp-scope` header does not carry the scope the tool requires | Obtain a token with the required scope and list that scope in `x-aap-mcp-scope`. See [Supported scopes](#supported-scopes). |
-| The error message names a parameter — for example a blank ID, `from_date` not earlier than `to_date`, or a malformed CIDR block | Invalid tool parameters | Check the parameter table for the tool you called; the message identifies the offending field. |
-| `error_code` is `validation_error` | The platform response did not match the expected schema | Usually transient — retry. If it persists, [contact support](Contact_Support.md). |
+| The error message names a parameter, for example, a blank ID, `from_date` not earlier than `to_date`, or a malformed CIDR block | Invalid tool parameters | Check the parameter table for the tool you called; the message identifies the offending field. |
+| `error_code` is `validation_error` | The platform response did not match the expected schema | Usually transient. Retry. If it persists, [contact support](Contact_Support.md). |
 | HTTP `401` | Missing or invalid bearer token | Re-authenticate against the configured identity provider. |
 | HTTP `403` | Authenticated, but not authorized for the resource | Confirm your scopes and that you are operating in the right tenant. |
 
-### Check whether the server is reachable
+### Checking Server Reachability
 
 ```bash
 curl -sS 'https://<mcp-host>/health'
@@ -536,7 +536,7 @@ Returns:
 {"status":"ok"}
 ```
 
-### Check the deployed version
+### Checking Deployed Version
 
 Useful when confirming whether a fix has been deployed:
 

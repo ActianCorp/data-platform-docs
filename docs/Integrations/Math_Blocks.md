@@ -27,7 +27,7 @@ This section describes the Math blocks. The Math blocks allow you to perform mat
 | Block | ![](images/DesignWorkspace_78.png) |
 | Description | Allows you to perform simple Arithmetic Operations on two numbers or numeric expressions. You can select from addition, subtraction, multiplication, division, and exponent operators. |
 | Script | operand1 + operand2operand1 - operand2operand1 * operand2operand1 / operand2operand1 ^ operand2 |
-| Inputs | Operand1 – A number or a numeric expression.Operand2 – A number or a numeric expression.Arithmetic operator – You can select from:•+ (Addition operator)•- (Subtraction operator)•× (Multiplication operator)•÷ (Division operator)•^ (Exponent operator) |
+| Inputs | Operand1 – A number or a numeric expression.Operand2 – A number or a numeric expression.Arithmetic operator – You can select from:<br>• + (Addition operator)<br>• - (Subtraction operator)<br>• × (Multiplication operator)<br>• ÷ (Division operator)<br>• ^ (Exponent operator) |
 | Returned Value | Returns the result of the arithmetic operation. |
 | Examples | The following example adds “5” to the value of field “Field1”:![](images/DesignWorkspace_79.png)Script:`@Field1 + 5` |
 
@@ -39,7 +39,7 @@ This section describes the Math blocks. The Math blocks allow you to perform mat
 | Description | Returns the absolute value of a number. |
 | Script | Abs(parameter) |
 | Inputs | A number or a numeric expression. |
-| Returned Value | Returns the unsigned magnitude of a number. Returns a double value, if the argument is a floating point value. If the argument is not a floating point value, then the return value is an integer, and in that case is constrained by the bounds below:•Lower bounds: -2147483648•Upper bounds: 2147483647 |
+| Returned Value | Returns the unsigned magnitude of a number. Returns a double value, if the argument is a floating point value. If the argument is not a floating point value, then the return value is an integer, and in that case is constrained by the bounds below:<br>• Lower bounds: -2147483648<br>• Upper bounds: 2147483647 |
 | Examples | Each of the following blocks return the absolute value 33:![](images/DesignWorkspace_80.png)Script:`Abs(33)`![](images/DesignWorkspace_81.png)Script:`Abs(-33)` |
 
 ### Hexadecimal Block
@@ -72,5 +72,5 @@ This section describes the Math blocks. The Math blocks allow you to perform mat
 | Description | Rounds a number to a specified number of decimal places. |
 | Returned Value | A number rounded to a specified number of decimal places. |
 | Script | Round(value, digits) |
-| Inputs | •value (req– number of digits to which you want to round off the decimal places. If omitted, integers are returned. |
+| Inputs | • value (req– number of digits to which you want to round off the decimal places. If omitted, integers are returned. |
 | Example | In the following example returns 1.234:![](images/DesignWorkspace_84.png)`Round(1.2335,3)` |

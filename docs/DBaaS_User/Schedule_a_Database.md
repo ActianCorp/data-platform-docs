@@ -14,7 +14,7 @@ You may create one or multiple schedule events to stop, start, or scale a databa
 
 | Action | Recurrence | Time Increment |
 | --- | --- | --- |
-| •Start Database•Stop Database | •Interval – event duration, from 0 hours, 15 minutes to 23 hours, 45 minutes•Schedule Once – date and time to run an event•Daily – every day of the week•Every weekday (Mon–Fri)•Weekly – particular weekdays•Monthly – month 1–12 on a particular day of the month•Custom (quartz cron expression—see [Cron Expressions](../DBaaS_User/Cron_Expressions.md)) | Fifteen-minute increments,  12:00 AM – 11:45 PM |
+| • Start Database<br>• Stop Database | • Interval – event duration, from 0 hours, 15 minutes to 23 hours, 45 minutes<br>• Schedule Once – date and time to run an event<br>• Daily – every day of the week<br>• Every weekday (Mon–Fri)<br>• Weekly – particular weekdays<br>• Monthly – month 1–12 on a particular day of the month<br>• Custom (quartz cron expression—see [Cron Expressions](../DBaaS_User/Cron_Expressions.md)) | Fifteen-minute increments,  12:00 AM – 11:45 PM |
 
 To create or delete a schedule event, follow the appropriate procedure:
 
@@ -56,12 +56,12 @@ To create a start/stop schedule event
 
 | Recurrence | Setting |
 | --- | --- |
-| •Interval – event duration | Select an interval from 0 hours, 15 minutes to 23 hours, 45 minutes |
-| •Schedule Once – trigger a one-time event | Select a day of the month and an execution time from 12:00 AM – 11:45 PM. |
-| •Daily – every day of the week•Every weekday (Mon–Fri) | Select a start time from 12:00 AM – 11:45 PM. |
-| •Weekly – particular weekdays | 1.Select one or more weekdays for the action.2.Select a start time from 12:00 AM – 11:45 PM. |
-| •Monthly – month 1–12 on a particular day of the month | 1.Select a month for the action.2.Select a month day for the action.3.Select a start time from 12:00 AM – 11:45 PM. |
-| •Custom | Enter a custom cron expression in the field. See [Cron Expressions](../DBaaS_User/Cron_Expressions.md). |
+| • Interval – event duration | Select an interval from 0 hours, 15 minutes to 23 hours, 45 minutes |
+| • Schedule Once – trigger a one-time event | Select a day of the month and an execution time from 12:00 AM – 11:45 PM. |
+| • Daily – every day of the week<br>• Every weekday (Mon–Fri) | Select a start time from 12:00 AM – 11:45 PM. |
+| • Weekly – particular weekdays | 1.Select one or more weekdays for the action.2.Select a start time from 12:00 AM – 11:45 PM. |
+| • Monthly – month 1–12 on a particular day of the month | 1.Select a month for the action.2.Select a month day for the action.3.Select a start time from 12:00 AM – 11:45 PM. |
+| • Custom | Enter a custom cron expression in the field. See [Cron Expressions](../DBaaS_User/Cron_Expressions.md). |
 
 6. Click the Schedule button to create the action.
 
