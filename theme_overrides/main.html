@@ -12,7 +12,7 @@
     📄 <strong>New documentation experience:</strong>
     the Actian Data Platform docs have moved from Adobe FrameMaker to Markdown.
     If anything looks off,
-    <a href="{{ config.repo_url }}">let us know</a>.
+    <a href="https://www.actian.com/contact/">let us know</a>.
   </span>
 {% endblock %}
 
@@ -26,9 +26,9 @@
 
   Why override instead of using the built-in `content.action.view` feature:
   the stock button only renders when `page.edit_url` resolves to a git host
-  (GitHub/GitLab/Bitbucket). These docs have no backing repo (repo_url is a
-  Support page), so the raw source is instead the `.md` mirrored next to each
-  page by scripts/copy_md_sources.py — same path, `.html` -> `.md`.
+  (GitHub/GitLab/Bitbucket). These docs set no repo_url at all, so the raw
+  source is instead the `.md` mirrored next to each page by
+  scripts/copy_md_sources.py — same path, `.html` -> `.md`.
 #}
 {% block content %}
   {% if page.url %}
@@ -65,17 +65,21 @@
   {#
     Prev/next navigation rendered INSIDE the content column so it spans the
     content width — previous pinned left, next pinned right — instead of the
-    default centered footer bar. Mirrors the Zeenea platform docs. The stock
-    full-width footer nav (.md-footer__inner) is hidden in
-    stylesheets/site-theme.css so this is the only prev/next control.
+    default centered footer bar. Mirrors the Jaspersoft portal.
+
+    The theme's own `navigation.footer` feature is left switched off (see
+    zensical.toml), so the stock full-width footer nav is never emitted and
+    this is the only prev/next control.
+
+    A page opts out with `hide: [footer]` in its front matter, and the nav is
+    then NOT RENDERED rather than rendered with a `hidden` attribute — the
+    stylesheet gives `.md-content-footer` `display: flex`, which overrides the
+    browser's `[hidden] { display: none }` and would leave it visible. Same
+    approach as the Jaspersoft portal.
   #}
-  {% if "navigation.footer" in features %}
-    {% if page.previous_page or page.next_page %}
-      {% set hidden = "" %}
-      {% if page.meta and page.meta.hide and "footer" in page.meta.hide %}
-        {% set hidden = "hidden" %}
-      {% endif %}
-      <nav class="md-content-footer" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+    {% set hidden = page.meta and page.meta.hide and "footer" in page.meta.hide %}
+    {% if not hidden and (page.previous_page or page.next_page) %}
+      <nav class="md-content-footer" aria-label="{{ lang.t('footer') }}">
         {% if page.previous_page %}
           {% set direction = lang.t("footer.previous") %}
           <a href="{{ page.previous_page.url | url }}" class="md-content-footer__link md-content-footer__link--prev" aria-label="{{ direction }}: {{ page.previous_page.title }}">
@@ -102,5 +106,4 @@
         {% endif %}
       </nav>
     {% endif %}
-  {% endif %}
 {% endblock %}

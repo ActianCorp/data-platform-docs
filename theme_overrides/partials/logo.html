@@ -1,0 +1,15 @@
+{#-
+  Header and drawer logo.
+
+  Both brand variants ship in the markup and the palette picks one: the dark
+  lockup on the light header, the white lockup on the dark header (the theme
+  sets data-md-color-scheme on <body>). Sizing and the swap live in
+  stylesheets/site-theme.css.
+
+  Mirrors the Jaspersoft portal. The `theme.logo` key in zensical.toml is left
+  in place as the fallback for anything that does not go through this partial.
+-#}
+<img src="{{ 'assets/images/actian-logo.svg' | url }}"
+     class="adp-logo adp-logo--on-light" alt="Actian">
+<img src="{{ 'assets/images/actian-logo-white.svg' | url }}"
+     class="adp-logo adp-logo--on-dark" alt="Actian">

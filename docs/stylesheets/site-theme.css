@@ -1,392 +1,214 @@
-/* ============================================================
-   Minimal override on top of the stock Zensical "modern" theme.
+/* ------------------------------------------------------------------ *
+ * Actian Data Platform documentation portal — small additions on top of
+ * the Zensical/Material stylesheet.
+ *
+ * Deliberately short, matching the Jaspersoft portal: everything the
+ * theme already styles (header, navigation, table of contents, headings,
+ * body type, admonitions, code blocks, card grids) is LEFT TO THE THEME
+ * so the light and dark palettes stay consistent and Zensical upgrades
+ * are picked up for free.
+ *
+ * Only add a rule here when the theme has no answer — converted-content
+ * quirks, markup this repo introduces in theme_overrides/main.html, or a
+ * browser behaviour the theme leaves at its default.
+ * ------------------------------------------------------------------ */
 
-   The modern theme is already a light theme (light header with a
-   backdrop blur, light footer, dark text). These rules only force
-   the header, navigation tabs, and footer to a solid white in the
-   light (default) color scheme. Dark mode (slate) is left untouched
-   so it stays readable.
-
-   The Actian logo is configured in zensical.toml (theme.logo).
-   Everything else uses the default Zensical theme.
-   ============================================================ */
-
-[data-md-color-scheme="default"] .md-header,
-[data-md-color-scheme="default"] .md-tabs,
-[data-md-color-scheme="default"] .md-footer,
-[data-md-color-scheme="default"] .md-footer-meta {
-  background-color: #ffffff;
-}
-
-/* ============================================================
-   Header "Support" button — solid blue pill, no icon.
-   (repo_url/repo_name in zensical.toml render the header source
-   link; these rules restyle it into a branded pill.)
-   ============================================================ */
-.md-header__source {
-  width: auto;
-  max-width: none;
-}
-.md-header .md-source__icon {
-  display: none;
-}
-.md-header .md-source {
-  display: inline-flex;
-  align-items: center;
-  height: auto;
-  background-color: #1267dc;
-  border-radius: 2rem;
-  padding: 0.35rem 1rem;
-  font-size: 0.7rem;
-  transition: opacity 0.15s ease;
-}
-.md-header .md-source:hover {
-  opacity: 0.88;
-}
-.md-header .md-source__repository {
-  margin-left: 0;
-  padding-left: 0;
-  color: #ffffff;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: visible;
-  text-overflow: clip;
-}
-
-/* ============================================================
-   Layout polish (additive; no content changes)
-   Uses documented Material/Zensical CSS custom properties and
-   theme markup classes only.
-   ============================================================ */
-
-/* Brand accent for links, focus rings, and selection in both schemes. */
-:root {
-  --md-accent-fg-color: #1267dc;
-}
-[data-md-color-scheme="slate"] {
-  --md-accent-fg-color: #4c8dff;
-}
-
-/* Slightly wider, more readable content column on large screens
-   (default is 61rem; helps the many wide reference tables). */
-.md-grid {
-  max-width: 66rem;
-}
-
-/* Home-page guide cards — minimal, professional (Stripe / Vercel style).
-   Small inline accent icon (no badge box), quiet semibold title, muted
-   2-line description for even card heights, hairline border, flat hover
-   (border tint only — no shadow or lift). Styling only; the card text and
-   icons in index.md are unchanged. */
-.md-typeset .grid.cards {
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  gap: 0.7rem;
-  margin: 1em 0;
-}
-.md-typeset .grid.cards > ul > li,
-.md-typeset .grid > .card {
-  margin: 0;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.5rem;
-  background: var(--md-default-bg-color);
-  box-shadow: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-.md-typeset .grid.cards > ul > li:hover,
-.md-typeset .grid > .card:hover {
-  border-color: var(--md-accent-fg-color);
-  background: rgba(18, 103, 220, 0.04); /* fallback */
-  background: color-mix(in srgb, var(--md-accent-fg-color) 4%, var(--md-default-bg-color));
-  box-shadow: none;
-  transform: none;
-}
-
-/* Title row: small inline icon + link (no badge, no oversized glyph). */
-.md-typeset .grid.cards > ul > li > p:first-child {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 0.35rem;
-}
-.md-typeset .grid.cards > ul > li .twemoji {
-  flex: none;
-  width: auto;
-  height: auto;
-  background: none;
-  color: var(--md-accent-fg-color);
-}
-.md-typeset .grid.cards > ul > li .twemoji svg {
-  width: 1.15rem;
-  height: 1.15rem;
-}
-
-/* Title text: quiet semibold, accent only on hover. */
-.md-typeset .grid.cards > ul > li > p:first-child a {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color);
-}
-.md-typeset .grid.cards > ul > li:hover > p:first-child a {
-  color: var(--md-accent-fg-color);
-}
-
-/* Drop the heavy divider; spacing separates title and description. */
-.md-typeset .grid.cards > ul > li > hr {
-  display: none;
-}
-
-/* Description: muted, small, clamped to 2 lines so all cards align. */
-.md-typeset .grid.cards > ul > li > p:last-child {
-  margin: 0;
-  font-size: 0.7rem;
-  line-height: 1.5;
+/* Figure captions. Converted pages emit the caption in italics on the
+   paragraph directly after the image; tone it down. */
+.md-typeset p > img + em,
+.md-typeset p > em:only-child {
   color: var(--md-default-fg-color--light);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 0.85em;
 }
 
-/* Tables: full width with a subtly shaded header and rounded frame. */
-.md-typeset table:not([class]) {
-  width: 100%;
-  border-radius: 0.35rem;
-  overflow: hidden;
+/* Screenshots: never let one overflow its column. */
+.md-typeset img {
+  max-width: 100%;
+  border-radius: 0.1rem;
 }
+
+/* Reference tables in the SQL and connectivity guides are wide; let them
+   scroll inside the content column instead of stretching the page. */
+.md-typeset .md-typeset__table {
+  overflow-x: auto;
+}
+
 .md-typeset table:not([class]) th {
-  background-color: var(--md-default-fg-color--lightest);
-  font-weight: 600;
+  white-space: nowrap;
 }
 
-/* ============================================================
-   Typography — calmer "developer-docs" feel (Stripe / Google style).
-   Native system font stack (no external font requests). Smaller,
-   tighter semibold headings instead of oversized thin ones; quiet,
-   muted navigation and tabs with the accent reserved for the active
-   item. Layout/type only — no content changes.
-   ============================================================ */
-
-/* Fast, native system font stack everywhere (no webfont fetch). */
-body,
-.md-typeset,
-.md-nav,
-.md-tabs,
-.md-header__title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Landing-page cards: a touch more room than the theme default, since the
+   cards carry a title plus a full sentence of description. */
+.md-typeset .grid {
+  grid-gap: 0.8rem;
 }
 
-/* Body copy: relaxed line-height for comfortable reading. */
-.md-typeset {
-  font-size: 0.8rem;
-  line-height: 1.7;
-}
-
-/* Headings: moderate weight + tighter tracking, quieter than the
-   default oversized thin headings. */
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5,
-.md-typeset h6 {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--md-default-fg-color);
-}
-.md-typeset h1 {
-  font-size: 1.75rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.8em;
-}
-.md-typeset h2 {
-  font-size: 1.3rem;
-  margin-top: 1.9em;
-}
-.md-typeset h3 {
-  font-size: 1.05rem;
-}
-.md-typeset h4 {
-  font-size: 0.9rem;
-  color: var(--md-default-fg-color--light);
-}
-
-/* Sidebar navigation: smaller, lighter, muted; accent on hover/active. */
-.md-nav {
-  font-size: 0.68rem;
-}
-.md-nav__link {
-  color: var(--md-default-fg-color--light);
-  font-weight: 400;
-}
-.md-nav__link:hover,
-.md-nav__link:focus {
-  color: var(--md-accent-fg-color);
-}
-.md-nav__link--active,
-.md-nav__item--active > .md-nav__link {
-  color: var(--md-accent-fg-color);
-  font-weight: 600;
-}
-
-/* Section labels: small, uppercase, tracked-out — developer-docs style. */
-.md-nav__title {
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--md-default-fg-color--lighter);
-}
-
-/* Header tabs: quiet by default, emphasized only when active. */
-.md-tabs__link {
-  font-size: 0.7rem;
-  font-weight: 500;
-  opacity: 0.72;
-  transition: opacity 0.15s ease, color 0.15s ease;
-}
-.md-tabs__link:hover {
-  opacity: 1;
-}
-.md-tabs__link--active {
-  opacity: 1;
-  font-weight: 600;
-}
-
-/* Softer header divider so the top bar reads quieter. */
-.md-header {
-  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.05);
-}
-
-/* Thin divider between the header/tabs row and the page content. */
-.md-tabs {
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-}
-
-/* Tighten the large gap between the header and the content (was 1.5rem),
-   moving the content and sidebars up. */
-.md-main__inner {
-  margin-top: 0.5rem;
-}
-.md-content__inner > h1:first-child,
-.md-typeset > h1:first-child {
-  margin-top: 0.2rem;
-}
-
-/* Prev/next pagination inside the content column (see main.html): spans the
-   content width with previous pinned left and next pinned right, above a thin
-   rule. The default centered footer nav is hidden below. */
-.md-content-footer {
-  display: flex;
-  justify-content: space-between;
+.md-typeset .grid > .card > p:first-child,
+.md-typeset .grid.cards > ul > li > p:first-child {
   align-items: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
-}
-.md-content-footer__link {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  max-width: 48%;
-  color: var(--md-default-fg-color);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-.md-content-footer__link--next {
-  margin-left: auto;
-  text-align: right;
-}
-.md-content-footer__link,
-.md-content-footer__link:hover {
-  text-decoration: none;
-}
-/* Tiny, bold, accent-colored direction label — small but eye-catching. */
-.md-content-footer__direction {
-  display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--md-accent-fg-color);
-}
-/* Compact title in normal text color; turns accent on hover. */
-.md-content-footer__title .md-ellipsis {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--md-default-fg-color);
-}
-.md-content-footer__link:hover .md-ellipsis {
-  color: var(--md-accent-fg-color);
-}
-.md-content-footer__button svg {
-  width: 0.95rem;
-  height: 0.95rem;
-  fill: var(--md-default-fg-color--light);
-}
-.md-content-footer__link:hover .md-content-footer__button svg {
-  fill: var(--md-accent-fg-color);
+  gap: 0.4rem;
 }
 
-/* Hide the stock full-width footer prev/next (copyright meta is kept).
-   Matches the theme's own `.md-footer__inner:not([hidden])` specificity so
-   this override wins the cascade (it loads later); a plain `.md-footer__inner`
-   rule would lose to the theme's `:not([hidden])` selector. */
-.md-footer__inner:not([hidden]) {
-  display: none;
+.md-typeset .grid > .card .twemoji,
+.md-typeset .grid.cards > ul > li .twemoji {
+  height: 1.1rem;
+  width: 1.1rem;
 }
 
-/* Header actions: keep the theme toggle, search, and Support cluster on the
-   right (default), but nudge it slightly in from the right edge so it isn't
-   jammed against the corner. Increase the value to move it further left. */
-.md-header__source {
-  margin-right: 2.5rem;
-}
-
-/* Page title consistency.
-   Pages converted from FrameMaker lead with an H2 that is the page title
-   (there is no H1). Render that single leading H2 at H1 scale so those
-   pages match the ones that use a real H1. Section H2s on H1 pages are
-   untouched because the selector only applies when the content has no H1. */
+/* ------------------------------------------------------------------ *
+ * Page title consistency.
+ *
+ * Pages converted from FrameMaker lead with an H2 that is the page title
+ * (there is no H1). Render that single leading H2 at H1 scale so those
+ * pages match the ones that use a real H1. Section H2s on pages that do
+ * have an H1 are untouched, because the selector only applies when the
+ * content has none.
+ *
+ * This is a converted-content fix, not a style preference — without it
+ * several hundred pages render their title at subheading size.
+ * ------------------------------------------------------------------ */
 .md-typeset:not(:has(> h1)) > h2:first-of-type {
+  font-size: 2em;
   margin-top: 0;
   margin-bottom: 0.8em;
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
 }
 
-/* Announcement banner: compact.
-   The theme sizes the banner from `.md-banner__inner` (font-size .7rem,
-   margin .6rem) and inherits `.md-typeset` line-height on the same element,
-   which together make the bar taller than a one-line notice needs. Shrink the
-   text and collapse the vertical margin so the banner reads as a thin strip
-   above the header. Selectors carry two classes to beat the theme's
-   single-class rules regardless of load order. */
+/* ------------------------------------------------------------------ *
+ * Announcement bar (theme_overrides/main.html).
+ *
+ * The theme sizes the bar from `.md-banner__inner` and inherits a
+ * `.md-typeset` line-height on the same element, which makes a one-line
+ * notice occupy a tall strip. Selectors carry two classes to beat the
+ * theme's single-class rules regardless of load order.
+ * ------------------------------------------------------------------ */
 .md-banner .md-banner__inner {
   font-size: 0.5rem;
   line-height: 1.35;
   margin: 0.2rem auto;
 }
 
-/* Scale the dismiss button down with the text (theme default is 1rem) so it
-   does not set the bar's height on its own. */
 .md-banner .md-banner__button svg {
   width: 0.65rem;
   height: 0.65rem;
 }
 
-/* Page feedback widget: the follow-up comment box.
-   The rating buttons come from the stock `.md-feedback` partial (enabled by
-   extra.analytics.feedback in zensical.toml) and are already themed. The
-   comment box below them is injected by docs/javascripts/extra.js after a
-   rating is submitted, so it needs styling here. Ported from the MkDocs
-   Material build of the Zeenea platform docs so both sites match. */
+/* ------------------------------------------------------------------ *
+ * Previous/next page links.
+ *
+ * The theme puts these in the site footer, spanning the full window
+ * width. They belong with the content they navigate, so main.html
+ * renders them at the end of the article and they are styled here to sit
+ * inside the content column. The theme's own `navigation.footer` feature
+ * is therefore left switched off.
+ *
+ * Borderless on purpose: a rule above the pair separates them from the
+ * page and the link text alone carries them — no cards, no arrow icons.
+ * ------------------------------------------------------------------ */
+.md-content-footer {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+  margin: 2.4rem 0 0;
+  padding-top: 1rem;
+}
+
+.md-content-footer__link {
+  color: var(--md-default-fg-color);
+  display: flex;
+  flex: 0 1 48%;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+}
+
+.md-typeset .md-content-footer__link,
+.md-typeset .md-content-footer__link:hover,
+.md-typeset .md-content-footer__link:focus {
+  text-decoration: none;
+}
+
+.md-content-footer__link--next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* The arrow buttons in the markup are redundant next to the Previous and
+   Next labels; the Jaspersoft portal shows text only. */
+.md-content-footer__button {
+  display: none;
+}
+
+.md-content-footer__direction {
+  color: var(--md-default-fg-color--light);
+  display: block;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+}
+
+.md-content-footer__title .md-ellipsis {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Only the page title reacts to hover; the label above it stays quiet. */
+.md-content-footer__link:hover .md-ellipsis {
+  color: var(--md-accent-fg-color);
+}
+
+@media screen and (max-width: 44.9844em) {
+  .md-content-footer {
+    flex-direction: column;
+  }
+
+  .md-content-footer__link,
+  .md-content-footer__link--next {
+    flex: 1 1 auto;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Scrolling.
+ *
+ * The theme leaves the document scroller at the browser default, so on
+ * macOS and iOS hitting the top or bottom rubber-bands the whole page —
+ * and because the header is sticky with a backdrop blur, the bounce
+ * reads as the page jumping. Pinning the viewport's overscroll stops the
+ * bounce (and scroll chaining out of the page).
+ *
+ * Trade-off: this also disables pull-to-refresh on Android Chrome, which
+ * is the accepted cost on a documentation site.
+ * ------------------------------------------------------------------ */
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* The sidebars scroll independently; keep a flick inside them from
+   continuing into the document scroller.
+ *
+ * Only real scroll containers may carry this. Chrome treats any element
+ * with overscroll-behavior other than `auto` as a scroll-chaining
+ * boundary even when it cannot scroll (`.md-nav__list` is
+ * `overflow: visible`), so listing the nav list here swallowed every
+ * wheel event over the navigation: neither the sidebar nor the page
+ * moved. Same rule and same reason as the Jaspersoft portal. */
+.md-sidebar__scrollwrap {
+  overscroll-behavior: contain;
+}
+
+/* ------------------------------------------------------------------ *
+ * Page feedback — the free-text follow-up shown after a rating.
+ * Matches the Jaspersoft and Zeenea portals; the rating buttons
+ * themselves are styled by the theme.
+ * ------------------------------------------------------------------ */
 .feedback-text-form {
   margin-top: 0.75rem;
 }
@@ -453,17 +275,70 @@ body,
   color: var(--md-default-fg-color--light);
 }
 
-/* Suppress elastic (rubber-band) overscroll.
-   The theme leaves the document scroller unguarded, so on macOS and iOS
-   scrolling past the top or bottom bounces the whole page. `none` removes the
-   bounce and also stops scroll chaining out of the document. The theme already
-   sets `overscroll-behavior-y: contain` on the primary sidebar's scrollwrap;
-   the secondary (table of contents) sidebar is not covered, so reaching either
-   end of it would hand the scroll to the page and jolt it. */
-html {
-  overscroll-behavior-y: none;
+/* ------------------------------------------------------------------ *
+ * Header logo (theme_overrides/partials/logo.html).
+ *
+ * Both brand variants ship in the markup and the palette picks one: the
+ * dark lockup on the light header, the white lockup on the dark header
+ * (the theme sets data-md-color-scheme on <body>).
+ *
+ * These selectors must out-specify the theme's own
+ * `.md-header__button.md-logo img { display: block }` (0,2,1) — a bare
+ * `.adp-logo--on-dark { display: none }` loses to it and both variants
+ * render, one of them invisible-on-white with only its edge showing.
+ * ------------------------------------------------------------------ */
+.md-header__button.md-logo img.adp-logo,
+.md-nav__button.md-logo img.adp-logo {
+  height: 1.5rem;
+  width: auto;
 }
 
-.md-sidebar--secondary .md-sidebar__scrollwrap {
-  overscroll-behavior-y: contain;
+.md-header__button.md-logo img.adp-logo--on-dark,
+.md-nav__button.md-logo img.adp-logo--on-dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo img.adp-logo--on-light,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo img.adp-logo--on-light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo img.adp-logo--on-dark,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo img.adp-logo--on-dark {
+  display: block;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .md-header__button.md-logo img.adp-logo,
+  .md-nav__button.md-logo img.adp-logo {
+    height: 1.2rem;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Home page "Guides" list (theme_overrides/partials/nav.html).
+ *
+ * With navigation.tabs the left sidebar shows the active tab's children,
+ * and Home has none — so the column was empty. This list fills it and is
+ * styled like the table of contents on the right for symmetry.
+ * ------------------------------------------------------------------ */
+.adp-guides {
+  margin-bottom: 1rem;
+}
+
+.adp-guides .md-nav__title {
+  display: flex;
+}
+
+.adp-guides .md-nav__link {
+  margin-top: 0.3rem;
+}
+
+/* On a phone the drawer shows this list followed by the full tree; a rule
+   keeps the two apart. */
+@media screen and (max-width: 76.234375em) {
+  .adp-guides {
+    border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.6rem;
+  }
 }

@@ -1,0 +1,80 @@
+{#-
+  Copy of the theme's partials/nav.html with ONE addition, marked below: on the
+  home page a "Guides" list is rendered above the normal navigation. Re-diff
+  against the theme partial after a Zensical upgrade.
+
+  Why: with navigation.tabs the left sidebar shows the active tab's children,
+  and the Home tab has none, so the home page had an empty left column. The
+  list mirrors the page's own cards but links to each guide's landing page.
+
+  The theme navigation is kept below it, not replaced: on a phone the drawer is
+  the only way into the full tree.
+
+  Mirrors the Jaspersoft portal, where the same list is labelled "Products".
+
+  Home is detected from page.url, not `nav.homepage`: that is only populated
+  when index.md is a top-level nav entry, and here it sits inside the Welcome
+  Guide section, so it is None. `page.is_homepage` is no use either — the
+  theme's own base.html tests it and the test is always false. use_directory_urls
+  is false, so the home page is index.html.
+-#}
+{#- Walk down the first child of each level until a page with a URL is
+    found. Jaspersoft's own partial uses `item.children | first` directly,
+    which works there because every product section opens with a landing
+    page; the guides in this repo open with a subsection, so `first` lands
+    on something with no `url` and the link renders as "none". -#}
+{% macro first_page(item) -%}
+  {%- if item.url -%}
+    {{ item.url }}
+  {%- elif item.children -%}
+    {{ first_page(item.children[0]) }}
+  {%- endif -%}
+{%- endmacro %}
+{#- BEGIN guides list (local addition) -#}
+{% if page.url == "index.html" or (nav.homepage and page.url == nav.homepage.url) %}
+  <nav class="md-nav md-nav--secondary adp-guides" aria-label="Guides">
+    <label class="md-nav__title">Guides</label>
+    <ul class="md-nav__list">
+      {% for item in nav.items %}
+        {% if item.children %}
+          {% set landing = first_page(item) | trim %}
+          {% if landing %}
+            <li class="md-nav__item">
+              <a href="{{ landing | url }}" class="md-nav__link">
+                <span class="md-ellipsis">{{ item.title }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
+{#- END guides list -#}
+{% import "partials/nav-item.html" as item with context %}
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+  {% if config.repo_url %}
+    <div class="md-nav__source">
+      {% include "partials/source.html" %}
+    </div>
+  {% endif %}
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+</nav>
