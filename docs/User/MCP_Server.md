@@ -32,13 +32,6 @@ client calls the matching tool on the server.
     [Actian MCP Server documentation](https://docs.actian.com/mcp-server/) — see
     the *Actian Data Platform* page in the *Analytics Engine* section.
 
-!!! warning "Keep your tokens secret"
-
-    The examples below use placeholders such as `<mcp-host>` and `<ACCESS_TOKEN>`.
-    An access token is a credential — treat it like a password. Never commit it to
-    source control, paste it into shared documents, or include it in a support
-    request. Rotate a token immediately if it is exposed.
-
 ## What the server exposes
 
 The server speaks MCP over HTTP streamable transport at the path `/mcp`, and
@@ -68,62 +61,72 @@ is expected; use the tool catalog instead.
 
 ## Connect an MCP client
 
-You need three things:
+The server is a full OAuth 2.0 protected resource. A client that supports remote
+MCP servers drives the authorization flow itself — opening a browser, signing you
+in, and attaching the result to every request — so you don't manage any
+credentials by hand.
 
-1. The **server URL**, for example `https://<mcp-host>/mcp`.
-2. An **access token** issued by the configured identity provider, carrying the
-   scopes you intend to use.
-3. The **`x-aap-mcp-scope`** header, listing the scopes used for the request.
+!!! note "Supported clients"
 
-### Add the server to your client
+    Actian currently supports connecting with the MCP Inspector, Claude (Desktop
+    and Code), and VS Code. If you need a different client supported,
+    [contact support](Contact_Support.md).
 
-In a client that supports remote MCP servers, add a server definition:
+Every client needs the same two things to add the server:
 
-```json
-{
-  "name": "aap-mcp",
-  "url": "https://<mcp-host>/mcp",
-  "transport": "streamable-http",
-  "auth": "oauth"
-}
-```
+| What | Value |
+| --- | --- |
+| Server URL | `https://<mcp-host>/mcp` |
+| Client ID | Read from the Protected Resource Metadata at `https://<mcp-host>/.well-known/oauth-protected-resource/mcp` |
 
-Clients that implement OAuth discovery can read the Protected Resource Metadata at
-`/.well-known/oauth-protected-resource/mcp` to find the authorization server,
-supported scopes, and client ID.
+No client secret is needed — leave that field blank if your client asks for one.
+
+Claude also needs a **local callback port** — the port on your machine that it
+temporarily listens on to receive the OAuth redirect during login. This is fixed
+at `3118`; it is registered as part of the client ID's redirect URI and isn't a
+value you choose yourself.
+
+=== "Claude Code"
+
+    Claude Code takes the client ID and callback port as explicit arguments:
+
+    ```bash
+    claude mcp add aap-mcp \
+      --transport http \
+      https://<mcp-host>/mcp \
+      --client-id <CLIENT_ID> \
+      --callback-port 3118
+    ```
+
+=== "VS Code"
+
+    Add a server entry to `mcp.json` with just the URL:
+
+    ```json
+    {
+      "servers": {
+        "aap-mcp": {
+          "type": "http",
+          "url": "https://<mcp-host>/mcp"
+        }
+      }
+    }
+    ```
+
+    When you first connect, VS Code opens an OAuth dialog asking for a client ID
+    and client secret — enter the client ID as described above and leave the
+    secret field blank.
 
 ### Verify the connection
 
-List the available tools to confirm the server is reachable and your token is
-accepted:
+Once your client is connected, ask it to call the `server_status` tool (see
+[Utility tools](#utility-tools)) — for example, *"is the MCP server working?"* It
+confirms the server is reachable and that your authentication is active.
 
-```bash
-curl -sS -X POST 'https://<mcp-host>/mcp' \
-  -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-  -H 'x-aap-mcp-scope: read:warehouses' \
-  -H 'Content-Type: application/json' \
-  -H 'Accept: application/json, text/event-stream' \
-  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
-```
+## Scopes
 
-## Authentication and scopes
-
-The server is an OAuth 2.0 protected resource. Every request to `/mcp` must carry a
-valid bearer token from the configured issuer.
-
-| Header | Required | Purpose |
-| --- | --- | --- |
-| `Authorization: Bearer <ACCESS_TOKEN>` | Yes | Access token issued by the configured identity provider |
-| `x-aap-mcp-scope` | Yes | The subset of the token's scopes that this request uses |
-
-!!! note
-
-    `x-aap-mcp-scope` is a single header value holding the scopes, normally
-    space-separated — for example `read:warehouses write:warehouses`.
-    Comma-separated values are also accepted. The header is required on every tool
-    call, including tools that declare no scope of their own.
-
-### Supported scopes
+Each tool requires one of these scopes, granted based on your account's
+permissions:
 
 | Scope | Used by |
 | --- | --- |
@@ -133,29 +136,15 @@ valid bearer token from the configured issuer.
 | `retrieve:events` | `get_warehouse_domain_events` |
 | `retrieve:telemetry` | `get_telemetry_metrics` |
 
-A request that does not carry the required scope is rejected with an authorization
-error. See [Troubleshooting](#troubleshooting).
-
-### How a request is authorized
-
-Every inbound request is checked in three stages before it reaches a tool:
-
-1. The bearer token is validated against the identity provider. A missing or
-   invalid token returns `401`.
-2. Content guardrails are applied, and disallowed tool calls are rejected.
-3. The scopes in `x-aap-mcp-scope` are compared against the scope the tool
-   requires. A mismatch returns `403`.
-
-When a tool makes a downstream call, it exchanges your token for a short-lived
-internal service token. Your `Authorization` header is never forwarded to backend
-services.
+If your account doesn't have a scope a tool needs, that tool call fails with an
+authorization error. See [Troubleshooting](#troubleshooting).
 
 ## Tool conventions
 
 These conventions apply to every tool:
 
-- Tools resolve your identity from the bearer token. You never pass tokens,
-  user names, or tenant IDs as tool parameters.
+- Tools resolve your identity automatically once your client is connected. You
+  never pass tokens, user names, or tenant IDs as tool parameters.
 - Tools marked **read-only** do not change state.
 - Dates are ISO 8601 strings. In a date range, `from_date` must be strictly
   earlier than `to_date`.
@@ -484,12 +473,8 @@ Returned metric shape:
 ### server_status
 
 Confirms that the server is running and reachable, and that your authentication is
-propagating correctly. Read-only. No parameters.
-
-No specific scope is required, but standard authentication still applies: both a
-valid `Authorization: Bearer` token and the `x-aap-mcp-scope` header are required
-to reach the tool. Requests missing either header are rejected regardless of the
-tool's scope.
+propagating correctly. Read-only. No parameters. No specific scope is required —
+any authenticated connection can call it.
 
 Example response:
 
@@ -518,11 +503,10 @@ The `error_code` value is one of `authentication_error`, `authorization_error`,
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `error_code` is `authorization_error` | Your token or `x-aap-mcp-scope` header does not carry the scope the tool requires | Obtain a token with the required scope and list that scope in `x-aap-mcp-scope`. See [Supported scopes](#supported-scopes). |
+| `error_code` is `authorization_error` | Your account doesn't have the scope the tool requires | Reconnect or re-authenticate your client. If it persists, ask your administrator to grant the required access. See [Scopes](#scopes). |
+| `error_code` is `authentication_error` | Your client's connection isn't authenticated, or your session has expired | Reconnect / re-authenticate your client. |
 | The error message names a parameter — for example a blank ID, `from_date` not earlier than `to_date`, or a malformed CIDR block | Invalid tool parameters | Check the parameter table for the tool you called; the message identifies the offending field. |
 | `error_code` is `validation_error` | The platform response did not match the expected schema | Usually transient — retry. If it persists, [contact support](Contact_Support.md). |
-| HTTP `401` | Missing or invalid bearer token | Re-authenticate against the configured identity provider. |
-| HTTP `403` | Authenticated, but not authorized for the resource | Confirm your scopes and that you are operating in the right tenant. |
 
 ### Check whether the server is reachable
 
