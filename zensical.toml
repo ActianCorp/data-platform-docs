@@ -286,6 +286,7 @@ nav = [
     { "APIs and Programmatic Access" = [
       { "Actian Data Platform REST APIs" = "User/Actian_Data_Platform_REST_APIs.md" },
       { "Warehouse Data API (BaaS)" = "User/Warehouse_Data_API.md" },
+      { "MCP Server for Warehouse Data Access" = "User/MCP_Server_Data_Access.md" },
       { "MCP Server for Platform Management" = "User/MCP_Server.md" },
     ] },
   ] },

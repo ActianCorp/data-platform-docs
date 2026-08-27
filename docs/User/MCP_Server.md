@@ -19,6 +19,9 @@ Claude Code, or the MCP Inspector, you can ask questions such as
 *"list my warehouses"* or *"show usage for warehouse `wh-123` last week"*, and the
 client calls the matching tool on the server.
 
+This page covers warehouse management operations. For access to the data inside a
+warehouse, see [MCP Server for Warehouse Data Access](MCP_Server_Data_Access.md).
+
 !!! note "This Is Not the Warehouse SQL Endpoint"
 
     Actian offers two different MCP servers, and both are reached at a path
