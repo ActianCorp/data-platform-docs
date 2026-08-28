@@ -8,7 +8,7 @@ canonical_id: "actian-data-platform-cron-expressions"
 
 ## Cron Expressions
 
-Actian Data Platform lets you set a schedule warehouse or database actions using a cron expression, which is a specially formatted text string.
+Actian Data Platform lets you set a schedule warehouse actions using a cron expression, which is a specially formatted text string.
 
 The following example is a cron expression representing a schedule that will run at 1:25 p.m. on the first day of each month.
 

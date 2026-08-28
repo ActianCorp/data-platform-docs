@@ -2,7 +2,7 @@
 title: "Documentation Home"
 hide:
   - footer
-description: "Product documentation for the Actian Data Platform — warehouses, database instances, data loading, connectivity, SQL, security, data quality, and integrations."
+description: "Product documentation for the Actian Data Platform — warehouses, data loading, connectivity, SQL, security, data quality, and integrations."
 ---
 
 # Actian Data Platform Documentation
@@ -23,10 +23,6 @@ description: "Product documentation for the Actian Data Platform — warehouses,
 -   :material-database: __[Warehouse User Guide](User/Introducing_Actian_Warehouse.md)__
 
     Create, manage, and monitor Actian warehouses; configure users, storage access, and the Query Editor.
-
--   :material-cloud-outline: __[Database as a Service Guide](DBaaS_User/Overview.md)__
-
-    Create and manage Ingres database instances in the cloud: load data, monitor, and use the Query Editor.
 
 </div>
 
@@ -95,9 +91,5 @@ description: "Product documentation for the Actian Data Platform — warehouses,
 -   :material-newspaper-variant-outline: __[Data Quality](Welcome/What's_New_in_Actian_Data_Quality.md)__
 
     Latest data quality changes, plus the [Actian Data Profiling Release Notes](Welcome/Actian_Data_Profiling_Release_Notes.md).
-
--   :material-newspaper-variant-outline: __[Databases](Welcome/What's_New_in_Actian_Data_Platform_Databases.md)__
-
-    Latest database changes, plus the [Database as a Service EAP Release Notes](Welcome/Actian_Database_as_a_Service_EAP_Release_Notes.md).
 
 </div>

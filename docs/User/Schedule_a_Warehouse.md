@@ -8,7 +8,7 @@ canonical_id: "actian-data-platform-schedule-a-warehouse"
 
 ## Schedule a Warehouse
 
-After creating a warehouse, you may schedule a start, stop, backup, or a scaling to economize on AU costs (see [Warehouse or Database Cost and Actian Units](../User/Concepts_to_Understand.md)).
+After creating a warehouse, you may schedule a start, stop, backup, or a scaling to economize on AU costs (see [Warehouse Cost and Actian Units](../User/Concepts_to_Understand.md)).
 
 You may create one or multiple schedule events to stop, start, or scale a warehouse using these elements:
 
@@ -27,11 +27,7 @@ To create or delete a schedule event, follow the appropriate procedure:
 
 To create a start/stop schedule event
 
-1. Do one of the following:
-
-    - In the Actian warehouses console, click the warehouse name to display its [Warehouse Details](../User/Warehouse_Details.md) page.
-
-    - In the Actian Database Instances console, click the database name to display its [Database Instance Details](../User/Database_Instance_Details.md) page.
+1. In the Actian warehouses console, click the warehouse name to display its [Warehouse Details](../User/Warehouse_Details.md) page.
 
 2. In the Schedule row, click the Create Schedule icon:
 
@@ -129,11 +125,7 @@ To create a warehouse scaling schedule event
 
 To delete a schedule event
 
-1. Do one of the following:
-
-    - In the Actian warehouses console, click the warehouse name to display its [Warehouse Details](../User/Warehouse_Details.md) page.
-
-    - In the Actian Database Instances console, click the database name to display its [Database Instance Details](../User/Database_Instance_Details.md) page.
+1. In the Actian warehouses console, click the warehouse name to display its [Warehouse Details](../User/Warehouse_Details.md) page.
 
 2. In the Schedule row, click the Create Schedule icon:
 

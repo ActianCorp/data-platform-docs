@@ -15,4 +15,4 @@ To stop a running warehouse
 
     The warehouse is stopped after a few minutes.
 
-For more information, see [Automatic Stopping of Idle Warehouses or Databases](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
+For more information, see [Automatic Stopping of Idle Warehouses](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).

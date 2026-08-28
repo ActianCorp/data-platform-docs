@@ -14,7 +14,7 @@ canonical_id: "actian-data-platform-monitor-au-usage"
 
 Account administrators may monitor AU usage either from the Home dashboard or using the Administration interface.
 
-For more information about AUs, see [Actian Units](../User/Concepts_to_Understand.md) and [Warehouse or Database Cost and Actian Units](../User/Concepts_to_Understand.md).
+For more information about AUs, see [Actian Units](../User/Concepts_to_Understand.md) and [Warehouse Cost and Actian Units](../User/Concepts_to_Understand.md).
 
 To monitor AU usage
 

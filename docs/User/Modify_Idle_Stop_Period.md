@@ -8,13 +8,13 @@ canonical_id: "actian-data-platform-modify-idle-stop-period"
 
 ## Modify Idle Stop Period
 
-Warehouse or database administrators may modify the idle stop period you defined at warehouse/database creation.
+Warehouse or database administrators may modify the idle stop period you defined at warehouse creation.
 
 To modify the idle stop period
 
-1. On the Warehouses page or Database Instances page, click the Google Cloud warehouse/database whose idle stop period you want to change.
+1. On the Warehouses page, click the Google Cloud warehouse whose idle stop period you want to change.
 
-    The [Warehouse Details](../User/Warehouse_Details.md) page or [Database Instance Details](../User/Database_Instance_Details.md) is displayed.
+    The [Warehouse Details](../User/Warehouse_Details.md) page is displayed.
 
 2. In the Idle Stop row, click Update.
 

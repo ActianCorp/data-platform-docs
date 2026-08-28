@@ -18,10 +18,10 @@ To copy a connection string
 
     - On the Database Instances page, click the name of the database whose connection details you want to copy.
 
-    The [Warehouse Details](../User/Warehouse_Details.md) page or [Database Instance Details](../User/Database_Instance_Details.md) page is displayed.
+    The [Warehouse Details](../User/Warehouse_Details.md) page is displayed.
 
 2. Click the Connections tab.
-3. Select a connection tool from the Connect to Actian warehouse/database dropdown (see [Connection Tools](../User/Connection_Tools.md)).
+3. Select a connection tool from the Connect to Actian warehouse dropdown (see [Connection Tools](../User/Connection_Tools.md)).
 
 4. Click the copy icon at the end of the field you want to copy:
 

@@ -33,8 +33,8 @@ To add the keys to your Actian warehouse
 
 5. Click the Upload button.
 
-    The key file is uploaded to your Actian warehouse/database. This may take up to a minute to take effect.
+    The key file is uploaded to your Actian warehouse. This may take up to a minute to take effect.
 
 Your key will be stored securely in the Actian Data Platform and will replace any previous key that you may have uploaded.
 
-Your warehouse or database can now access your Google Cloud data in the cloud, and you may now run queries against the data source using the [Query Editor](../User/Part_QueryEditor.md).
+Your warehouse can now access your Google Cloud data in the cloud, and you may now run queries against the data source using the [Query Editor](../User/Part_QueryEditor.md).

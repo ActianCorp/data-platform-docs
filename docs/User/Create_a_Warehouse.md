@@ -57,9 +57,9 @@ To create an Actian warehouse
 
 8. Set an idle stop period.
 
-    This is an amount of time after which the warehouse will stop running if there is no query activity—from 0 hours, 15 minutes to 4 hours, 45 minutes. This saves on AU costs. For more information, see [Warehouse or Database Cost and Actian Units](../User/Concepts_to_Understand.md).
+    This is an amount of time after which the warehouse will stop running if there is no query activity—from 0 hours, 15 minutes to 4 hours, 45 minutes. This saves on AU costs. For more information, see [Warehouse Cost and Actian Units](../User/Concepts_to_Understand.md).
 
-    Idle stop cannot be disabled in a non-production environment. For more information, see [Automatic Stopping of Idle Warehouses or Databases](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
+    Idle stop cannot be disabled in a non-production environment. For more information, see [Automatic Stopping of Idle Warehouses](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
 
     Google Cloud: To modify the idle stop period after the warehouse is created, see [Modify Idle Stop Period](../User/Modify_Idle_Stop_Period.md).
 

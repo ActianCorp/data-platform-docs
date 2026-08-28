@@ -14,9 +14,9 @@ When available, updates run first, which should take only a few minutes. A runni
 
 To modify the Maintenance Window start time:
 
-1. On the Warehouses page or Database Instances page, click the warehouse/database whose maintenance window you want to change.
+1. On the Warehouses page, click the warehouse whose maintenance window you want to change.
 
-    The [Warehouse Details](../User/Warehouse_Details.md) page or [Database Instance Details](../User/Database_Instance_Details.md) displays.
+    The [Warehouse Details](../User/Warehouse_Details.md) page displays.
 
 2. In the Maintenance Window row, click Update.
 

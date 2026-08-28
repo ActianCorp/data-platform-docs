@@ -33,9 +33,9 @@ To clone an Actian warehouse
 
     If you select Idle Stop, you must manually start or restart the warehouse. If you select Idle Sleep, the warehouse resumes as soon as a query is launched on the warehouse.
 
-    For more information, see [Warehouse or Database Cost and Actian Units](../User/Concepts_to_Understand.md).
+    For more information, see [Warehouse Cost and Actian Units](../User/Concepts_to_Understand.md).
 
-    Idle stop cannot be disabled in a non-production environment. For more information, see [Automatic Stopping of Idle Warehouses or Databases](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
+    Idle stop cannot be disabled in a non-production environment. For more information, see [Automatic Stopping of Idle Warehouses](../User/Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
 
 5. Ensure that your current IP address and the Actian Data Platform data integration services IP addresses are selected.
 

@@ -107,7 +107,7 @@ The database engine is updated to 6.1.30107.
 
 The Warehouse Details page is updated with a new menu on the left side of the page. For more information, see [Warehouse Details](../User/Warehouse_Details.md).
 
-The ability to create database instances is added to Avalanche. For more information, see [Create a Database Instance](../User/Create_a_Database_Instance.md). For information about the differences between warehouses and databases, see [Comparing Warehouses and Databases](../User/Comparing_Warehouses_and_Databases.md).
+The ability to create database instances is added to Avalanche.
 
 Instructions on adding SSO users is updated at [Add SSO Users](../User/Add_SSO_Users.md).
 

@@ -105,7 +105,7 @@ To set up S3 access permissions
 
 !!! note "Note"
 
-    You will need these credentials to [Grant Access to Warehouse or Database for External Tables Access](../User/Grant_Access_to_Warehouse_or_Database_for_Extern.md).
+    You will need these credentials to [Grant Access to Warehouse for External Tables Access](../User/Grant_Access_to_Warehouse_or_Database_for_Extern.md).
 
 18. Important: Download the .csv file and save for future use, as you will not have the opportunity to see the secret key again.
 

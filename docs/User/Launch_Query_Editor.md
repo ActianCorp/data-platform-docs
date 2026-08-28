@@ -12,9 +12,9 @@ To launch Query Editor, you must be the creator of the warehouse or be added as 
 
 To launch Query Editor
 
-1. On the Warehouses or Database Instances page, click the name of the warehouse or database you want to access in Query Editor.
+1. On the Warehouses page, click the name of the warehouse you want to access in Query Editor.
 
-    The [Warehouse Details](../User/Warehouse_Details.md) page or [Database Instance Details](../User/Database_Instance_Details.md) page is displayed.
+    The [Warehouse Details](../User/Warehouse_Details.md) page is displayed.
 
 2. On the left side of the window, click the Query Editor link.
 

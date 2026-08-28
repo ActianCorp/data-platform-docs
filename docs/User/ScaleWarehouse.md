@@ -36,11 +36,11 @@ A warehouse must be running to scale it.
 
 !!! note "Note"
 
-    If you are running a 610.x-based warehouse, any scaling, up or down, takes the warehouse off-line and restarts the warehouse. During an off-line scaling, the warehouse/database will be unavailable and any active users’ work will be affected. If you are doing an off-line scaling, we recommend scaling during off hours.
+    If you are running a 610.x-based warehouse, any scaling, up or down, takes the warehouse off-line and restarts the warehouse. During an off-line scaling, the warehouse will be unavailable and any active users’ work will be affected. If you are doing an off-line scaling, we recommend scaling during off hours.
 
 To scale an Actian warehouse
 
-1. On the Actian Warehouses page, click the name of the warehouse you want to scale. It must be in the Running state (see [Restart a Warehouse](../User/Restart_a_Warehouse.md) or [Restart a Database](../User/Restart_a_Database.md)).
+1. On the Actian Warehouses page, click the name of the warehouse you want to scale. It must be in the Running state (see [Restart a Warehouse](../User/Restart_a_Warehouse.md)).
 
     The [Warehouse Details](../User/Warehouse_Details.md) page is displayed.
 

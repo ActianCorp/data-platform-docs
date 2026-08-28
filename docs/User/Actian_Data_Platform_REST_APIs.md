@@ -26,7 +26,7 @@ are scoped differently, so the first step is choosing the right one.
 
 | | Control API | Warehouse Data API |
 | --- | --- | --- |
-| Use it to | Create, start, stop, scale, and configure warehouses and databases; read tenant, usage, and entitlement information | Read and write data in one warehouse: manage schema, run CRUD operations, run SQL |
+| Use it to | Create, start, stop, scale, and configure warehouses; read tenant, usage, and entitlement information | Read and write data in one warehouse: manage schema, run CRUD operations, run SQL |
 | Scope | Global. One endpoint covers every resource in your tenant | Per warehouse. Each warehouse has its own endpoint |
 | Base URL | `https://<admiral-host>/api/v1` | `https://<warehouse-id>.<warehouse-domain>/baas/v1` |
 | Authentication | Bearer token from the platform login endpoint | BAT token from the warehouse login endpoint |
@@ -93,7 +93,7 @@ Two values recur throughout the examples.
 
 | Placeholder | Meaning |
 | --- | --- |
-| `<resource-type>` | Either `warehouse` or `database` |
+| `<resource-type>` | `warehouse` |
 | `<warehouse-id>` | The resource identifier, for example, `av-xxxxxxxxxxxx` |
 
 ### 1. Listing Warehouses
@@ -186,7 +186,7 @@ curl -X 'PUT' \
 
 To stop a warehouse automatically after a period of inactivity instead, use the
 `idle-stop` endpoint. For more information, see
-[Automatic Stopping of Idle Warehouses or Databases](Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
+[Automatic Stopping of Idle Warehouses](Automatic_Stopping_of_Idle_Warehouses_or_Databas.md).
 
 ## Updating IP Allow List
 
@@ -223,14 +223,14 @@ also covers the following operations.
 
 | Task | Endpoint |
 | --- | --- |
-| Create a warehouse or database | `POST /resource/<resource-type>` |
-| Get one resource | `GET /resource/<resource-type>/<resource-id>` |
-| Delete a resource | `DELETE /resource/<resource-type>/<resource-id>` |
+| Create a warehouse | `POST /resource/warehouse` |
+| Get one warehouse | `GET /resource/warehouse/<warehouse-id>` |
+| Delete a warehouse | `DELETE /resource/warehouse/<warehouse-id>` |
 | Restart a warehouse | `PUT /resource/warehouse/<warehouse-id>/restart` |
 | Clone a warehouse | `POST /resource/warehouse/clone` |
 | Tenant details and entitlements | `GET /tenant`, `GET /tenant/entitlements` |
 | Current usage | `GET /usage/current`, `GET /usage/details/timeseries` |
-| Backups | `GET /resource/<resource-type>/<resource-id>/backups` |
+| Backups | `GET /resource/warehouse/<warehouse-id>/backups` |
 | Enable the Warehouse Data API | `PUT /resource/warehouse/<warehouse-id>/data-api/configure` |
 
 ## Working with Warehouse Data

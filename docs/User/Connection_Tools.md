@@ -8,7 +8,7 @@ canonical_id: "actian-data-platform-connection-tools"
 
 ## Connection Tools
 
-On the Connections panel on the [Warehouse Details](../User/Warehouse_Details.md) or [Database Instance Details](../User/Database_Instance_Details.md) page, the Connect to Actian warehouse/Database dropdown menu lists the following tools.
+On the Connections panel on the [Warehouse Details](../User/Warehouse_Details.md) page, the Connect to Actian warehouse/Database dropdown menu lists the following tools.
 
 To copy information from the fields on the Connections tab, see [Copy Connection Strings to the Clipboard](../User/Copy_Connection_Strings_to_the_Clipboard.md).
 
