@@ -31,7 +31,7 @@ The URL is specific to the warehouse and has the form `https://<warehouse-host>/
 
 ## Client configuration and available tools
 
-For client configuration examples, the tool, resource, and prompt reference, and how write approval works, see [SaaS](https://actiancorp.github.io/mcp-server-docs/latest/analytics-engine/saas.html) in the MCP Server documentation.
+For client configuration examples, the tool, resource, and prompt reference, and how write approval works, see [SaaS](https://docs.actian.com/mcp-server/latest/analytics-engine/saas.html) in the MCP Server documentation.
 
 ## Related documentation
 
