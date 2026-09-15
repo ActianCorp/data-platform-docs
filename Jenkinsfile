@@ -92,10 +92,14 @@ pipeline {
 
         stage('Build Zensical site') {
             steps {
-                // `make build` runs `zensical build` then mirrors raw Markdown
-                // sources into site/ (scripts/copy_md_sources.py), since
-                // Zensical has no `hooks:` equivalent to run that inline.
-                sh 'make build'
+                // Same steps as `make build`, inlined because `make` isn't
+                // installed on default-agent. Zensical has no `hooks:`
+                // equivalent, so raw Markdown sources are mirrored into
+                // site/ as a separate post-build step.
+                sh '''
+                    zensical build
+                    python3 scripts/copy_md_sources.py
+                '''
             }
         }
 
